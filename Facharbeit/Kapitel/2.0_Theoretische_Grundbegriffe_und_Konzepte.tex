@@ -1,0 +1,309 @@
+% Abschlussarbeit am Ende der Oberschule
+% Facharbeit zum parallelen Programmierparadigma
+% Thomas Mittermair
+% Oberschulzentrum J. Ph. Fallmerayer Brixen
+
+\chapter{Theoretische Grundbegriffe und Konzepte}
+
+	\section{Grundprinzipien der Parallelisierung}
+	
+		Bei der Parallelisierung, also der Aufteilung eines Vorgangs in verschiedene, meist voneinander unabhängige Abarbeitungsstränge, existieren einige Grundprinzipien, der beachtet werden müssen und aus diesem Grund im Folgenden näher erläutert werden.	
+	
+		\subsection{Teile und herrsche (divide and conquer, divide et impera)}
+		\label{TeileUndHerrsche}
+	
+			In der Informatik wird man oft mit Problemen konfrontiert, die als Ganzes betrachtet zunächst nur schwer bewältigbar erscheinen. Aus diesem Grund wurde eine Strategie mit dem Namen \textit{teile und herrsche}, auch \textit{divide and conquer} oder \textit{divide et impera} genannt, entwickelt. Selbige ist für viele Bereiche der Informatik unabdingbar. Dabei wird ein Problem so lange in kleiner Teilprobleme zerlegt, bis sich die entstehenden Teilprobleme einfach lösen lassen. Diese Teillösungen müssen im Anschluss noch zu einer Gesamtlösung kombiniert werden. Diese Vorgehensweise erleichtert oft das Lösen komplexer Probleme, aber auch einfache Sachverhalte können durch die Anwendung dieser Strategie meist eleganter und schneller gelöst werden. \cite{TeileUndHerrsche}\\
+			Beispielweise funktioniert der Sortier-Algorithmus \textit{Mergesort} nach diesem Prinzip. Das zu lösende Problem besteht in der Sortierung einer zugeordneten Liste von Einträgen gemäß ihres Schlüssels. Dabei wird die Liste rekursiv in kleinere Teillisten aufgeteilt, bis nur noch Listen übrig bleiben, die aus einem Element bestehen. Listen mit nur einem Element gelten als sortiert. Nun müssen diese Teillösungen noch zu einer Gesamtlösung kombiniert werden. Dabei werden die entstandenen Teillisten wieder zu größeren, aber sortierten Listen zusammengefügt, bis nur noch eine Liste übrig bleibt. Die Liste gilt dann als sortiert. \cite{EinfacheSortierverfahren}\\
+			Somit wird klar, dass auch die parallele Programmierung nach dem Prinzip \textit{teile und herrsche} arbeitet. Ein Problem wird hierbei in verschiedenen Teilprobleme aufgeteilt, welche dann parallel abgearbeitet werden können. Dabei muss allerdings beachtet werden, ob Parallelverarbeitung möglich ist, denn nicht jedes Problem ist parallelisierbar. Wenn beispielsweise ein Aufgabe aus Teilaufgaben besteht, die jeweils alle vom Ergebnis der vorhergehenden Teilaufgabe abhängen, so ist durch die Parallelisierung keine Leistungssteigerung möglich. In diesem Fall würden die eigentlich für parallele Arbeit ausgelegten Komponenten nacheinander am Problem arbeiten, was dem Prinzip der Leistungssteigerung vollkommen widerspricht.
+
+		\subsection{Fork-Join-Modell}
+		\label{ForkJoinModell}
+			
+			Das Fork-Join-Modell ist ein grundlegendes Prinzip im Bereich der Parallelisierung.
+			Das englische Verb \textit{to fork} kann dabei mit \textit{gabeln} oder auch \textit{aufspalten} übersetzt werden, das englische Verb \textit{to join} hingegen mit \textit{verbinden} oder auch \textit{zusammenströmen}. Verwendet man dieses Konzept, so existiert in einem Programm zunächst ein Abarbeitungsstrang, der sequentiell Befehle abarbeitet. Kommt das auszuführende Programm zum Punkt, an welchem eine Parallelverarbeitung möglich wird, erstellt dieser Haupt-Abarbeitungsstrang $n$ Kind-Abarbeitungsstränge, welche dann parallel an einem Problem arbeiten. Diese Gabelung des sequentiellen Haupt-Abarbeitungsstranges in mehrere Kind-Abarbeitungsstränge entspricht dem \textit{Fork}. Während die Kind-Abarbeitungsstränge am Problem arbeiten, kann der Haupt-Abarbeitungsstrang, welcher in diesem Zusammenhang auch Eltern- oder Vater-Abarbeitungsstrang genannt wird, entweder auch an der Lösung des Problems mitarbeiten oder auch andere Aufgaben erledigen und muss dann auf die Terminierung der Kind-Abarbeitungsstränge warten. Das Zusammenströmen des Haupt-Abarbeitungsstranges mit den $n$ Kind-Abarbeitungssträngen entspricht dem \textit{Join}, da aus mehreren parallelen Abarbeitungssträngen wieder ein einziger, sequentieller Abarbeitungsstrang wird.\\
+			Das Fork-Join-Modell weist den Vorteil auf, dass es eine einfache Erstellung parallel arbeitender Programme ermöglicht. \cite{ParaProgRauber} Aus der Beschreibung dieses Modells lässt sich leicht erkennen, dass das Fork-Join-Modell auf dem Prinzip des unter Punkt \nameref{TeileUndHerrsche} erwähnten Prinzips \textit{teile und herrsche} aufbaut.
+
+		\subsection{Lastenverteilung (load balancing)}
+		
+			Die konsequente Anwendung des unter Punkt \nameref{ForkJoinModell} genannten \textit{Fork-Join-Modells} führt zu einer grundlegenden Frage, welcher parallele Handlungsstrang wie viel Arbeit leisten soll und wie die gesamte Arbeit (Last) aufgeteilt werden soll.\\
+			Das Hauptziel der Zuweisung der Arbeit an die jeweiligen parallelen Handlungsstränge sollte sein, dass eine hochwertige \textit{Lastenverteilung}, auch \textit{load balancing} genannt, daraus resultiert, das bedeutet, jeder parallele Handlungsstrang sollte, sofern möglich, die gleiche Menge an Berechnung durchführen müssen. \cite{ParaProgRauber}
+			Der Grund, warum jeder parallele Handlungsstrang gleich viel Last tragen, also gleich viel Arbeit verrichten sollte, liegt in der Natur des Fork-Join-Modells. Da der Haupt-Abarbeitungsstrang auf die Terminierung \textit{aller} Kind-Abarbeitungsstränge warten muss, ist die parallele Lösung des Problems nur performant, falls alle parallelen Abarbeitungsstränge annähernd gleich viel Zeit für die Abarbeitung benötigen. Das folgende Sprichwort beschreibt diesen Sachverhalt angemessen:
+			
+				\begin{quote}
+					 \textit{Eine Kette ist nur so stark wie ihr schwächstes Glied. \cite{SprichwortKette}}
+				\end{quote}
+				
+			Überträgt man das obige Sprichwort auf die Parallelisierung, so wird aus der Stärke der Kette die Ausführungsgeschwindigkeit des parallelen Teils des Programmes und aus den einzelnen Gliedern der Kette werden die einzelnen, parallelen Abarbeitungsstränge im Programm.
+			Das Ziel der Lastenverteilung ist es folglich, die Last so auf die parallelen Abarbeitungsstränge aufzuteilen, dass die geringste Gesamtausführungszeit des Programms daraus resultiert. Das gleichmäßige Aufteilen der Arbeit ist somit das Bestreben dieses grundlegenden Konzepts der parallelen Programmierung.			
+			
+		\subsection{Parallelität und Nebenläufigkeit}
+			
+			Im Bereich der Parallelisierung stößt man des Öfteren auf zwei Begriffe, nämlich dem Begriff der \textit{Nebenläufigkeit} und dem der \textit{Parallelität}, welche im Folgenden näher erläutert werden.	
+			
+			\begin{description}
+				\item[Nebenläufigkeit]
+				  Zwei Vorgänge nennt man \textit{nebenläufig}, wenn sie vollkommen voneinander unabhängig abgearbeitet werden können. Existieren zwei nebenläufige Vorgänge A und B, so spielt es keine Rolle, ob zuerst Vorgang A und dann Vorgang B abgearbeitet wird oder umgekehrt, oder ob sie sogar gleichzeitig, also parallel, erledigt werden.\\
+				  Anweisungen, welche nebenläufig sind, können also parallel und auch auf verschiedenen Prozessoren ausgeführt werden. Werden sie auf einem Prozessor ausgeführt, so kann der Prozessor beliebig zwischen der Abarbeitung des Vorganges A und B hin und her wechseln und die Abarbeitungsreihenfolge ist somit nicht von Bedeutung.
+			  \item[Parallelität]
+				  Zwei Vorgänge nennt man \textit{parallel}, wenn sie gleichzeitig und unabhängig voneinander abgearbeitet werden können. Die Anweisungen zweier Vorgänge werden also parallel bearbeitet, wenn die Anweisungen unabhängig voneinander zur selben Zeit erledigt werden. Eine parallele Bearbeitung ist somit immer auch nebenläufig.
+			\end{description}
+			
+			Somit wird klar, dass \textit{Nebenläufigkeit} ein allgemeinerer Begriff als \textit{Parallelität} ist. \cite{NebenlaeufigeProg}
+			
+			Quellen (zitieren ist schwierig, muss noch eine Lösung gefunden werden):
+			http://ddi.cs.uni-potsdam.de/HyFISCH/Produzieren/SeminarDidaktik/Nebenlaeufigkeit/nebenlaeufig.htm
+			https://www-vs.informatik.uni-ulm.de/teach/ss03/ti1/2003s-TI1-H-Proc-2-D.pdf
+
+	\section{Implementierungsmöglichkeiten der Parallelisierung}
+	
+		Die Parallelisierung kann auf verschiedensten Arten realisiert werden. Im Allgemeinen lassen sich allerdings zwei Ebenen erkennen: Die Hardware- und Softwareebene.
+	
+		\subsection{Implementierungsmöglichkeiten der Parallelisierung auf Hardwareebene}
+		
+			Auf Ebene der Hardware gibt es eine Vielzahl von Möglichkeiten, eine Parallelisierung zu implementieren. Im Folgenden werden dabei exemplarisch zwei grundlegende Varianten erläutert.
+					
+			\subsubsection{Pipelining}
+				
+				Wie aus Punkt \nameref{SequUndParaInformatik} ersichtlich wird, erfolgt die Abarbeitung eines Befehls in einem Prozessor wie an einem Fließband (engl. Pipeline), der Befehl durchläuft also mehrere, in diesem Fall fünf, Stufen. Zunächst wird der Befehl geladen, dann dekodiert, danach werden die Operanden geladen, der Befehl ausgeführt und das Ergebnis schließlich in den Speicher zurückgeschrieben.\\
+				Betrachtet man erneut die Abbildung zum Befehlszyklus \nameref{fig:BefehlszylusOhnePipelining}, so erkennt man, dass die Hardware bei dieser Art der Befehlsausführung nicht effizient ausgenutzt wird. Betrachtet man die fünf Phasen der Befehlsausführung als Stufen einer Pipeline, so kann man die Befehlsausführung auch anders, überlappend, organisieren. Man nutzt also aus, dass die auf einem Prozessor befindlichen Funktionseinheiten bei der Abarbeitung eines Befehls kaum alle gleichzeitig beansprucht werden. Wenn ein Befehl eine Phase abschließt, so muss diese Phase nicht bis zum Abschluss der gesamten Befehlsabarbeitung ungenutzt bleiben, sondern der nächste Befehl könnte direkt diese Phase betreten. Somit wird innerhalb der Pipeline versucht, alle Stufen gleichzeitig für aufeinanderfolgende Befehle zu nutzen und somit die Hardware-Auslastung zu verbessern. Dadurch werden mehrere Befehle gleichzeitig abgearbeitet. Die Pipeline-Verarbeitung kommt in vielen modernen Prozessoren zum Einsatz.\\
+				Die Vorteile der Pipeline-Verarbeitung im Gegensatz zur Sequentialität des Befehlszyklus soll nun an Hand eines Beispiels der Abarbeitung von drei Befehlen verdeutlicht werden.
+				Die Abbildung \nameref{fig:BefehlszylusMitPipelining} soll diesen Vorgang grafisch veranschaulichen. Nimmt man an, dass die Bearbeitung in jeder Phase im Optimalfall einen Taktzyklus benötigt, so dauert die Ausführung dieser drei Befehle ohne Pipelining ganze 15 Taktzyklen, während die Verwendung von Pipeling zu einer Abarbeitungsdauer von 8 Taktzyklen führt. Dies entspricht nahezu einer Halbierung der benötigten Zeit, ohne zusätzliche Hardware ankaufen zu müssen. Des Weiteren wird, sobald die Pipeline-Bearbeitung begonnen hat, - zumindest theoretisch, falls keine Verzögerungen eintreten - in jedem Taktzyklus ein Befehl abgeschlossen, während dies bei der sequentiellen Bearbeitung nur alle fünf Taktzyklen passiert. Somit wird klar, dass sich Pipelining durchaus lohnt.\\
+				Nicht immer kann eine Pipeline allerdings optimal ausgenutzt werden. Wenn beispielsweise Datenabhängigkeiten bestehen, dass bedeutet das berechnete Ergebnis eines Befehls ist Voraussetzung für die Ausführung eines folgenden Befehls, müssen sogenannte Wartetakte eingeführt werden, welche die Ausführung verzögern. \cite{AufbauFunktionsweiseMikroprozessoren}
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=11cm]{Abbildungen/Befehlszylus_mit_Pipelining.png}
+					\caption{Grafische Darstellung der Abarbeitung von drei Befehlen nach dem Schema des Befehlszyklus unter Anwendung der Pipelining-Verarbeitung.}
+					\label{fig:BefehlszylusMitPipelining}
+				\end{figure}
+			
+				Quelle (zitieren ist schwierig, muss noch eine Lösung gefunden werden):
+				https://www.elektronik-kompendium.de/sites/com/1705221.htm --> Vielleicht Netzwerktechnik-Fibel: Grundlagen, Übertragungstechnik und Protokolle, Anwendungen und Dienste, Sicherheit --> Buch zur Webseite
+				
+			\subsubsection{Vektorrechner}
+			
+				Eine weitere Möglichkeit der Realisierung von Parallelem Rechnen sind die sogenannten \textit{Vektorrechner}, auch \textit{Vektorprozessoren} oder \textit{Arrayrechner} genannt.\\
+				Das im Namen dieser Technologie enthaltene \textit{Vektor} oder \textit{Array} rührt daher, dass die gleichen Berechnungen gleichzeitig auf einer Menge von Daten ausgeführt werden. Diese Daten sind in diesem Fall meist in Form eines \textit{n}-elementigen Arrays, also eines \textit{n}-dimensionalen Vektors, organisiert.
+				Diese Art der Prozessoren sind den gewöhnlichen CPUs, welche die gleiche Operation nacheinander auf den Daten ausführen würden, um ein vielfaches überlegen, falls es sich bei der zu bewerkstelligenden Aufgabe um eine Operation handelt, die auf viele Daten ausgeführt werden muss. Somit können sich erhebliche Performance-Gewinne erzielen lassen.\\
+				Vektorrechner werden vor allem in der Simulationstechnik verwendet, wo viele gleichartige Daten auf gleiche Weise verarbeitet werden müssen. Dies ist beispielsweise in der Geologie und Meteorologie des Öfteren der Fall.
+				Allerdings birgt diese Technologie den Nachteil, dass keine Standard-CPUs hier verwendet werden können, da das Vektorrechnen in der Hardware der CPU implementiert sein muss. Aus diesem Grund ergeben sich für Vektorrechner meist erhöht Kosten im Vergleich zu gewöhnlichen Prozessoren. In der jüngeren Vergangenheit entfernte sich der Trend somit von dieser Art der Parallelrechner und ging zu großen Rechen-Clustern über. Dies sind Verbünde von vielen Standardprozessoren, die über schnelle Leitungen verbunden sind. Dadurch können Kosten eingespart werden, da durch die industrielle Herstellung der Preis von gewöhnlichen CPUs stark gesunken ist.\\
+				Da gewöhnliche CPUs nicht in Vektoren von Daten arbeiten können, werden sie mit Betrachtung der mathematischen Hintergründe auch \textit{Skalarprozessoren} genannt. \cite{VektorrechnerWikipedia}
+				
+		\subsection{Implementierungsmöglichkeiten der Parallelisierung auf Softwareebene}
+
+			Softwaretechnisch existieren im Allgemeinen genau zwei grundlegende Arten, um Parallelisierung zu implementieren: \textit{Prozesse} und \textit{Threads}.
+			Dabei spielt das Betriebssystem eines Rechners eine zentrale Rolle, da es dem Software-Entwickler die nötigen Instrumente zur Verfügung stellt, um solche Prozesse und Threads zu erstellen.
+			Heutige Rechner sind dazu in der Lage, mehrere Aktionen gleichzeitig zu erledigen. Ein Computer liest beispielsweise Daten von der Festplatte, gibt Inhalte auf dem Bildschirm aus und gleichzeitig laufen auch noch einige Anwendungsprogramme des jeweiligen Benutzers.\\
+			Zunächst muss klargestellt werden, dass ein gewöhnlicher Rechner nicht so viele CPUs enthält wie Aufgaben abzuarbeiten sind und der Prozessor somit dazu gezwungen ist, zwischen der Abarbeitung der einzelnen Programme zu wechseln. Zu jedem beliebigen Zeitpunkt wird also stets nur ein Programm gleichzeitig auf einer CPU bearbeitet. Durch das schnelle Wechseln zwischen den Programmen wird beim Benutzer die Illusion von Parallelität geweckt. Um eine klar Abgrenzung zwischen dieser vorgetäuschten Parallelität und der der echten Hardware-Parallelität zu schaffen, spricht man von \textit{Quasiparallelität}. \cite{ModerneBetriebssysteme}
+			
+			\subsubsection{Das Prozess-Modell \cite{ModerneBetriebssysteme}}
+			
+				Im Rahmen des Modells ist die Gesamtheit aller ausführbaren Programme als eine Menge von sequentiellen Prozessen organisiert. Solche sequentielle Prozesse werden oft auch nur Prozesse genannt.
+				Ein Prozess ist dabei ein Programm in Ausführung, wobei zentrale Aufgaben wie beispielsweise die Zuteilung der Ressourcen (z.B. CPU) dem Betriebssystem überlassen werden.\\
+				Für jeden Prozess wird der Eindruck erweckt, dass er selbst eine CPU zur Verfügung hat und jeder Prozess somit tatsächlich parallel abläuft. In der Realität ist dies nur selten der Fall, meist handelt es sich bei dieser CPU nur um eine virtuelle CPU und die reale CPU schaltet zwischen den Prozessen hin- und her. Folglich kommt meist Quasiparallelität zum Einsatz. Die kleinen Einheiten an Rechenzeit, welche die einzelnen Prozesse erhalten, werden als Zeitscheiben bezeichnet.\\
+				Jeder Prozess besitzt eine individuelle Aufgabe und auch eine eigene Ablaufsteuerung, also auch einen eigenen Befehlszähler, welcher angibt, welcher Befehl des Programmes als Nächster abgearbeitet werden muss.
+				Somit ist die grundlegende Idee, dass jeder Prozess eine Aktivität beliebiger Art ist. Er hat ein Programm, welches festlegt, wie die Aufgabe abgearbeitet werden muss, Eingabedaten, Aufgabedaten und einen Zustand.
+				Das Programm beschreibt im Unterschied zum Prozess also nur das Verfahren, also den Algorithmus, mit welchem eine Aufgabe gelöst werden soll. Die Aktivität des Lösens dieser Aufgabe unter der Verwendung des Programmes kann dann als Prozess bezeichnet werden.
+				Der Ansatz des Erstellens von mehreren Prozesses auf einem Rechner wird auch als \textbf{Multiprocessing} bezeichnet.
+				
+				\begin{description}
+					\item[Prozesszustand]
+						\label{Prozesszustand}
+						Obwohl jeder Prozess eine unabhängige Einheit darstellt, kommt es oft zu Situationen, in welchen Prozesse sich austauschen müssen, um Aufgaben korrekt zu erledigen.\\
+						Führt ein Prozess A beispielsweise eine Berechnung durch, die zu einem Ergebnis führt, welches von einem weiteren Prozess B benötigt wird, damit selbiger eine Aufgabe abarbeiten kann, so muss der Prozess B so lange blockiert werden, bis die Ergebnisse von Prozess A zur Verarbeitung bereitstehen.\\
+						Des Weiteren ist es möglich, dass die Zeitscheibe eines Prozesses, der gerade eine Aufgabe mit Hilfe der CPU erledigt, abläuft. Somit wäre er zwar rechenbereit, kann allerdings keine Berechnungen durchführen, da er im Moment nicht über eine Ausführungseinheit verfügt.\\
+						Ein Prozess kann folglich fünf grundlegende Zustände annehmen.
+						
+						\begin{enumerate}
+							\item \textbf{Erstellt-Zustand}: Der Prozess wurde erstellt und ist bereit, die ihm zugewiesene Aufgabe abzuarbeiten.
+							\item \textbf{Rechnender Zustand, Aktiv-Zustand}: Der Prozess führt gerade Berechnungen unter Verwendung der CPU durch.
+							\item \textbf{Rechenbereiter Zustand, Bereit-Zustand}: Der Prozess wäre zum Rechnen in der Lage, verfügt im Moment aber über keine CPU.
+							\item \textbf{Blockiert-Zustand}: Der Prozess ist nicht zum Rechnen imstande, bis eine bestimmtes Ereignis eintritt, also bis beispielsweise Daten zur Verfügung stehen. In diesem Beispiel kann der Prozess auch, falls er gerade die CPU erhalten würde, keine Berechnungen durchführen. Das Zuteilen von Ressourcen an einen blockierten Prozess ist folglich nicht sinnvoll.
+							\item \textbf{Beendet-Zustand}: Der Prozess hat seine Aufgabe vollfüllt oder wurde auf Grund eines Problems beendet.
+						\end{enumerate}
+					
+						Die folgende Grafik soll die Prozesszustände nochmals verdeutlichen. Dabei ist der Übergang vom aktiven in den blockierten Zustand der einzige Zustandswechsel, den der Prozess selbst auslösen kann. Alle anderen werden vom Betriebssystem veranlasst.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=11cm]{Abbildungen/Prozesszustaende.png}
+							\caption{Grafische Darstellung der grundlegenden Prozesszustände.}
+						\end{figure}
+		
+					\item[Prozesshierarchie]
+						\label{Prozesshierarchie}
+						
+						Ein Prozess ist dazu in der Lage, weitere Prozesse zu starten. Startet ein Prozess A einen neuen Prozess B, so bildet sich zwischen den beiden Prozessen eine Hierarchie: Der Prozess A ist der Vaterprozess, während der Prozess B der Kindprozess ist. Jeder Prozess hat dabei genau einen Vaterprozess, allerdings beliebig viele Kindprozesse.\\
+						Aus dem obigen Konzept wird nicht klar, wie ein Rechner-System startet, da zu Beginn ein Prozess gestartet werden muss, welcher der erste Prozess ist und somit keine Vaterprozess haben kann.\\
+						Das Betriebssystem UNIX löst diese Problematik mittels eines eigenen Prozesses mit dem Namen \textit{init}, welcher sich im Boot-Abbild des System gespeichert ist. Beim Systemstart wird dieses Boot-Image gelesen und der Prozess \textit{init} erzeugt. Dieser Prozess kann dann wiederum Kindprozesse starten, welche dann wiederum Kindprozesse starten können usw.
+						Somit initialisiert sich das Betriebssystem beim Start selbst. Somit ergibt sich eine das gesamte System umfassende Prozess-Hierarchie, wobei diese baumartig aufgebaut ist und die Wurzel des Baumes der Prozess \textit{init} ist.
+						Unter Windows gibt es kein Konzept der Prozesshierarchie, alle Prozesse sind hier gleichwertig.
+		
+					\item[Eigenschaften eines Prozesses]
+						Ein Prozess hat einige wichtige Eigenschaften. Auf die wichtigsten soll im Folgenden eingegangen werden.
+						
+						\begin{itemize}
+							\item Jeder Prozess besitzt eine eigene Prozessumgebung. Das bedeutet, er besitzt eine eigene Aufgabe, einen eigenen Speicher-Adressraum und auch einen eigenen Ausführungsfaden. Das bedeutet, dass jeder Prozess seine Aufgabe individuell abarbeiten kann.
+							\item Jeder Prozess kann andere Prozesse erzeugen, welche dann Kindprozesse genannt werden.
+							\item Jeder Prozess kann mit anderen Prozessen kommunizieren. Man spricht hier von IPC (Inter-Prozess-Kommunikation), wobei das Betriebssystem Kommunikations-Methoden anbietet.
+							\item Jedem Prozess wird ein sogenannter \textit{Adressraum} zugeordnet. Dieser besteht aus einer Liste von Speicherstellen, auf die der Prozess Lese- und Schreibzugriffe ausführen darf.
+							\item Prozesse können voneinander abhängen. Dies ist beispielsweise der Fall, wenn ein Prozess erst arbeiten kann, sobald er das Ergebnis eines anderen Prozesses erhalten hat. In diesem Fall ist Prozess-Synchronisation nötig, auf welche in Punkt PUNKT EINFÜGEN eingegangen wird.
+						\end{itemize}
+						
+					\item[Scheduling von Prozessen]
+						\label{ProzessScheduling}
+						
+						Auf den modernen Betriebssystemen ist die Existenz mehrerer Prozesse zur gleichen Zeit keine Seltenheit, sondern die Regel. Falls weniger physikalische CPUs vorhanden sind wie parallel ablaufende Prozesse, so müssen die CPUs zwischen verschiedenen Prozessen wechseln. Des Weiteren muss es eine Instanz geben, welche entscheidet, welcher Prozess als Nächster eine Zeitscheibe zugewiesen bekommt und auch die Länge der Zeitscheibe muss festgelegt werden. Der Teil des Betriebssystems, welche für diese Aufgaben zuständig ist, wird \textit{Scheduler} (englisch für \textit{Zeitplaner}) genannt.\\
+						Der Scheduler teilt den Prozessen folglich die CPU zu. Der Scheduler weiß allerdings nie genau, welche Ressourcen in Zukunft angefragt werden und welche zur Verfügung stehen werden. Der Scheduling-Algorithmus muss daher schätzen und muss dynamisch auf Änderungen reagieren. Es gestaltet sich folglich schwierig, ein geeignetes Verfahren zu finden, um den nächsten Prozess, der eine Zeitscheibe erhalten soll, auszuwählen. Aus diesem Grund haben sich verschiedene Strategien im Lauf der Geschichte entwickelt. Im Folgenden werden exemplarische einige Strategien erklärt.\\
+						
+						\begin{enumerate}
+							\item \textbf{Scheduling in Stapelverarbeitungs-Systemen: First Come - First Serves (FCFS)}: Den Prozessen wird die CPU in der Reihenfolge zugewiesen, in der sie sie anfordern. Somit entsteht eine Warteschlange von rechenbereiten Prozessen. Sobald ein Prozess in der blockierten Zustand übergeht, kommt der nächste Prozess an die Reihe und der blockierte Prozess reiht sich nach dem Verlassen des blockierten Zustandes wieder in die Warteschlange ein. Ein Vorteil dieses Verfahrens ist, dass die CPU optimal ausgenutzt wird. Allerdings kann die Abarbeitung eines aufwendigen Prozesses die Abarbeitung kleiner Prozesses verzögern oder sogar verhindern.
+							\item \textbf{Scheduling in Stapelverarbeitungs-Systemen: Shortest Job First (SJF)}: Bei diesem Algorithmus wird davon ausgegangen, dass die Abarbeitungszeiten, also die Zeiten, wie lange die Prozesse zur Abarbeitung benötigen, im Vornherein bekannt sind. Dies ist beispielsweise anhand von Erfahrungswerten möglich. Der Prozess, der die kleinste Abarbeitungszeit besitzt, bekommt in diesem Fall die CPU. Dieses Verfahren funktioniert, falls die Abarbeitungszeiten durch Erfahrungen bekannt sind. Allerdings kann es passieren, dass sich die Bearbeitung aufwendiger Prozesses verzögert oder im schlimmsten Fall diese Prozesse die CPU sogar nie bekommen.
+							\item \textbf{Scheduling in interaktiven Systemen: Round-Robin-Scheduling (Zeitscheiben-Verfahren)}: Dies ist einer der am meisten verwendeten Scheduling-Strategien. Jedem Prozess wird dabei eine Zeitscheibe zugewiesen, für welchen er die CPU bekommt. Nach Ablauf der Zeitscheibe wird dem Prozess der Prozessor entrissen und an den nächsten Prozess gegeben. Falls der Prozess vor Ablauf der Zeitscheibe blockiert oder beendet wird, so endet seine Zeitscheibe vorzeitig und der nächste Prozess kann mit seinen Berechnungen beginnen. Somit ergibt sich auch hier eine Warteschlange, wobei jeder Prozess der Reihe nach die CPU bekommt und sich nach der Bearbeitung durch die CPU entweder beendet, blockiert wird oder sich wieder am Ende der Warteschlange einreiht. Im einfachsten Fall des Round-Robin-Verfahrens wird davon ausgegangen, dass alle Prozesse gleich wichtig sind und somit alle Prozesse gleich große Zeitscheiben zugewiesen bekommen. Eine Abwandlung dieses Verfahrens ist das Weighted-Round-Robin-Scheduling. Bei diesem Algorithmus können die Zeitscheiben je nach Prozess unterschiedlich lang sein. Ein Nachteil dieses Verfahrens ist allerdings, dass dringende Prozesse nicht vorgezogen werden können.
+							\item \textbf{Scheduling in interaktiven Systemen: Prioritätenbasiertes Scheduling}: Bei Verwendung des Round-Robin-Scheduling ist jeder Prozess gleich wichtig. Denkt man allerdings an die Realität, so gibt es des Öfteren Aktivitäten, die wichtiger sind als andere. Ein Prozess, der im Hintergrund E-Mails verschickt, sollte von geringerer Wichtigkeit sein als ein Prozess, der für die Darstellung von Videos in Echtzeit zuständig ist. Aus diesem Grund stellt das prioritätenbasierte Scheduling eine Weiterentwicklung des Round-Robin-Scheduling dar. Jeder Prozess bekommt bei diesem Verfahren zusätzlich eine Priorität zugewiesen und der Prozess mit der aktuell höchsten Priorität erhält die CPU. Jedem Prozess muss in diesem Zusammenhang auch noch eine maximale Zeitscheiben-Dauer zugewiesen werden, um zu verhindern, dass der Prozess mit der größten Priorität ewig läuft. Nach dem Ablauf dieses Maximums an CPU-Zeit muss dann ein Prozesswechsel passieren, wobei der Prozess mit der nächstgrößten Priorität an die Reihe kommt. Bei mehreren Prozessen mit gleich großer Priorität kann FCFS angewendet werden.
+						\end{enumerate}
+					
+				\end{description}
+			
+			\subsubsection{Das Thread-Modell \cite{ModerneBetriebssysteme}}
+			
+				Im Rahmen des bereits bekannten Prozess-Modells hat jeder sequentielle Prozess einen eigenen Adressraum und auch einen eigenen Ausführungsfaden, wobei die einzelnen Prozesse auf einem System parallel zueinander ablaufen.\\
+				Es hat sich allerdings herausgestellt, dass es oft von Vorteil ist, mehrere Ausführungsfäden parallel bzw. quasiparallel zueinander innerhalb desselben Adressraums ablaufen zu lassen. Die einzelnen Ausführungsfäden verhalten sich dann ähnlich wie getrennte Prozesse, wobei der größte Unterschied der gemeinsame Adressraum darstellt.\\
+				Die zwei Grundkonzepte von Prozessen sind die Bündelung der Ressourcen und die Ausführung.\\
+				
+				\begin{itemize}
+					\item Ein Prozess lässt sich als eine Gruppierung von Ressourcen unterschiedlichster Art betrachten. Dazu zählen Quelltext, Programm-Daten, geöffnete Dateien, und vieles mehr. All diese Ressourcen sind im Adressraum des Prozesses und somit im Hauptspeicher des Rechners abgelegt.\\
+					\item Das zweite wichtige Konzept ist die Ausführung. Ein Prozess besitzt im Normalfall genau einen \textit{Ausführungsfaden} oder auf englisch auch \textit{Thread\footnote{Der englische Begriff \textit{Thread} kann mit dem deutschen Wort \textit{Faden} übersetzt werden.}} genannt. Eigentlich besitzt nicht der Prozess selbst, sondern der ihm innewohnende Thread den Befehlszähler, welcher angibt, welcher Befehl als nächstes abgearbeitet werden soll.\\
+				\end{itemize}
+			
+				Ein Thread ist zwar stets von seinem Prozess existenzabhängig, jedoch sind Prozess und Thread zwei getrennte Konzepte. Das Konzept von Threads erweitert das Prozess-Modell, da ein Prozess nicht nur einen Thread enthalten kann, sondern beliebig viele. Somit können mehrere Ausführungsfäden, welche voneinander unabhängig sind, innerhalb einer Prozessumgebung mit einem gemeinsamen Adressraum, realisiert werden. Durch die Einführung von Threads wird ein Prozess auf das Prinzip der Zusammenfassung von Ressourcen und des Bereitstellen einer Umgebung für seine Threads reduziert.\\
+				Mehrere Threads parallel innerhalb eines Prozesses laufen zu lassen verhält sich ähnlich wie mehrere Prozesse parallel auf einem Rechner laufen zu lassen. Im ersten Fall teilen sich die Threads die Ressourcen des Prozesses (Adressraum, geöffnete Dateien, ...), im zweiten Fall teilen sich die Prozesse die Ressourcen des Rechners (Festplatte, Drucker, ...). Threads und Prozesse befinden sich allerdings auf verschiedenen Ebenen.\\
+				Threads werden in der Fachliteratur auf Grund ihrer Ähnlichkeit zu Prozessen manchmal auch als \textit{leichtgewichtige Prozesse} bezeichnet.\\
+				Der Ansatz des Erstellens von mehreren Threads innerhalb eines Prozesses wird auch als \textbf{Multithreading} bezeichnet. Läuft auf einem System mit nur einer CPU ein Prozess mit mehreren Threads, so wechseln sich die Threads in der Ausführung ab. Die CPU wechselt ähnlich zu den Prozessen auch hier zwischen den Threads, sodass wiederum die Illusion von parallel ablaufenden Threads erzeugt wird.
+				
+				\begin{description}
+					\item[Eigenschaften von Threads]
+					
+						Ein Thread hat einige wichtige Eigenschaften, die ihn von einem Prozess unterscheiden. Auf die wichtigsten soll im Folgenden eingegangen werden.
+						
+						\begin{itemize}
+							\item Alle Threads eines Prozesses teilen sich die Ressourcen des Prozesses und somit auch seinen Adressraum. Damit geht einher, dass alle Threads dieselben globalen Variablen besitzen. Die Threads teilen sich somit auch beispielsweise alle geöffneten Dateien und ähnliche Ressourcen des Prozesses. Dabei kann es zu unvorhergesehenen Problemen, sogenannten \textit{zeitkritischen Abläufen}, kommen. Diese potentiell gefährlichen Situationen lassen sich mittels \textit{Prozess-Synchronisation} lösen, auf welche in Punkt HIER EINFÜGEN eingegangen wird.
+							\item Ein Thread kann wie auch jeder Prozess in Zustände wie unter Punkt \nameref{Prozesszustand} beschrieben geraten. Die fünf Grundzustände lauten auch hier Erstellt-Zustand, Aktiv-Zustand, Bereit-Zustand, Blockiert-Zustand und Beendet-Zustand.
+							\item Threads dienen der Erstellung mehrerer Ausführungsfäden, welche sich die Ressourcen des Prozesses, zu dem sie gehören, teilen und somit eng und schnell an einer gemeinsamen Aufgabe arbeiten können.
+							\item Auch zwischen Threads können Hierarchien analog zu Prozessen aufgebaut werden. Dabei sei auf den Punkt \nameref{Prozesshierarchie} verwiesen.
+						\end{itemize}
+					
+					\item[Fork-Join-Modell bei Threads]
+						
+						Während Prozesse meist vollkommen unterschiedliche Aufgaben erledigen, arbeiten bei Einsatz von Multithreading die Threads eine Prozesses meist gemeinsam an einem Problem. Hier bietet sich das unter Punkt erwähnte \nameref{ForkJoinModell} an.\\
+						Dabei startet ein Prozess zunächst mit einem einzigen Thread, dem Haupt-Abarbeitungsstrang. Diese Thread verfügt über die Möglichkeit, neue Threads zu erzeugen. Der Haupt-Thread muss dabei den Kind-Threads mitteilen, welche Aufgabe sie lösen müssen. Der Haupt-Thread kann nun entweder selbst auch Berechnungen durchführen oder auch direkt auf die Beendigung seine Kind-Threads warten und das Ergebnis der einzelnen Threads aufsammeln und zu einer Gesamt-Lösung kombinieren.
+					
+					\item[Verwendung von Threads]
+						
+						Threads werden immer dann verwendet, wenn innerhalb einer Anwendung mehrere Aufgaben gleichzeitig bewältigt werden müssen, wobei sich diese Aktivitäten gegenseitig blockieren können. Das Aufspalten einer Anwendung in mehrere quasi-parallel ablaufende Threads vereinfacht auch die Programmierung.\\
+						Das zuvor genannte Konzept des gemeinsamen Adressraum ist das zentrale Konzept für die Verwendung von Threads. Threads erweitern somit das Prozess-Modell um die Fähigkeit von quasi-parallelen Abarbeitungs-Strängen, die die Daten und Ressourcen des Prozesses gemeinsam nutzen.\\
+						Ein weiteres Argument für die Verwendung von Threads ist, dass sie an keine Ressourcen wie z.B. offene Dateien gebunden sind, und somit schneller erstellt und zerstört werden können. In vielen Systemen ist die Erstellung eines Threads 100 Mal schneller durchgeführt als die Erstellung eines Prozesses.
+						
+					\item[Joinable und Detached Threads]
+					
+						Normalerweise sind Threads \textit{joinable}. Dies bedeutet, dass man vom Vater-Thread aus durch Aufruf einer bestimmten vom Betriebssystem zur Verfügung gestellten Funktion auf die Beendigung des jeweiligen Kind-Threads warten kann. Der diese Funktion aufrufende Vater-Thread wird dabei so lange blockiert, bis der Kind-Thread beendet wurde. Dann kann der Vater-Thread auch eventuelle Rückgabewerte des Kind-Threads einsammeln. Ein joinable Thread \textit{joint} (zu Deutsch \textit{zusammenstörmen}) also zum Vater-Thread zurück, bevor er sich beendet.
+						Ein joinable Thread wird so lange nicht als beendet betrachtet, bis er mit einem anderen Thread gejoint wird.\\
+						Oft kommt es allerdings auch vor, dass ein Kind-Thread nichts zurückgibt und somit kein Bedarf besteht, dass der Vater-Thread auf die Beendigung des Kind-Threads warten müssen. Setzt man bei einem Thread die Eigenschaft von \textit{joinable} auf \textit{detached} (zu Deutsch \textit{losgelöst}), so wird dem System klargemacht, dass man einen Thread erstellt, auf dessen Beendigung nicht gewartet werden muss. Somit wird dieser losgelöste Thread beendet, sobald er seine Aufgabe erledigt, wobei kein Join-Vorgang nötigt ist, oder sobald der Prozess, zu welchem er gehört, beendet wird. \cite{ParaProgRauber} \cite{ThreadsRheinwerk}
+						
+					\item[Scheduling von Threads]
+					
+						Auf modernen Systemen ist es die Regel, dass mehrere Prozesse parallel ablaufen, welche wiederum jeweils aus mehreren Threads bestehen. Somit liegen zwei verschiedene Ebenen der Parallelität vor, nämlich Prozesse und Threads gleichzeitig. Für das Scheduling in diesem Fall gibt es grundsätzlich zwei verschiedene Ansätze.\\
+						Der erste Ansatz ist dem Prozess-Scheduling sehr ähnlich. Der Prozess-Scheduler weist dabei einfach den einzelnen Prozessen nacheinander die CPU zu, ohne Rücksicht auf die Threads innerhalb der Prozesse zu nehmen. Somit muss in jedem Prozess nochmals ein Thread-Scheduler existieren, welcher dann den Thread auswählt, der die CPU tatsächlich bekommt. Innerhalb einer Zeitscheibe eines Prozesses können somit mehrere Threads bearbeitet werden, da der Thread-Scheduler die Prozess-Zeitscheibe nochmals in kleinere Zeitscheiben unterteilt, welche dann wiederum den Threads zugewiesen werden. Bei diesem Ansatz können sowohl der Prozess-, als auch der Thread-Scheduler Strategien anwenden, welche ähnlich zu den unter Punkt \nameref{ProzessScheduling} genannten Strategien sind.
+						Der zweite Ansatz besteht darin, dass der Scheduler nicht mehr zwischen Prozessen unterscheidet, sondern nur noch über eine Liste von Threads verfügt, von denen er weiß, dass diese rechenbereit sind. Somit wird die Grenze zwischen den Prozessen aufgehoben und der Fokus liegt auf den Threads. Auch bei diesem Ansatz kann der Scheduler Strategien anwenden, welche ähnlich zu den unter Punkt \nameref{ProzessScheduling} genannten Strategien sind.
+						
+				\end{description}
+			
+	\section{Prozess-Synchronisation \cite{ModerneBetriebssysteme}}
+	
+		Auch wenn Prozesse an sich als vollkommen voneinander unabhängige Abarbeitungseinheiten betrachtet werden können, besteht doch in vielen Fällen die Notwendigkeit, dass Prozesse untereinander kommunizieren müssen. Diese Art des Austausches von Informationen wird als \textit{Interprozesskommunikation}, kurz \textit{IPC}, bezeichnet.\\
+		Dabei müssen allerdings drei wichtige Punkte beachtet werden.
+		
+		\begin{itemize}
+			\item Den Prozessen müssen Möglichkeiten des Austausches von Informationen bereitgestellt werden.
+			\item Mehrere kooperierende Prozesse dürfen sich bei kritischen Aktivitäten in die Quere kommen.
+			\item Falls Abhängigkeiten zwischen Prozessen vorliegen, so müssen diese sauber abgearbeitet werden.			
+		\end{itemize}
+	
+		Ein häufiges bei der IPC auftretendes Problem sind die bereits schon erwähnten \textit{kritischen Aktivitäten} oder auch \textit{Zeitkritischen Abläufe}, auf welche im Folgenden eingegangen werden soll.
+		
+		\subsection{Probleme bei der parallelen Bearbeitung}
+		
+			\subsubsection{Zeitkritischer Ablauf}
+			\label{ZeitkritischerAblauf}
+			
+				Bei diesem Problem wird davon ausgegangen, dass mehrere Prozesse arbeiten und über eine gemeinsame Ressource verfügen, auf die alle zugreifen können. Eine solche Ressource ist in vielen Fällen ein gemeinsamer Speicher. Dieser könnte sowohl im Hauptspeicher liegen, aber auch beispielsweise eine gemeinsame Datei sein. Der Einfachheit wegen wird nun von zwei Prozessen A und B ausgegangen, die über eine gemeinsame Speicherressource kommunizieren.\\
+				Um die Natur der ICP und die dabei auftretenden Probleme zu begreifen, soll nun auf ein häufig in diesem Zusammenhang erwähntes und alltagstaugliches Beispiel eingegangen werden.
+				
+				\begin{description}
+					\item[Beispiel Drucker-Spooler]
+	
+						Um dieses Beispiel zu verstehen, muss zunächst klargestellt werden, dass jedem Prozess grundsätzlich zu jeder Zeit die CPU entrissen werden kann. Der Prozess speichert in diesem Fall seinen aktuellen Zustand und sobald er wieder eine Zeitscheibe zugeteilt bekommt, fährt er genau da fort, wo er zuvor aufgehört hat.
+						In diesem Beispiel wird angenommen, dass zwei Prozesse Dokumente drucken wollen. Um dies zu erreichen, tragen sie den Dateinamen des zu druckenden Dokumentes in eine Spooler-Warteschlange\footnote{Spooling (\textit{Simultaneous Peripheral Operation On-Line}) ist ein Begriff, welcher oft in Zusammenhang mit Betriebssystemen genannt wird. Damit meint man einen Vorgang, bei welchen zu bearbeitende Aufträge in einen Speicher geschrieben werden, bevor sie der eigentlichen Verarbeitung zugeteilt werden. \cite{SpoolingWikipedia}} ein. Ein dritter Prozess überprüft in bestimmten zeitlichen Abständen, ob neue Druckaufträge aufgegeben wurden, initiiert den Druckauftrag und löscht den Auftrag aus der Spooling-Warteschlange.\\
+						Des Weiteren wird angenommen, dass die Warteschlange aus nummerierten Einträgen (0, 1, 2, ...) besteht, wobei jeder Eintrag genau ein zu druckendes Dokument aufnehmen kann. Beide Prozesse sind dazu in der Lage, den Index des nächsten freien Eintrages in der Spooler-Warteschlange auszulesen.\\
+						Der kritische Punkt wird in dem Moment erreicht, sobald sich beide Prozesse (annähernd) gleichzeitig dafür entscheiden, ein Dokument zum Drucken in die Warteschlange einreihen zu wollen.\\
+						Prozess A bekommt also vom Scheduler eine Zeitscheibe zugewiesen und darf rechnen. Er speichert den aktuell nächsten freien Eintrag in der Warteliste, beispielsweise 7, in seiner lokalen Variable \textit{nextFreeSlot}. Nach dieser Aktion läuft seine Zeitscheibe ab und der Prozess B darf nun Berechnungen durchführen. Da auch er einen Druck in Auftrag geben möchte, speichert auch er den aktuell nächsten freien Eintrag in der Warteliste, welcher immer noch 7 ist, in seiner lokalen Variable \textit{nextFreeSlot}. Beide Prozesse sind also der Ansicht, dass der nächste freie Eintrag in der Spooler-Warteschlange 7 ist. Die Zeitscheibe von Prozess B ist noch nicht abgelaufen, weshalb er nun den Dateinamen der von ihm zu druckenden Datei in den noch freien Eintrag 7 der Warteschlange einreiht, weshalb nun der Index des nächsten freien Eintrag in der Warteliste 8 beträgt. Prozess B hat seine Arbeit erledigt und gibt die CPU frei bzw. seine Zeitscheibe läuft ab. Nun wird der Prozessor folglich wieder dem Prozess A zugeteilt, welcher genau an der Stelle weiterarbeitet, an der er zuvor unterbrochen wurde. Er liest den Wert von seine lokalen Variable \textit{nextFreeSlot} aus und stellt fest, dass laut dieser Variable der Index des nächsten freien Eintrag in der Warteliste 7 ist. Aus diesem Grund schreibt er den Dateinamen der von ihm zu druckenden Datei in den seiner Ansicht nach freien Eintrag 7 der Warteschlange. Tatsächlich ist der Eintrag aber zuvor nicht leer gewesen, weshalb der Prozess A den Druckauftrag von Prozess B unwiderruflich gelöscht hat.\\
+						Der Drucker-Spooler kann über diese Inkonsistenz\footnote{Unstimmigkeit, Widersprüchlichkeit} nicht Bescheid wissen und wird den Auftrag von Prozess A drucken, während der Druckauftrag von Prozess B nie vollführt werden wird. Die Abbildung \autoref{fig:ZeitkritischerAblaufDruckerSpooler} soll die genannte Problematik nochmals grafisch verdeutlichen.\\
+						Solche Situationen, in denen mehrere Prozesse schreibend und lesend auf gemeinsame Ressourcen zugreifen und der Erfolg oder Misserfolg des gesamten Ablaufes davon abhängt, welcher Prozess wann genau arbeiten kann, nennt man \textbf{zeitkritische Abläufe}.\\
+						Solche Fehler lassen sich auch im Quellcode eines Programmes nur äußerst schwierig finden, da die Programme meistens problemlos funktionieren und nur manchmal das Problem auftritt.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=6cm]{Abbildungen/Zeitkritischer_Ablauf_Drucker_Spooler.png}
+							\caption{Grafische Darstellung des Drucker-Spoolers als ein Beispiel für einen zeitkritischen Ablauf.}
+							\label{fig:ZeitkritischerAblaufDruckerSpooler}
+						\end{figure}
+					
+					\item[Kritischer Abschnitt]
+
+						Nun wird die in Punkt \nameref{ZeitkritischerAblauf} genannte Problematik nicht mehr abstrakt, sondern auf Ebene des Quellcodes der beteiligten Prozesse betrachtet.\\
+						Solange die Prozesse auf keine gemeinsamen Ressourcen zugreifen, kann es zu keinen zeitkritischen Abläufen kommen. Nur das lesende und schreibende Zugreifen auf Ressourcen, auf welche mehrere Prozesse Zugriff besitzen, kann zu dieser Art von Problemen führen. Die Teile eines Programmes, in welchen ein Zugriff auf solche gemeinsam genutzt Ressourcen erfolgt, nennt man \textbf{kritische Region} oder auch \textbf{kritischer Abschnitt}.\\
+						Um dieses Problem zu lösen, muss man auf ein Konzept von höchste Wichtigkeit in Zusammenhang mit dem parallelen Programmierparadigma, nämlich auf die \textit{Prozess-Synchronisation}, zurückgreifen. Mögliche Lösungsansätze werden unter Punkt PUNKT HIER EINFÜGEN näher erläutert.
+				
+				\end{description}
+				
+			\subsubsection{Verklemmung (Deadlock)}
+			
+				Bei Rechnersystemen gibt es meist Ressourcen, die gleichzeitig nur einem Prozess zugewiesen werden können. Wenn zwei Prozesse gleichzeitig zwei Dokumente mit dem selben Drucker drucken möchten, so ist nicht klar, wie der Drucker vorgehen sollte und wird höchstwahrscheinlich nur unbrauchbare Dokumente drucken. Aus diesem Grund sind Betriebssysteme dazu in der Lage, Ressourcen für eine bestimmte Zeit nur einem einzigen Prozess zuzuweisen.\\
+				Nun existieren aber Situationen, in welchen ein Prozess mehrere (also \textit{n}) Ressourcen gleichzeitig benötigt, um weiterarbeiten zu können. Das bedeutet, dass er erst aus dem Blockiert- in den Bereit- bzw. Aktiv-Zustand gelangen kann, sobald alleinig dem Prozess alle \textit{n} Ressourcen zu Verfügung stehen. Ein Beispiel hierfür ist ein Prozess A, der ein Dokument einscannen und gleichzeitig auf dem Bildschirm den aktuellen Scann-Status anzeigen möchte. Um arbeiten zu können, benötigt dieser Prozess folglich die beiden Ressourcen Scanner und Bildschirm, um arbeiten zu können.\\
+				Im folgenden Szenario kommt es nun zu einem Problem. Auf einem System laufen zwei Prozesse A und B, wobei der Prozess B gerade den Scanner für sich reserviert hat und damit arbeitet. Sobald nun Prozess A an die Reihe kommt, fordert er die beiden Ressourcen Bildschirm und Scanner an. Da der Prozess B den Scanner gerade verwendet und für sich reserviert hat, kann der Prozess A nicht arbeiten, da er wie bereits erwähnt sowohl den Bildschirm als auch den Scanner benötigt, um arbeiten zu können, jedoch nur den Bildschirm erhält. Der Prozess A gelangt nun folglich in den Blockiert-Zustand und wartet, bis die Ressource Scanner freigegeben wird. Fordert nun der Prozess B auch noch den Bildschirm an und gibt den Scanner nicht frei, da er beispielsweise noch mit einem Scan-Vorgang beschäftigt ist, so geht auch der Prozess B in den Blockiert-Zustand, da er nicht alle von ihm angeforderten Ressourcen erhält. Ab diesem Zeitpunkt befinden sich beide Prozesse in einem Szenario, in welchem sie sich gegenseitig blockieren, sodass nie wieder einer der beiden den Blockiert-Zustand verlassen wird. Eine solche Situation nennt man \textit{Deadlock} oder auch \textit{Verklemmung}. \cite{DeadlockWikipedia}\\
+				Solche Deadlocks können auch zwischen mehr als zwei Prozessen und mehr als zwei Ressourcen entstehen. Die Situation einer Verklemmung bei zwei Prozessen A und B und zwei Ressourcen 1 und 2 ist in der Abbildung \autoref{fig:DeadlockSchema} schematisch dargestellt.
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=8cm]{Abbildungen/Deadlock_Schema.png}
+					\caption{Grafische Darstellung eines Deadlocks bei zwei Prozessen A und B und zwei Ressourcen 1 und 2.}
+					\label{fig:DeadlockSchema}
+				\end{figure}
+			
+				Formal lässt sich der Begriff Deadlock laut Andrew S. Tanenbaum wie folgt definieren:
+				
+					\begin{quote}
+						\textit{Eine Menge von Prozessen befindet sich in einem Deadlock-Zustand, wenn jeder Prozess aus der Menge auf ein Ereignis wartet, das nur ein anderer Prozess aus der Menge auslösen kann. \cite{ModerneBetriebssysteme}}
+					\end{quote}
+				
+				Alle Prozesse dieser Menge befinden sich somit im blockierten Zustand und werden die Ereignisse, auf welche die anderen Prozesse dieser Menge warten, nie auslösen.
+				
+				\begin{description}
+					\item[Behebung von Deadlocks]
+						Ist ein Deadlock aufgetreten, so muss das System wieder in einen verklemmungsfreien Zustand gelangen, um ordnungsgemäß arbeiten zu können. Im Folgenden der mehrere Möglichkeiten behandelt, um einen Deadlock in einem System zu beheben.\\
+						
+						\begin{description}
+							\item[Behebung von Deadlocks durch Unterbrechung]
+								Eine Möglichkeit, einen Deadlock aufzuheben, besteht in der zeitweisen Suspendierung eines beteiligen Prozesses. Suspendieren bedeutet in diesem Fall, dass der Prozess als nicht ausführbar markiert wird. Somit können die Ressourcen, die ihm zugewiesen worden sind, nun anderen Prozessen zugeteilt werden. Dadurch kann ein Deadlock behoben werden. Sobald die anderen Prozesse ihre Arbeit erledigt haben und die Ressourcen freigeben, so kann der suspendierte Prozess wieder aktiviert werden und auch selbiger ist dann dazu in der Lage, seine Berechnungen durchzuführen. Die Auswahl des zu suspendierenden Prozesses muss dabei weise getätigt werden, da es sich bei den Ressourcen, die jener Prozess belegt, um solche handeln muss, die einfach entzogen und wieder zurückgegeben werden können.
+							\item[Behebung von Deadlocks durch Rollback]
+								Ist beim Entwickeln eines Systems klar, dass beim Betrieb des Öfteren Deadlocks auftreten können, dann kann der Entwickler auch direkt eine Zusatzfunktion einbauen, die das Beseitigen von Deadlocks erleichtert. Dieser Zusatz erlaubt es dem System, den Zustand jedes Prozesses auf dem System in festgelegten Abständen (an \textit{Checkpoints}) zu speichern, sodass der Prozess jederzeit in einen vergangenen Zustand zurückversetzt und von diesem aus neu gestartet werden kann. An jedem Checkpoint werden dann alle für den Zustand des Prozesses relevanten Informationen gesammelt. Dabei handelt es sich um den Speicherinhalt des Prozesses im Hauptspeicher, aber beispielsweise auch über die momentan vom Prozess belegten Ressourcen.
+								Kommt es nun zu einem Deadlock, so können die benötigten Ressourcen ermittelt werden. Um die Verklemmung aufzulösen, wird nun ein Prozess, der eine Ressource besitzt, die von einem anderen Prozess angefordert wird, einfach in einen Zustand zurückversetzt, in dem er die fragliche Ressource noch nicht reserviert hatte. Die somit freigegebene Ressource kann nun einem anderen Prozess, der auch am Deadlock beteiligt ist, zugeteilt werden. Die Arbeit, die der zurückgesetzte Prozess von dem Zeitpunkt der Erstellung des Checkpoints bis zum Zeitpunkt des Deadlocks geleistet hat, geht verloren. Sobald dieser Prozess die fragliche Ressource wieder anfordert, so muss er warten, bis sie wieder frei wird. Der Vorgang des Zurücksetzen eines Prozesses in einen vergangenen Zustand wird auch als \textit{Rollback}\footnote{zurückrollen, zurückdrehen} bezeichnet.
+							\item[Behebung von Deadlocks durch Prozessabbruch]
+								Die radikalste Methode zur Behebung einer Verklemmung ist der Abbruch eines oder mehrerer der am Deadlock beteiligten Prozesse. Die Schwierigkeit liegt dabei in der Bestimmung des abzubrechenden Prozesses. Der abzubrechende Prozess muss bei Abbruch genau die Ressourcen freigeben, sodass ein anderer am Deadlock beteiligter Prozess wieder weiterarbeiten kann. Des Weiteren sollte ein Prozess zum Abbruch ausgewählt werden, der einfach wieder gestartet werden kann. Ein Beispiel hierfür ein Compiler\footnote{Ein Compiler ist ein Programm, das Programm-Quellcode, welcher in einer bestimmten Programmiersprache verfasst wurde, in eine Form übersetzen kann, sodass ein Rechner zum direkten Ausführen des Programmes in der Lage ist. \cite{CompilerWikipedia}}. Der Ablauf eines Compilers kann immer wiederholt werden, da er nur eine Quellcode-Datei benötigt und daraus eine ausführbare Datei erstellt. Der erste, unterbrochene Durchlauf hat keinen Einfluss auf den neuen Ablauf. Anders ist dies beispielsweise bei Prozessen, die schreibend auf Datenbanken zugreifen. Addiert ein Prozess beispielsweise zu einer Zahl, die in einer Datenbank gespeichert ist, die Zahl 5, so kann ein abgebrochener und ein vollführter Durchlauf entweder dazu führen, dass die Zahl 5 addiert wird, oder auch, dass die Zahl 10 (5 + 5) addiert wird. Die Addition von 10 würde die Datenbank in einen inkonsistenten Zustand bringen.								
+						\end{description}
+						
+					\item[Verhinderung von Deadlocks]
+					Noch besser als die Behebung eines Deadlocks ist es, sicherzustellen, dass ein Deadlock gar nicht eintreten kann.
+					HIER BIN ICH
+					
+				\end{description}

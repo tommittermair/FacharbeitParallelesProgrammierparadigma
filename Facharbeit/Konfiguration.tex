@@ -1,0 +1,61 @@
+% Abschlussarbeit am Ende der Oberschule
+% Facharbeit zum parallelen Programmierparadigma
+% Thomas Mittermair
+% Oberschulzentrum J. Ph. Fallmerayer Brixen
+
+% define document class
+\documentclass[11pt, a4paper, titlepage, twoside, german]{report}
+
+% include required packages
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[ngerman, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{times}
+\usepackage{url}
+\usepackage{appendix}
+\usepackage{hyperref}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+% use bibliography style
+\bibliographystyle{ieeetr}
+
+% specify margins for two-sided print
+\oddsidemargin 3cm
+\evensidemargin 1cm
+\textwidth 12cm
+
+% define header format
+\fancypagestyle{plain}{
+	\fancyhf{} % Clear header/footer
+	\fancyhead[LE,RO]{\leftmark}
+	\fancyfoot[LE,RO]{\textit{Paralleles Programmierparadigma}}
+	\fancyfoot[RE,LO]{\thepage}
+	\fancyfoot[CE, CO]{}
+}
+\pagestyle{plain} % Set page style to plain.
+
+\headheight 26pt
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% define style for appendix header
+\newcommand{\appendixheader}{ % specify header for appendix
+    \fancyhf{}
+    \fancyhead[LE, RO]{APPENDIX \rightmark}
+    \fancyfoot[LO, RE]{Name 1, Name 2}
+    \fancyfoot[RO, LE]{\thepage}
+}
+
+% code for creating empty pages
+% no headers on empty pages before new chapter
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{empty}\cleardoublepage}
+
+\setcounter{secnumdepth}{6} % setting level of numbering

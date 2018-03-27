@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+
+\bibitem{ModerneBetriebssysteme}
+A.~S. Tanenbaum, {\em {Moderne Betriebssysteme}}.
+\newblock Pearson Studium, 2., aktualisierte auflage~ed., 2003.
+
+\bibitem{SequentiellDuden}
+B.~I. GmbH, ``{sequentiell},'' 2018.
+
+\bibitem{ParallelDuden}
+B.~I. GmbH, ``{parallel},'' 2018.
+
+\bibitem{Kausalitaet}
+H.~Spektrum Akademischer~Verlag, ``{Lexikon der Physik. Kausalität},'' 1998.
+
+\bibitem{ParaProgLoogen}
+R.~Loogen, ``{Parallele Programmierung},'' 2009.
+
+\bibitem{Objektorientierung}
+T.~Slawig, ``{Objektorientierte Programmierung – Grundlagen und -Begriffe},''
+  2004.
+
+\bibitem{PhasenBefehlsbearbeitung}
+C.~Siemers, ``{Prozessorgrundlagen: Von-Neumann-Architektur, Teil 3 - Phasen
+  der Befehlsbearbeitung},'' 2004.
+
+\bibitem{FunktionsweiseComputersysteme}
+L.~Morgenstern, ``{Einführung in die Funktionsweise von Computersystemen},''
+  2017.
+
+\bibitem{ParaProgRauber}
+G.~Rauber, Thomas und~Rünger, {\em {Parallel Programming for Multicore and
+  Cluster Systems; Second Edition}}.
+\newblock Springer, 2013.
+
+\bibitem{GrundlagenParallelisierung}
+S.~Kegel, Philipp und~Gorlatch, ``{Grundlagen der Parallelisierung},'' 2009.
+
+\bibitem{EmpirieDuden}
+B.~I. GmbH, ``{Empirie},'' 2018.
+
+\bibitem{EndeHardwareMiniaturisierung}
+F.~Beyaz, ``{Parallele Multiprozessorsysteme - Das Ende der Hardware
+  Miniaturisierung?},'' 2009.
+
+\bibitem{LRZ}
+Leibniz-Rechenzentrum, ``{SuperMUC Petascale System}.''
+
+\bibitem{TeileUndHerrsche}
+B.~Möller, ``{Die Teile-und-Herrsche-Strategie},'' 2012.
+
+\bibitem{EinfacheSortierverfahren}
+S.~Edelkamp, ``{Algorithmen und Datenstrukturen - Einfache Sortierverfahren}.''
+
+\bibitem{SprichwortKette}
+D.~Albrecht, Julia und~Frey, {\em {Sprichwörter und Psychologie - eine
+  Annäherung}}.
+\newblock Springer, 2017.
+
+\bibitem{NebenlaeufigeProg}
+G.~Herrtwich, Ralf und~Hommel, {\em {Nebenläufige Programme}}.
+\newblock Springer, 1994.
+
+\bibitem{AufbauFunktionsweiseMikroprozessoren}
+C.~Richter, ``{Einführung in Aufbau und Funktionsweise von
+  Mikroprozessoren},'' 2005.
+
+\bibitem{VektorrechnerWikipedia}
+d.~f.~E. Wikipedia, ``{Vektorprozessor}.''
+
+\bibitem{ThreadsRheinwerk}
+J.~Wolf, ``{Linux-UNIX-Programmierung - Kapitel 10: Threads},'' 2006.
+
+\bibitem{SpoolingWikipedia}
+d.~f.~E. Wikipedia, ``{Spooling}.''
+
+\bibitem{DeadlockWikipedia}
+d.~f.~E. Wikipedia, ``{Deadlock (Informatik)}.''
+
+\bibitem{CompilerWikipedia}
+d.~f.~E. Wikipedia, ``{Compiler}.''
+
+\end{thebibliography}
