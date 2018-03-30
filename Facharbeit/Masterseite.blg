@@ -45,4 +45,10 @@ Warning--entry type for "DijkstraWikipedia" isn't style-file defined
 --line 195 of file Literatur.bib
 Warning--entry type for "BankieralgorithmusWikipedia" isn't style-file defined
 --line 202 of file Literatur.bib
-(There were 22 warnings)
+Warning--entry type for "DatenwortWikipedia" isn't style-file defined
+--line 209 of file Literatur.bib
+Warning--entry type for "SpeicherbusWikibooks" isn't style-file defined
+--line 216 of file Literatur.bib
+Warning--entry type for "MoveBefehlWikibooks" isn't style-file defined
+--line 223 of file Literatur.bib
+(There were 25 warnings)
