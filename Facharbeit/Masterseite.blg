@@ -39,4 +39,10 @@ Warning--entry type for "DeadlockWikipedia" isn't style-file defined
 --line 173 of file Literatur.bib
 Warning--entry type for "CompilerWikipedia" isn't style-file defined
 --line 180 of file Literatur.bib
-(There were 19 warnings)
+Warning--entry type for "SichererUnsichererZustandBennewitz" isn't style-file defined
+--line 187 of file Literatur.bib
+Warning--entry type for "DijkstraWikipedia" isn't style-file defined
+--line 195 of file Literatur.bib
+Warning--entry type for "BankieralgorithmusWikipedia" isn't style-file defined
+--line 202 of file Literatur.bib
+(There were 22 warnings)
