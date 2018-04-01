@@ -51,4 +51,12 @@ Warning--entry type for "SpeicherbusWikibooks" isn't style-file defined
 --line 216 of file Literatur.bib
 Warning--entry type for "MoveBefehlWikibooks" isn't style-file defined
 --line 223 of file Literatur.bib
-(There were 25 warnings)
+Warning--entry type for "SpinlockWikipedia" isn't style-file defined
+--line 230 of file Literatur.bib
+Warning--entry type for "SemaphorWikipedia" isn't style-file defined
+--line 237 of file Literatur.bib
+Warning--entry type for "SemaphorBorchert" isn't style-file defined
+--line 244 of file Literatur.bib
+Warning--entry type for "BetriebssystemeNetzmafia" isn't style-file defined
+--line 252 of file Literatur.bib
+(There were 29 warnings)

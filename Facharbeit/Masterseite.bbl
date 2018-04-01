@@ -77,18 +77,6 @@ d.~f.~E. Wikipedia, ``{Spooling}.''
 \bibitem{DeadlockWikipedia}
 d.~f.~E. Wikipedia, ``{Deadlock (Informatik)}.''
 
-\bibitem{CompilerWikipedia}
-d.~f.~E. Wikipedia, ``{Compiler}.''
-
-\bibitem{SichererUnsichererZustandBennewitz}
-M.~Bennewitz, ``{Systeme I: Betriebssysteme - Kapitel 6: Deadlocks},'' 2013.
-
-\bibitem{DijkstraWikipedia}
-d.~f.~E. Wikipedia, ``{Edsger W. Dijkstra}.''
-
-\bibitem{BankieralgorithmusWikipedia}
-d.~f.~E. Wikipedia, ``{Bankieralgorithmus}.''
-
 \bibitem{DatenwortWikipedia}
 d.~f.~E. Wikipedia, ``{Datenwort}.''
 
@@ -98,5 +86,29 @@ d.~f.~B. Wikibooks, ``{Computerhardware: Hauptplatine: Bus: Speicherbus}.''
 \bibitem{MoveBefehlWikibooks}
 d.~f.~B. Wikibooks, ``{Assembler-Programmierung für x86-Prozessoren/
   Befehlsreferenz}.''
+
+\bibitem{SpinlockWikipedia}
+d.~f.~E. Wikipedia, ``{Spinlock}.''
+
+\bibitem{BetriebssystemeNetzmafia}
+J.~Plate, ``{Betriebssysteme}.''
+
+\bibitem{DijkstraWikipedia}
+d.~f.~E. Wikipedia, ``{Edsger W. Dijkstra}.''
+
+\bibitem{SemaphorWikipedia}
+d.~f.~E. Wikipedia, ``{Semaphor (Informatik)}.''
+
+\bibitem{SemaphorBorchert}
+A.~F. Borchert, ``{Systemnahe Software II},'' 2008.
+
+\bibitem{CompilerWikipedia}
+d.~f.~E. Wikipedia, ``{Compiler}.''
+
+\bibitem{SichererUnsichererZustandBennewitz}
+M.~Bennewitz, ``{Systeme I: Betriebssysteme - Kapitel 6: Deadlocks},'' 2013.
+
+\bibitem{BankieralgorithmusWikipedia}
+d.~f.~E. Wikipedia, ``{Bankieralgorithmus}.''
 
 \end{thebibliography}
