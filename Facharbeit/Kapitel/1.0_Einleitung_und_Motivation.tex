@@ -11,6 +11,8 @@
 
 		\subsection{Begriffe der Sequentialität und Parallelität}
 
+			Die Ausdrücke \textit{Sequentialität} und \textit{Parallelität} stellen Schlüsselbegriffe im Zusammenhang mit dieser Arbeit dar. Der Online-Duden gibt für diese beiden Begriffe die nun folgenden Definitionen.
+			
 			\begin{description}
 			  \item[Sequentialität]
 				  Der Begriff \textit{Sequentialität} hängt eng mit dem Adjektiv \textit{sequenziell} zusammen. Vorgänge, die sequenziell ablaufen, spielen sich aufeinander folgend und der Reihe nach ab. \cite{SequentiellDuden}
@@ -20,7 +22,7 @@
 
 			\subsubsection{Sequentialität und Parallelität im Alltag und in der Natur}
 			
-				Jeder Mensch ist, oft ohne davon Kenntnis zu nehmen, täglich mit sequentiellen und parallelen Vorgängen und Abläufen konfrontiert. Ein alltägliches Beispiel für Sequentialität ist der Begriff von Zeit, denn eine Sekunde vergeht erst, sobald die vorherige Sekunde vollkommen abgelaufen ist. Zeit läuft somit vollkommen sequentiell ab, wodurch das Kausalitäts-Prinzip, also das Prinzip von Ursache und Wirkung, erst möglich wird, denn hätte die Zeit diese Eigenschaft nicht, so wären Ursache und Wirkung nicht klar voneinander unterscheidbar. Folglich geschieht in der Natur nichts ohne Grund, und das bedeutet wiederrum, dass es zu jedem beliebigen Ereignis ein anderes Ereignis gibt, dass in der Vergangenheit liegt und das nachfolgende Ereignis hervorruft. \cite{Kausalitaet} Viele Vorgänge in der Natur laufen hingegen parallel ab. Beispielsweise findet stets eine simultane Weiterentwicklung statt, denn jeder Mensch und auch jede Pflanze entwickeln sich gleichzeitig, und nicht nacheinander, weiter. \cite{ParaProgLoogen}
+				Jeder Mensch ist, oft ohne davon Kenntnis zu nehmen, täglich mit sequentiellen und parallelen Vorgängen und Abläufen konfrontiert. Ein alltägliches Beispiel für Sequentialität ist der Begriff von Zeit, denn eine Sekunde vergeht erst, sobald die vorherige Sekunde vollkommen abgelaufen ist. Zeit läuft somit vollkommen sequentiell ab, wodurch das Kausalitäts-Prinzip, also das Prinzip von Ursache und Wirkung, erst möglich wird, denn hätte die Zeit diese Eigenschaft nicht, so wären Ursache und Wirkung nicht klar voneinander unterscheidbar. Folglich geschieht in der Natur nichts ohne Grund, und das bedeutet wiederum, dass es zu jedem beliebigen Ereignis ein anderes Ereignis gibt, das in der Vergangenheit liegt und das nachfolgende Ereignis hervorruft. \cite{Kausalitaet} Viele Vorgänge in der Natur laufen hingegen parallel ab. Beispielsweise findet stets eine simultane Weiterentwicklung statt, denn jeder Mensch und auch jede Pflanze entwickeln sich gleichzeitig, und nicht nacheinander, weiter. \cite{ParaProgLoogen}
 				
 			\subsubsection{Sequentialität und Parallelität in der Informatik}
 				\label{SequUndParaInformatik}
@@ -30,7 +32,7 @@
 				\begin{description}
 			  		\item[Ausführungsschema eines Prozessors]
 						Der Prozessor, auch CPU (Central Processing Unit) genannt, ist das Herzstück eines Rechners. Er ist die Komponente, welche für die Ausführung und Abarbeitung der Befehle zuständig ist. Ein Prozessor kann dabei im Normalfall, also sofern er nur aus einem Kern besteht, nur eine Operation zugleich ausführen. Diese Eigenschaft leitet sich vom Schema ab, nach welchem die Mehrheit aller im Moment auf dem Markt befindlichen CPUs arbeiten. Dabei handelt es sich um den \textit{Von-Neumann-Zyklus}, allgemeiner auch als \textit{Befehlszyklus} bekannt.
-						Die Abarbeitung eines Befehls geschieht dabei nach dem folgenden Schema:
+						Die Abarbeitung eines Befehls geschieht dabei meist nach dem folgenden Schema:
 						
 						\begin{enumerate}
 							\item \textbf{Instruction-Fetch-Phase (IF), Befehlholungs-Phase}: In dieser Phase wird der Befehlscode vom Hauptspeicher in ein Register des Prozessors geladen.
@@ -43,7 +45,7 @@
 						Jeder einzelne Befehl durchläuft dieses Schema, das bedeutet, nachdem ein Befehl die Write-Back-Phase abgeschlossen hat, kann der nächste Befehl mit der Instruction-Fetch-Phase beginnen. \cite{PhasenBefehlsbearbeitung} \cite{FunktionsweiseComputersysteme}\\
 						
 						Diese Sequentialität des Befehlszyklus soll nun an Hand eines Beispiels der Abarbeitung von drei Befehlen verdeutlicht werden.
-						Die Abbildung \nameref{fig:BefehlszylusOhnePipelining} soll diesen Vorgang grafisch veranschaulichen.
+						Die Abbildung \ref{fig:BefehlszylusOhnePipelining} soll diesen Vorgang grafisch veranschaulichen.
 						
 						\begin{figure}
 							\centering	
@@ -58,7 +60,7 @@
 				
 	\section{Gründe für das parallele Programmierparadigma}
 				
-		Neben der besseren Modellierung von parallelen Vorgängen bietet die Parallelisierung noch einige weitere Vorteile. Schon seit einigen Jahren wird die parallele Programmierung im Bereich des Hochleistungs-Rechnens verwendet. Genauere Simulationen oder auch die Simulationen von komplexeren Problemen benötigt immer mehr Rechenleistung und auch Speicherplatz. Ein oft genanntes Beispiel sind in diesem Zusammenhang die Wetter-Simulationen, welche auf komplizierten mathematischen Modellen basieren. Das Vorhersagen der zukünftigen Entwicklung der Atmosphäre ist nur durch die Verwendung eines Modells und einer daraus resultierenden Simulation möglich.
+		Neben der besseren Modellierung von parallelen Vorgängen bietet die Parallelisierung noch einige weitere Vorteile. Schon seit einigen Jahren wird die parallele Programmierung im Bereich des Hochleistungs-Rechnens verwendet. Genauere Simulationen oder auch die Simulationen von komplexeren Problemen benötigen immer mehr Rechenleistung und auch Speicherplatz. Ein oft genanntes Beispiel sind in diesem Zusammenhang die Wetter-Simulationen, welche auf komplizierten mathematischen Modellen basieren. Das Vorhersagen der zukünftigen Entwicklung in der Atmosphäre ist nur durch die Verwendung eines Modells und einer daraus resultierenden Simulation möglich.
 		Die Schwierigkeit bei Computer-Simulationen liegt allerdings darin, dass sie meist einen großen Rechenaufwand nach sich ziehen. Ein nicht leistungsfähiger Rechner kann die Simulation selbst oder auch die Genauigkeit des resultierenden Ergebnisses erheblich einschränken. Aus diesem Grund werden Parallelrechner\footnote{Ein Parallelrechner ist ein Rechner, der über mehrere Ausführungseinheiten (z.B. Kerne oder Prozessoren) verfügt und somit echte Parallelverarbeitung unterstützt.} oft im Zusammenhang mit Computersimulationen verwendet. Um solche Rechner ausnutzen zu können, muss die durchzuführende Berechnung in mehrere, kleinere Teile zerlegt werden, welche dann den einzelnen, parallelen Abarbeitungseinheiten zugeordnet werden können. Diese einzelnen Berechnungen sollten unabhängig voneinander ablaufen, und auch der Algorithmus, der angewendet wird, muss in parallel ausführbare Einheiten zerlegbar sein. Um eine parallele Ausführung zu ermöglichen, muss der Algorithmus allerdings in einer Programmiersprache verfasst werden, welche entweder die Parallelisierung direkt, durch Hinzunahme von externen Bibliotheken oder auch durch spezielle Compiler-Direktiven unterstützt, welche zu einer gewöhnlichen Programmiersprache wie beispielsweise C oder Java hinzugefügt werden. \cite{ParaProgRauber}\\
 		
 		\subsection{Möglichkeiten der Leistungserhöhung}
@@ -73,10 +75,10 @@
 
 		\subsection{Mooresches Gesetz}
 		
-			Einer der Mitbegründer von Intel, Gordon Moore, formulierte im Jahr 1965 das nach ihm benannte Mooresche Gesetz. Dieses besagt, dass sich die Anzahl der Transistoren, welche in einem Prozessor enthalten sind, alle 18 Monate verdoppelt. Diese Aussage traf Moore in Bezug auf die sich damals schnell entwickelnde Halbleiter-Industrie. Zehn Jahre später, im Jahr 1975, relativierte er die von ihm formulierte Regel, in dem er die Verdopplung der Anzahl der Transistoren in einem Chip von nun an auf in etwa alle zwei Jahre voraussagte. In diesem Zusammenhang muss allerdings erwähnt werden, dass dieses Gesetz auf Empirie\footnote{Empirie bezeichnet auf Basis von Erfahrung gewonnenes Wissen. \cite{EmpirieDuden}} basiert, und folglich für die Wissenschaft genau genommen keinerlei Bedeutung hat.
+			Einer der Mitbegründer von Intel, Gordon Moore, formulierte im Jahr 1965 das nach ihm benannte Mooresche Gesetz. Dieses besagt, dass sich die Anzahl der Transistoren, welche in einem Prozessor enthalten sind, in etwa alle 18 Monate verdoppelt. Diese Aussage traf Moore in Bezug auf die sich damals schnell entwickelnde Halbleiter-Industrie. Zehn Jahre später, im Jahr 1975, relativierte er die von ihm formulierte Regel, indem er die Verdopplung der Anzahl der Transistoren in einem Chip von nun an auf in etwa alle zwei Jahre voraussagte. In diesem Zusammenhang muss allerdings erwähnt werden, dass dieses Gesetz auf Empirie\footnote{Empirie bezeichnet auf Basis von Erfahrung gewonnenes Wissen. \cite{EmpirieDuden}} basiert, und folglich für die Wissenschaft genau genommen keinerlei Bedeutung hat.
 			Im Jahr 2003 hielt Moore einen Vortrag über die Zukunft der Halbleiterbranche an der \textit{International Solid-State Cicuits Conference (ISSCC)}, während welchem er sich eingestand, dass das nach ihm benannte Gesetz wohl in den nächsten Jahren seine Gültigkeit verlieren würde. \cite{EndeHardwareMiniaturisierung}\\
-			Schenkt man Moore und den Gesetzen der Physik Glauben, so wird die zweite der unter \nameref{MoeglichkeitenLeistungserhoehung} genannten Möglichkeit die Zukunft der Informatik bestimmen.
-			Die Abbildung \autoref{fig:MoorschesGesetz} verdeutlicht nochmals den Zusammenhang zwischen der historischen Entwicklung der Anzahl der Transistoren auf einem Prozessor und dem Mooreschen Gesetz. Dabei sei erwähnt, dass die Skalierung der y-Achse dieses Graphes keineswegs linear ist, sondern logarithmisch erfolgt.
+			Schenkt man Moore und den Gesetzen der Physik Glauben, so wird die zweite der unter Kapitel  \ref{MoeglichkeitenLeistungserhoehung} genannten Möglichkeit die Zukunft der Informatik bestimmen.
+			Die Abbildung \ref{fig:MoorschesGesetz} verdeutlicht nochmals den Zusammenhang zwischen der historischen Entwicklung der Anzahl der Transistoren auf einem Prozessor und dem Mooreschen Gesetz. Dabei sei erwähnt, dass die Skalierung der y-Achse dieses Graphes keineswegs linear ist, sondern logarithmisch erfolgt.
 		
 			\begin{figure}
 				\centering	
