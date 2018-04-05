@@ -111,4 +111,46 @@ M.~Bennewitz, ``{Systeme I: Betriebssysteme - Kapitel 6: Deadlocks},'' 2013.
 \bibitem{BankieralgorithmusWikipedia}
 d.~f.~E. Wikipedia, ``{Bankieralgorithmus}.''
 
+\bibitem{ParallelrechnerAmirnaderi}
+H.~Amirnaderi, ``{AMD MP Prozessoren},'' 2003.
+
+\bibitem{GrundlagenParallelisierungKegel}
+S.~Kegel, Philipp und~Gorlatch, ``{Grundlagen der Parallelisierung},'' 2009.
+
+\bibitem{ALUWikipedia}
+d.~f.~E. Wikipedia, ``{Arithmetisch-logische Einheit}.''
+
+\bibitem{FPUWikipedia}
+d.~f.~E. Wikipedia, ``{Gleitkommaeinheit}.''
+
+\bibitem{RechnerverbundWikipedia}
+d.~f.~E. Wikipedia, ``{Rechnerverbund}.''
+
+\bibitem{GridWikipedia}
+d.~f.~E. Wikipedia, ``{Grid-Computing}.''
+
+\bibitem{FlynnWikipedia}
+d.~f.~E. Wikipedia, ``{Michael J. Flynn}.''
+
+\bibitem{BSMultiprozessorsysteme}
+R.~Prodan, ``{Betriebssysteme für Multiprozessorsysteme},'' 2012.
+
+\bibitem{MehrkernprozessorWikipedia}
+d.~f.~E. Wikipedia, ``{Mehrkernprozessor}.''
+
+\bibitem{MehrprozessorsystemWikipedia}
+d.~f.~E. Wikipedia, ``{Mehrprozessorsystem}.''
+
+\bibitem{MulticomputerIGI}
+D.~o.~K. IGI~Global, ``{What is Multicomputer}.''
+
+\bibitem{TaxonomieWikipedia}
+d.~f.~E. Wikipedia, ``{Taxonomie}.''
+
+\bibitem{FlynnsTaxonomie}
+M.~Zemann, ``{Flynn's Taxonomie},'' 2004.
+
+\bibitem{FlynnscheKlassifikationWikipedia}
+d.~f.~E. Wikipedia, ``{Flynnsche Klassifikation}.''
+
 \end{thebibliography}

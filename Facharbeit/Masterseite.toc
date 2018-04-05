@@ -34,4 +34,13 @@
 \contentsline {subsubsection}{\numberline {2.3.2.2}L\IeC {\"o}sungen zum Deadlock}{44}{subsubsection.2.3.2.2}
 \contentsline {subsubsection}{\numberline {2.3.2.3}L\IeC {\"o}sungen zur Starvation}{51}{subsubsection.2.3.2.3}
 \contentsline {section}{\numberline {2.4}Parallelrechner}{51}{section.2.4}
-\contentsline {chapter}{Literaturverzeichnis}{53}{chapter*.2}
+\contentsline {subsection}{\numberline {2.4.1}Begriffserkl\IeC {\"a}rung}{51}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Ebenen der Parallelit\IeC {\"a}t}{51}{subsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Mehrere Abarbeitungseinheiten innerhalb eines Prozessors}{52}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Mehrere Abarbeitungseinheiten innerhalb eines Rechners}{52}{subsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {2.4.2.3}Mehrere Abarbeitungseinheiten innerhalb eines Clusters}{52}{subsubsection.2.4.2.3}
+\contentsline {subsubsection}{\numberline {2.4.2.4}Mehrere Abarbeitungseinheiten innerhalb eines Grids}{53}{subsubsection.2.4.2.4}
+\contentsline {subsection}{\numberline {2.4.3}Arten und Einteilungen von Parallelrechnern}{54}{subsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.3.1}Arten von Parallelrechnern}{54}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {2.4.3.2}Einteilung der Architekturen nach der Flynnschen Klassifikation}{55}{subsubsection.2.4.3.2}
+\contentsline {chapter}{Literaturverzeichnis}{59}{chapter*.2}

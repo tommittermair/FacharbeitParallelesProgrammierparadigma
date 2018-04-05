@@ -81,6 +81,7 @@
 				https://www.elektronik-kompendium.de/sites/com/1705221.htm --> Vielleicht Netzwerktechnik-Fibel: Grundlagen, Übertragungstechnik und Protokolle, Anwendungen und Dienste, Sicherheit --> Buch zur Webseite
 				
 			\subsubsection{Vektorrechner}
+				\label{Vektorrechner}
 			
 				Eine weitere Möglichkeit der Realisierung von Parallelem Rechnen sind die sogenannten \textit{Vektorrechner}, auch \textit{Vektorprozessoren} oder \textit{Arrayrechner} genannt.\\
 				Das im Namen dieser Technologie enthaltene \textit{Vektor} oder \textit{Array} rührt daher, dass die gleichen Berechnungen gleichzeitig auf einer Menge von Daten ausgeführt werden. Diese Daten sind in diesem Fall meist in Form eines \textit{n}-elementigen Arrays, also eines \textit{n}-dimensionalen Vektors, organisiert.
@@ -537,4 +538,154 @@
 				
 	\section{Parallelrechner}
 		
-		HIER BIN ICH
+		\subsection{Begriffserklärung}
+			\label{ParallelrechnerBegriffserklaerung}
+			
+			Da das Thema des nun folgenden Abschnitts \textit{Parallelrechner} sind, ist es notwendig, zunächst zu definieren, was man unter diesem Begriff versteht.\\
+			Ein \textit{Parallelrechner} ist ein Rechner, der über mehrere Verarbeitungseinheiten verfügt, die gemeinsam an einem Problem arbeiten. Aus diesem Grund müssen die einzelnen Komponenten vollkommen aufeinander abgestimmt sein. Unter dem Begriff \textit{Verarbeitungseinheit} ist hier nicht zwingend ein Prozessor oder ein CPU-Kern zu verstehen, sondern dabei kann es sich auch um einen gesamten Rechner handeln. \cite{ParallelrechnerAmirnaderi}
+			
+		\subsection{Ebenen der Parallelität}
+			\label{EbenenParallelitaet}
+		
+			Parallelrechner können, wie die Definition aus Punkt \ref{ParallelrechnerBegriffserklaerung} schon andeutet, auf verschiedenen Ebenen realisiert werden. Man spricht dabei von unterschiedlichenen \textit{Ebenen der Parallelität}.\\
+			Die wichtigsten Ebenen der Parallelität werden nun eingeführt. \cite{GrundlagenParallelisierungKegel}
+			
+			\subsubsection{Mehrere Abarbeitungseinheiten innerhalb eines Prozessors}
+				\label{MehrereAbarbeitungseinheitenProzessor}
+				
+				Die untersten Ebene der Parallelität findet sich direkt auf der Ebene des kleinsten Abarbeitungseinheit, nämlich dem Prozessor selbst.\\
+				Verfügt ein Prozessor beispielsweise über mehrere ALUs\footnote{Die ALU (\textit{Arithmetic Logic Unit}), auch \textit{Arithmetisch-logische Einheit} genannt, ist ein elektronisches Rechenwerk, welches in Prozessoren zum Einsatz kommt. \cite{ALUWikipedia}} bzw. FPUs,\footnote{Die FPU (\textit{Floating Point Unit}), auch \textit{Gleitkommaeinheit} genannt, ist ein elektronisches Rechenwerk, welches in Prozessoren Operationen auf Gleitkommazahlen ausführen kann. Somit stellt sie eine Erweiterung der ALU dar. \cite{FPUWikipedia}} so liegt bereits auf dieser Ebene eine Parallelverarbeitung vor, da mehrere Daten gleichzeitig, also parallel, verarbeitet werden können. Die Grafik \ref{fig:EbenenDerParallelitaetProzessor} soll diesen Sachverhalt nochmals grafisch verdeutlichen.
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=4cm]{Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png}
+					\caption{Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Prozessors.}
+					\label{fig:EbenenDerParallelitaetProzessor}
+				\end{figure}
+			
+			\subsubsection{Mehrere Abarbeitungseinheiten innerhalb eines Rechners}
+				\label{MehrereAbarbeitungseinheitenRechner}
+			
+				Die nächst-größere Ebene stellt der Rechner selbst dar.\\
+				Sind in einem Rechner mehrere Prozessoren bzw. CPU-Kerne verbaut, so kann auch in diesem Fall Parallelisierung stattfinden. Die Grafik \ref{fig:EbenenDerParallelitaetRechner} zeigt diese Situation grafisch.
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=4cm]{Abbildungen/Ebenen_der_Parallelitaet_Rechner.png}
+					\caption{Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Rechners.}
+					\label{fig:EbenenDerParallelitaetRechner}
+				\end{figure}
+			
+			\subsubsection{Mehrere Abarbeitungseinheiten innerhalb eines Clusters}
+				\label{MehrereAbarbeitungseinheitenCluster}
+			
+				Werden nun mehrere Rechner verbunden (also vernetzt), so spricht man von einem \textit{Rechnerverbund} oder auch \textit{Rechnercluster}. \cite{RechnerverbundWikipedia}\\
+				Da hierbei mehrere Rechner involviert sind, die jeweils unabhängig voneinander Aufgaben erledigen können, findet sich auch hier Parallelität.\\
+				Die Grafik \ref{fig:EbenenDerParallelitaetCluster} soll diesen Umstand grafisch veranschaulichen.
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=4cm]{Abbildungen/Ebenen_der_Parallelitaet_Cluster.png}
+					\caption{Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Clusters.}
+					\label{fig:EbenenDerParallelitaetCluster}
+				\end{figure}
+			
+			\subsubsection{Mehrere Abarbeitungseinheiten innerhalb eines Grids}
+				\label{MehrereAbarbeitungseinheitenGrid}
+			
+				Die höchste Ebene der Parallelität stellt ein \textit{Grid}, zu Deutsch \textit{Raster}, dar. In diesem Fall werden mehrere Rechner oder auch ganze Cluster zusammengeschlossen, also über ein Verbindungsnetzwerk verbunden. Auch in diesem Fall liegt also Parallelverarbeitung vor. Somit ist Grid-Computing eine Form des Hochleistungsrechnens, bei welcher ein virtueller Supercomputer kreiert wird. Damit werden meist sehr rechenintensive Probleme, wie beispielsweise in der Pharmaforschung und den Wirtschaftswissenschaften, gelöst. \cite{GridWikipedia}\\
+				Die Abbildung \ref{fig:EbenenDerParallelitaetGrid} stellt dies in Form einer Grafik dar. Die Wolke steht dabei symbolisch für das Verbindungsnetzwerk.
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=5cm]{Abbildungen/Ebenen_der_Parallelitaet_Grid.png}
+					\caption{Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Grids.}
+					\label{fig:EbenenDerParallelitaetGrid}
+				\end{figure}
+			
+		\subsection{Arten und Einteilungen von Parallelrechnern}
+		
+			Es gibt verschiedene Ansätze, Parallelrechner zu klassifizieren. Eine bekannte Art ist die Klassifikation anhand der Art des Systems. Auch sehr verbreitet ist die Einteilung nach der Architekturen nach Flynn\footnote{Michael J. Flynn (* 1934) ist ein US-amerikanischer Elektrotechniker. \cite{FlynnWikipedia}} und die Einteilung nach der Speicheranordnung. Auf diese drei Ansätze wird nun näher eingegangen.
+			
+			\subsubsection{Arten von Parallelrechnern}
+				
+				Die Arten von Parallelrechnern sind ein Einteilungskonzept, welches auf den in Kapitel \ref{EbenenParallelitaet} erläuterten Ebenen der Parallelität basiert.\\
+				Nach diesem Schema existieren drei Arten von Parallelrechnern, welche im folgenden genannt und erläutert werden. \cite{BSMultiprozessorsysteme}
+				
+				\begin{description}
+					\item [Multikernprozessor-Systeme]
+						Unter einem \textit{Multikernprozessor-System}, auch \textit{Mehrkernprozessor-System} genannt, versteht man einen Rechner, der über eine einzige CPU verfügt. Dieser Prozessor verfügt allerdings über mehrere Kerne, die auf einem Chip vereint sind. \cite{MehrkernprozessorWikipedia}\\
+						Hier liegt also die unter Kapitel \ref{MehrereAbarbeitungseinheitenProzessor} eingeführte Ebene der Parallelität von mehreren Abarbeitungseinheiten innerhalb eines Prozessors vor.
+					
+					\item [Multiprozessor-Systeme]
+						Ein \textit{Multiprozessor-System} oder \textit{Mehrprozessor-System} ist ein Rechner, der über mehr als einen Prozessor verfügt. \cite{MehrprozessorsystemWikipedia}\\
+						In diesem Fall handelt es sich um die unter Kapitel \ref{MehrereAbarbeitungseinheitenRechner} eingeführte Ebene der Parallelverarbeitung von mehreren Abarbeitungseinheiten innerhalb eines Rechners.
+					
+					\item [Multicomputer-Systeme]
+						Von einem \textit{Multicomputer-System} spricht man, wenn mehrere Rechner so über ein Kommunikationsnetzwerk verbunden werden, dass sie zusammen an einem gemeinsamen Problem arbeiten können. \cite{MulticomputerIGI}\\
+						Somit liegen hier folglich die unter Kapitel \ref{MehrereAbarbeitungseinheitenCluster} bzw. \ref{MehrereAbarbeitungseinheitenGrid} eingeführten Ebenen der Parallelverarbeitung von mehreren Abarbeitungseinheiten innerhalb eines Clusters bzw. Grids vor.
+				\end{description}
+				
+			\subsubsection{Einteilung der Architekturen nach der Flynnschen Klassifikation}
+				
+				Michael J. Flynn, ein US-amerikanischer Elektrotechniker \cite{FlynnWikipedia}, führte im Jahr 1966 eine Rechnerarchitektur-Einteilung ein, welche als \textit{Flynnsche Klassifikation} oder \textit{Flynnsche Taxonomie \footnote{Eine Taxonomie ist ein einheitliches Schema, mit dem Objekte nach bestimmten Kriterien in Kategorien eingeordnet werden. \cite{TaxonomieWikipedia}}} bezeichnet wird.
+				
+				\begin{description}
+					\item [Befehlsstrom]
+						Unter einem \textit{Befehlsstrom} versteht man Befehle, welche auf bestimmten Daten ausgeführt werden. Jeder Befehlsstrom muss dabei über einen eigenen Befehlszähler, der den nächsten auszuführenden Befehl des jeweiligen Befehlsstromes speichert. \cite{FlynnsTaxonomie}
+					\item [Datenstrom]
+						Ein \textit{Datenstrom} ist eine Sequenz von Daten, auf denen Befehle ausgeführt werden können. \cite{FlynnsTaxonomie}
+				\end{description}
+			
+				Auf Grund der Anzahl der vorhandenen Befehls- und Datenströme unterscheidet Flynn vier verschiedenen Kategorien, welche in der Übersichtstabelle \ref{tab:UebersichtFlynnscheKlassifikation} aufgeführt sind.
+				
+				\begin{table}
+					\caption{Übersicht zur Flynnschen Klassifikation.}
+					\begin{tabular}{c|c|c}
+						& Single Instruction & Multiple Instruction \\
+						\hline
+						Single Data & SISD & MISD \\
+						Multiple Data & SIMD & MIMD \\
+					\end{tabular}
+					\label{tab:UebersichtFlynnscheKlassifikation}
+				\end{table}
+			
+				Diese vier Kategorien werden im Folgenden näher erläutert.
+			
+				\begin{description}
+					\item [Single Instruction, Single Data (SISD)]
+						Ein SISD-System verfügt nur über eine Ausführungseinheit, welche Zugriff auf einen einzigen Programm- und Daten-Speicher besitzt. In jedem Schritt lädt die Ausführungseinheit einen Befehl und ein Daten-Element, führt den Befehl auf dem Element aus und schreibt das Ergebnis in den Speicher zurück.\\
+						Somit ist ein solches System ein gewöhnlicher, sequentiell arbeitender Rechner, welcher nach dem Von-Neumann-Modell arbeitet.
+						
+					\item [Multiple Instruction, Single Data (MISD)]
+						Ein MISD-System besteht aus mehreren Ausführungseinheiten, wobei jede Einheit einen eigenen Programm-Speicher besitzt. Alle Einheiten teilen sich allerdings einen Daten-Speicher. In jedem Schritt erhält jede Ausführungseinheit \textit{das selbe} Daten-Element aus dem Daten-Speicher. Jede Einheit lädt allerdings den auszuführenden Befehl aus seinem privaten Programm-Speicher. Das führt dazu, dass die jeweiligen Ausführungseinheiten parallel verschiedene Befehle auf identischen Daten ausführen.\\
+						Ein solches paralleles System wurde noch nie für den kommerziellen Gebrauch gefertigt.
+					
+					\item [Single Instruction, Multiple Data (SIMD)]
+						In einem SIMD-System sind mehrere Ausführungseinheiten verbaut, wobei jede Einheit Zugriff auf einen privaten Daten-Speicher besitzt. Allerdings teilen sich in diesem Fall alle Einheiten den selben Programm-Speicher, wobei eine eigens dafür konstruierte Steuerungseinheit Befehle lädt und an die Ausführungseinheiten weitergibt, was bedeutet, dass alle Einheiten das selbe Programm und damit die selben Befehle ausführen. In jedem Schritt erhalten alle Ausführungseinheiten von der Steuereinheit den selben Befehl, laden allerdings verschiedene Daten-Elemente aus ihren eigenen Daten-Speicher, auf welchen der Befehl dann ausgeführt wird.\\
+						Aus diesem Grund wird der selbe Befehl \textit{parallel und synchron} von allen Einheiten auf verschiedenen Daten-Elementen ausgeführt.\\
+						Der SIMD-Ansatz kann sehr effizient sein und wird beispielsweise bei Computer-Grafik-Algorithmen, wo die selben Befehle auf vielen Daten ausgeführt werden müssen, verwendet. Die in Kapitel \ref{Vektorrechner} erläuterten Vektorrechner lassen sich der SIMD-Klasse zuordnen.
+						
+					\item [Multiple Instruction, Multiple Data (MIMD)]
+						Ein MIMD-System verfügt über mehrere Ausführungseinheiten, welche alle Zugriff auf einen eigenen Programm- und Daten-Speicher besitzen. In jedem Schritt lädt jede Einheit einen eigenen Befehl und ein eigenes Daten-Element, führt den Befehl auf dem Element aus und schreibt das Ergebnis in den eigenen Daten-Speicher zurück.\\
+						Aus diesem Grund führen jeweils die einzelnen Ausführungseinheiten einen eigenen Befehl \textit{parallel und asynchron} auf verschiedenen Daten-Elementen aus.\\
+						Beispiele für Systeme, die der MIMD-Klasse zugeordnet werden können, sind Multikernprozessor- oder auch Cluster-Systeme. \cite{ParaProgRauber} \cite{FlynnscheKlassifikationWikipedia}
+				\end{description}
+			
+				SIMD-Systeme sind im Gegensatz zu SIMD-Systemen einfach zu programmieren, weil nur ein Programmfluss existiert, dem alle Prozessoren synchron folgen. Somit ist kein Synchronisation auf Programm-Ebene nötig. Allerdings stellt die synchrone Ausführung auch eine Einschränkung dar, da die Daten-Elemente sich unterscheiden können. Bedingungen der folgenden Form müssen aus diesem Grund in zwei getrennten Schritten ausgeführt werden.
+				
+				\lstinputlisting[language=C, breaklines=true]{Quellcode/if-Statement_SIMD-Systeme.c}
+				
+				Im ersten Schritt müssen alle Ausführungseinheiten, deren lokale Variable \textit{b} gleich 0 ist, den \textit{then}-Block der \textit{if}-Anweisung ausführen. Im zweiten Schritt müssen alle anderen Ausführungseinheiten, bei welchen dies folglich nicht zutrifft und \textit{b} ungleich 0 ist, den \textit{else}-Block ausführen.\\
+				Somit wird klar, dass MIMD-Rechner flexibler sind als SIMD-Systeme, da jede Ausführungseinheit über einen eigenen Programmfluss verfügt.\\
+				Zusammenfassend lässt sich zur Flynnschen Klassifikation aussagen, dass sie zwar nur eine grobe Einteilung vornimmt, welche allerdings einen Überblick über die Arbeitsweise eines Parallelrechners gibt. \cite{ParaProgRauber}
+				
+				
+				
+				HIER BIN ICH:
+				%https://www.informatik.uni-augsburg.de/lehrstuehle/swt/vs/lehre/archiv/SS_08/seminar/downloads/seminarband.pdf integrieren bei Flynn!
+				
+				
+				
+				
+				%file:///C:/Users/Thomas%20Mittermair/Downloads/9783540425199-c1.pdf --> Für nächstes hilfereis (verteulter und gemeinesamer Speicher)
