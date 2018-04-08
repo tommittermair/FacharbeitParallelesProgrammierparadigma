@@ -655,11 +655,11 @@
 				\begin{description}
 					\item [Single Instruction, Single Data (SISD)]
 						Ein SISD-System verfügt nur über eine Ausführungseinheit, welche Zugriff auf einen einzigen Programm- und Daten-Speicher besitzt. In jedem Schritt lädt die Ausführungseinheit einen Befehl und ein Daten-Element, führt den Befehl auf dem Element aus und schreibt das Ergebnis in den Speicher zurück.\\
-						Somit ist ein solches System ein gewöhnlicher, sequentiell arbeitender Rechner, welcher nach dem Von-Neumann-Modell arbeitet.
+						Somit ist ein solches System ein gewöhnlicher, sequentiell arbeitender Rechner, welcher nach dem Von-Neumann-Modell arbeitet, also ein Einprozessorsystem. Auf diesem Art von Computer kann man Parallelität folglich nur als Quasiparallelität realisieren.
 						
 					\item [Multiple Instruction, Single Data (MISD)]
-						Ein MISD-System besteht aus mehreren Ausführungseinheiten, wobei jede Einheit einen eigenen Programm-Speicher besitzt. Alle Einheiten teilen sich allerdings einen Daten-Speicher. In jedem Schritt erhält jede Ausführungseinheit \textit{das selbe} Daten-Element aus dem Daten-Speicher. Jede Einheit lädt allerdings den auszuführenden Befehl aus seinem privaten Programm-Speicher. Das führt dazu, dass die jeweiligen Ausführungseinheiten parallel verschiedene Befehle auf identischen Daten ausführen.\\
-						Ein solches paralleles System wurde noch nie für den kommerziellen Gebrauch gefertigt.
+						Ein MISD-System besteht aus mehreren Ausführungseinheiten, wobei jede Einheit einen eigenen Programm-Speicher besitzt. Alle Einheiten teilen sich allerdings einen Daten-Speicher. In jedem Schritt erhält jede Ausführungseinheit \textit{das selbe} Daten-Element aus dem Daten-Speicher. Jede Einheit lädt allerdings den auszuführenden Befehl aus seinem privaten Programm-Speicher. Das führt dazu, dass die jeweiligen Ausführungseinheiten parallel verschiedene Befehle auf den gleichen Daten ausführen.\\
+						Ein solches paralleles System wurde noch nie für den kommerziellen Gebrauch gefertigt, da hier mehrere Prozessoren gleichzeitig auf den selben Daten Befehle ausführen, weshalb sich die Frage der Sinnhaftigkeit eines solchen Systemes stellt.
 					
 					\item [Single Instruction, Multiple Data (SIMD)]
 						In einem SIMD-System sind mehrere Ausführungseinheiten verbaut, wobei jede Einheit Zugriff auf einen privaten Daten-Speicher besitzt. Allerdings teilen sich in diesem Fall alle Einheiten den selben Programm-Speicher, wobei eine eigens dafür konstruierte Steuerungseinheit Befehle lädt und an die Ausführungseinheiten weitergibt, was bedeutet, dass alle Einheiten das selbe Programm und damit die selben Befehle ausführen. In jedem Schritt erhalten alle Ausführungseinheiten von der Steuereinheit den selben Befehl, laden allerdings verschiedene Daten-Elemente aus ihren eigenen Daten-Speicher, auf welchen der Befehl dann ausgeführt wird.\\
@@ -669,23 +669,65 @@
 					\item [Multiple Instruction, Multiple Data (MIMD)]
 						Ein MIMD-System verfügt über mehrere Ausführungseinheiten, welche alle Zugriff auf einen eigenen Programm- und Daten-Speicher besitzen. In jedem Schritt lädt jede Einheit einen eigenen Befehl und ein eigenes Daten-Element, führt den Befehl auf dem Element aus und schreibt das Ergebnis in den eigenen Daten-Speicher zurück.\\
 						Aus diesem Grund führen jeweils die einzelnen Ausführungseinheiten einen eigenen Befehl \textit{parallel und asynchron} auf verschiedenen Daten-Elementen aus.\\
-						Beispiele für Systeme, die der MIMD-Klasse zugeordnet werden können, sind Multikernprozessor- oder auch Cluster-Systeme. \cite{ParaProgRauber} \cite{FlynnscheKlassifikationWikipedia}
+						Beispiele für Systeme, die der MIMD-Klasse zugeordnet werden können, sind Multikernprozessor- oder auch Cluster-Systeme. \cite{ParaProgRauber} \cite{FlynnscheKlassifikationWikipedia} \cite{EntwicklungParallelerProgramme}
 				\end{description}
 			
-				SIMD-Systeme sind im Gegensatz zu SIMD-Systemen einfach zu programmieren, weil nur ein Programmfluss existiert, dem alle Prozessoren synchron folgen. Somit ist kein Synchronisation auf Programm-Ebene nötig. Allerdings stellt die synchrone Ausführung auch eine Einschränkung dar, da die Daten-Elemente sich unterscheiden können. Bedingungen der folgenden Form müssen aus diesem Grund in zwei getrennten Schritten ausgeführt werden.
+				SIMD-Systeme sind im Gegensatz zu MIMD-Systemen einfach zu programmieren, weil nur ein Programmfluss existiert, dem alle Prozessoren synchron folgen. Somit ist kein Synchronisation auf Programm-Ebene nötig. Allerdings stellt die synchrone Ausführung auch eine Einschränkung dar, da die Daten-Elemente sich unterscheiden können. Bedingungen der folgenden Form müssen aus diesem Grund in zwei getrennten Schritten ausgeführt werden.
 				
 				\lstinputlisting[language=C, breaklines=true]{Quellcode/if-Statement_SIMD-Systeme.c}
 				
 				Im ersten Schritt müssen alle Ausführungseinheiten, deren lokale Variable \textit{b} gleich 0 ist, den \textit{then}-Block der \textit{if}-Anweisung ausführen. Im zweiten Schritt müssen alle anderen Ausführungseinheiten, bei welchen dies folglich nicht zutrifft und \textit{b} ungleich 0 ist, den \textit{else}-Block ausführen.\\
 				Somit wird klar, dass MIMD-Rechner flexibler sind als SIMD-Systeme, da jede Ausführungseinheit über einen eigenen Programmfluss verfügt.\\
 				Zusammenfassend lässt sich zur Flynnschen Klassifikation aussagen, dass sie zwar nur eine grobe Einteilung vornimmt, welche allerdings einen Überblick über die Arbeitsweise eines Parallelrechners gibt. \cite{ParaProgRauber}
+		
+			\subsubsection{Einteilung von Parallelrechnern nach Art der Speicheranordnung}
+			
+				Teilt man die Parallelrechner nach der Art der Speicheranordnung ein, so erhält man zwei Klassen von Parallelrechnern, welche im Folgenden erläutert werden sollen.
 				
+				\begin{description}
+					\item [Parallelrechner mit verteiltem Speicher]
+						Rechner mit verteiltem Speicher, auch \textit{Distributed Memory} genannt, bestehen aus \textit{n} Prozessoren $P_1, P_2, P_3, ... P_i$, wobei jedem Prozessor genau ein privater lokaler Speicher $M_i$ zugeteilt ist. Nur der Prozessor $P_i$ darf auf den Speicher $M_i$ zugreifen. Umgekehrt gilt das selbe: Ein Prozessor $P_i$ darf nur auf den Speicher $M_i$ zugreifen.\\
+						Die einzelnen Rechner (mit Prozessor, Hauptspeicher und eventuell weiteren Ressourcen) werden über ein Verbindungsnetzwerk zu einem Parallelrechner verbunden. Die Kommunikation läuft dabei anhand des sogenannten \textit{Message Passings} (Nachrichtenaustausch) ab, das bedeutet, dass die Rechner untereinander Nachrichten austauschen.\\
+						Die Abbildung \ref{fig:ParallelrechnerVerteilterSpeicher} soll dieses Konzept nochmals bildlich veranschaulichen.
+						
+					\item[Parallelrechner mit gemeinsamem Speicher]
+						Ein anderer Ansatz ist das Konzept des gemeinsamen Speichers, welches auch als \textit{Shared Memory} bezeichnet wird. Dabei existieren auch \textit{n} Prozessoren $P_1, P_2, P_3, ... P_i$, allerdings ist allen Prozessoren ein- und derselbe gemeinsame (Haupt-)Speicher zugeteilt. Durch diesen gemeinsamen Datenspeicher und damit verbundene gemeinsame Variablen erfolgt auch die Kommunikation zwischen den einzelnen Prozessoren.\\
+						Die Abbildung \ref{fig:ParallelrechnerGemeinsamerSpeicher} erläutert dieses Prinzip auch auf grafischer Ebene.\\
+						Es gibt zwei Modelle, nach denen \textit{Shared Memory}-Systeme auf den Speicher zugreifen. Auch diese werden im Folgenden näher beleuchtet. \cite{EntwicklungParallelerProgramme}
+						
+						\begin{description}
+							\item [Uniform Memory Access (UMA)]
+								Bei diesem Modell sind alle Prozessoren beim Zugriff auf den Speicher gleichberechtigt, insbesondere die Zugriffszeiten sind für alle CPUs gleich. Somit besteht beim Zugriff auf Ressourcen kein Unterschied zwischen den einzelnen Ausführungseinheiten.\\
+								Sogenannte \textit{Symmetrische Multiprozessoren} (SMP) sind UMA-Systeme. \cite{EntwicklungParallelerProgramme}
+								
+							\item [Non-Uniform Memory Access (NUMA)]
+								Im Rahmen dieses Modells können auch alle Prozessoren auf den gemeinsamen Speicher zugreifen. Allerdings variieren in die Fall die Zugriffszeiten je nach Ort, an dem sich die angesprochene Speicheradresse befindet. Der Grund dafür ist, dass der Speicher auf mehrere Knoten verteilt ist. Somit ist der Zugriff auf einen lokales Speicherknoten schneller als auf entfernte. Für den Programmierer besteht allerdings kaum bis gar kein Unterschied zu UMA-Systemen. \cite{EntwicklungParallelerProgramme}
+						\end{description}
+				\end{description}
+			
+				\begin{figure}
+					\centering	
+					\includegraphics[width=7cm]{Abbildungen/Parallelrechner_mit_verteiltem_Speicher.png}
+					\caption{Grafische Darstellung eines Parallelrechners mit verteiltem Speicher.}
+					\label{fig:ParallelrechnerVerteilterSpeicher}
+				\end{figure}
+			
+				\begin{figure}
+					\centering	
+					\includegraphics[width=7cm]{Abbildungen/Parallelrechner_mit_gemeinsamem_Speicher.png}
+					\caption{Grafische Darstellung eines Parallelrechners mit gemeinsamem Speicher.}
+					\label{fig:ParallelrechnerGemeinsamerSpeicher}
+				\end{figure}
+			
+				Die Programmierung gestaltet sich bei Rechnern mit gemeinsamem Speicher meist einfacher als bei verteiltem Speicher, da alle Prozessoren Zugriff auf den Speicher besitzen und somit der Programmierer nicht explizit für die Steuerung des Versendens von Informationen zuständig ist. Allerdings kann es durch die gemeinsame Ressource zu Datenzugriffsproblemen kommen, die beispielsweise durch die unter Kapitel \ref{ProzessSynchronisation} erklärten Mechanismen gelöst werden können.\\
+				Zu solchen Problemen kommt es in der Regel bei der Verwendung eines Rechners mit verteiltem Speicher nicht, da der Großteil des Datenflusses hierbei meist nur zwischen dem Prozessor und dessen lokalem Speicher abläuft. Doch das Umgehen der Synchronisierungsproblematik führt zu einer anderen Schwierigkeit: Werden Daten von anderen Prozessoren benötigt, so muss der Austausch von Informationen anhand von speziellen Befehlen erfolgen, welche die Informationen dann über ein Netzwerk vermitteln. \cite{ParalleleNumerischeVerfahren}\\
+				Anzumerken ist noch, dass es auch hybride Systeme gibt, welche als \textit{Hybrid Distributed-Shared Memory}-Systeme bezeichnet werden. Diese Rechner verwenden eine Mischung aus gemeinsamem und verteiltem Speicher. Dabei handelt es sich um Systeme, welche aus mehreren Rechnern mit gemeinsamem Speicher bestehen. Die Prozessoren, die jeweils zu einem Parallelrechner mit gemeinsamem Speicher bestehen, können alle auf den selben globalen Speicher zugreifen. Der verteilte Speicher kommt durch den Zusammenschluss mehrere Shared-Memory-Systeme zustande. Aus diesem Grund ist eine Netzwerk-Kommunikation von Nöten, um Informationen zwischen diesen Teilsysteme auszutauschen. \cite{EntwicklungParallelerProgramme}
 				
-				
-				HIER BIN ICH:
-				%https://www.informatik.uni-augsburg.de/lehrstuehle/swt/vs/lehre/archiv/SS_08/seminar/downloads/seminarband.pdf integrieren bei Flynn!
-				
-				
-				
-				
-				%file:///C:/Users/Thomas%20Mittermair/Downloads/9783540425199-c1.pdf --> Für nächstes hilfereis (verteulter und gemeinesamer Speicher)
+	\section{Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}
+		
+		Die Bewertung der Güte von Programmen ist eine grundlegende Komponente, wenn man effiziente Programme erstellen möchte. Da es bei der parallelen Programmierung nahezu ausschließlich um das Erzielen einer Performance-Verbesserung geht, spielt hier die Analyse und die Optimierung der Abläufe innerhalb eines Programmes eine zentrale Rolle. Aus diesem Grund wurden einige Kenngrößen und Modelle entwickelt, die die Performance-Analyse und -Vorhersage von Programmen mit Parallelverarbeitung ermöglichen.\\
+		
+		\subsection{Kosten, Speedup und Effizienz}
+		
+			HIER BIN ICH.
+			Alles ab "Performance Metrics for Parallel Programs" im Buch.

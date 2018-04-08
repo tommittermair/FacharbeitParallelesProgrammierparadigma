@@ -87,4 +87,15 @@ Warning--entry type for "FlynnsTaxonomie" isn't style-file defined
 --line 346 of file Literatur.bib
 Warning--entry type for "FlynnscheKlassifikationWikipedia" isn't style-file defined
 --line 354 of file Literatur.bib
-(There were 43 warnings)
+Warning--entry type for "EntwicklungParallelerProgramme" isn't style-file defined
+--line 361 of file Literatur.bib
+Warning--entry type for "ParalleleNumerischeVerfahren" isn't style-file defined
+--line 369 of file Literatur.bib
+I was expecting a `,' or a `}'---line 375 of file Literatur.bib
+ :  
+ :  url       = {http://www.springer.com/cda/content/document/cda_downloaddocument/9783540425199-c1.pdf?SGWID=0-0-45-96268-p2213021},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Alefeld, Götz; Lenhardt, Ingrid und Obermaier, Holger" for entry ParalleleNumerischeVerfahren
+while executing---line 969 of file ieeetr.bst
+(There were 2 error messages)

@@ -21,4 +21,6 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{Begriffserkl\344rung}{section.2.4}% 21
 \BOOKMARK [2][-]{subsection.2.4.2}{Ebenen der Parallelit\344t}{section.2.4}% 22
 \BOOKMARK [2][-]{subsection.2.4.3}{Arten und Einteilungen von Parallelrechnern}{section.2.4}% 23
-\BOOKMARK [0][-]{chapter*.2}{Literaturverzeichnis}{}% 24
+\BOOKMARK [1][-]{section.2.5}{Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.5.1}{Kosten, Speedup und Effizienz}{section.2.5}% 25
+\BOOKMARK [0][-]{chapter*.2}{Literaturverzeichnis}{}% 26

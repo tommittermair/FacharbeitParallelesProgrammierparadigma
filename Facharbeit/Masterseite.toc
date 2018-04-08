@@ -43,4 +43,7 @@
 \contentsline {subsection}{\numberline {2.4.3}Arten und Einteilungen von Parallelrechnern}{54}{subsection.2.4.3}
 \contentsline {subsubsection}{\numberline {2.4.3.1}Arten von Parallelrechnern}{54}{subsubsection.2.4.3.1}
 \contentsline {subsubsection}{\numberline {2.4.3.2}Einteilung der Architekturen nach der Flynnschen Klassifikation}{55}{subsubsection.2.4.3.2}
-\contentsline {chapter}{Literaturverzeichnis}{59}{chapter*.2}
+\contentsline {subsubsection}{\numberline {2.4.3.3}Einteilung von Parallelrechnern nach Art der Speicheranordnung}{57}{subsubsection.2.4.3.3}
+\contentsline {section}{\numberline {2.5}Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}{60}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Kosten, Speedup und Effizienz}{60}{subsection.2.5.1}
+\contentsline {chapter}{Literaturverzeichnis}{61}{chapter*.2}
