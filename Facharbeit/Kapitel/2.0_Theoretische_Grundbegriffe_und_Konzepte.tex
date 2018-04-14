@@ -725,9 +725,64 @@
 				
 	\section{Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}
 		
-		Die Bewertung der Güte von Programmen ist eine grundlegende Komponente, wenn man effiziente Programme erstellen möchte. Da es bei der parallelen Programmierung nahezu ausschließlich um das Erzielen einer Performance-Verbesserung geht, spielt hier die Analyse und die Optimierung der Abläufe innerhalb eines Programmes eine zentrale Rolle. Aus diesem Grund wurden einige Kenngrößen und Modelle entwickelt, die die Performance-Analyse und -Vorhersage von Programmen mit Parallelverarbeitung ermöglichen.\\
+		Die Bewertung der Güte von Programmen ist eine grundlegende Voraussetzung, wenn man effiziente Programme erstellen möchte. Da es bei der parallelen Programmierung nahezu ausschließlich um das Erzielen einer Performance-Verbesserung geht, spielt hier die Analyse und die Optimierung der Abläufe innerhalb eines Programmes eine zentrale Rolle. Aus diesem Grund wurden einige Kenngrößen und Modelle entwickelt, die die Performance-Analyse und -Vorhersage von Programmen mit Parallelverarbeitung ermöglichen.\\
+		Die Größe, welche es in diesem Zusammenhang vor allem zu analysieren und wenn möglich reduzieren gilt, ist die \textit{Ausführungszeit} des Programmes, auch \textit{Laufzeit} genannt. Der Benutzer eines Rechner-Systems ist an sehr kurzen Antwort- bzw. Reaktionszeiten interessiert, was wiederum auf die Zeit zwischen dem Start und der Terminierung eines Programmes, also die Ausführungszeit, führt.\\
+		Auf der anderen Seite zielen Rechenzentren, welche extrem komplexen Berechnungen mittels Supercomputer zu lösen versuchen, auf einen hohen \textit{Durchsatz} ab, wobei dieser Durchsatz die durchschnittliche Anzahl an Arbeitseinheiten, welche pro Zeiteinheit verrichtet werden können, darstellt.
 		
 		\subsection{Kosten, Speedup und Effizienz}
 		
-			HIER BIN ICH.
-			Alles ab "Performance Metrics for Parallel Programs" im Buch.
+			Die Laufzeit eines parallelen Programmes auf einer speziellen Ausführungsplattform ist ein wichtiges Kriterium zur Bewertung des Programmes.\\
+			Die \textit{parallele Laufzeit} eines Programmes $t_P(n)$ eines Programmes ist dabei die Zeit zwischen dem Starten des Programmes auf dem ersten Prozessor und dem Ende der Ausführung auf dem letzten beteiligten Prozessor. Dabei steht $t$ für die Laufzeit, $P$ für die Anzahl an beteiligten, parallel arbeitenden Prozessoren und $n$ für die Größe des zu lösenden Problems. Diese sogenannte \textit{Problemgröße} hängt von den Eingabe-Daten ab. Ein Beispiel hierfür ist die Anzahl von Gleichungen, welche von einer Software gelöst werden muss.\\
+			Des Weiteren ist auch $t_S(n)$ von Bedeutung. Dies ist die Laufzeit des schnellsten sequentiellen Programmes, das ein Problem der Größe $n$ löst.
+			Aus diesen Kennzahlen lassen sich einige weitere Kenngrößen ableiten, welche im Folgenden erläutert werden sollen.\\
+			
+			
+			\subsubsection{Kosten eines parallelen Programmes}
+			
+				Die \textit{Kosten} $C_P(n)$ eines parallelen Programmes mit der Problemgröße $n$, wobei $P$ Prozessoren an der Ausführung beteiligt sind, sind wie folgt definiert:
+				
+				\[ C_P(n) = P \cdot t_P(n) \]
+				
+				Die daraus resultierende Zahl gibt also an, wie viel Arbeit alle Prozessoren zusammen verrichtet haben. Dabei wird davon ausgegangen, dass das Programm vollkommen parallel abläuft und die Last auf alle Prozessen genau im gleichen Maße verteilt wird.\\
+				Ein solches Programm wird \textit{kosten-optimal} genannt, falls $C_P(n) = t_S(n)$ gilt. Das bedeutet, dass das kosten-optimale parallele Programm exakt gleich viele Operationen wie das schnellste sequentielle Programm ausführt. Ist dies der Fall, so würde durch die parallele Ausführung an sich \textbf{kein} zusätzlicher Aufwand, z.B. für Kommunikation oder Synchronisation, entstehen.
+				
+			\subsubsection{Speedup eines parallelen Programmes}
+				\label{Speedup}
+			
+				Der \textit{Speedup} $S_P(n)$, auch \textit{Geschwindigkeitsgewinn} oder \textit{Beschleunigung} genannt, ist die wohl simpelste und aussagekräftigste Kennzahl.\\
+				Er lässt sich durch die folgende Formel ausdrücken:
+				
+				\[ S_P(n) = \frac{t_S(n)}{t_P(n)} \]
+				
+				Aus dem obigen Ausdruck wird klar, dass der Speedup die Laufzeit des besten sequentiellen Programmes mit der Laufzeit des parallelen Programmes unter Verwendung von $P$ Prozessoren vergleicht, wobei beide Programme das selbe Problem lösen müssen. Somit wird der Vorteil, welcher sich aus der Parallelisierung ergibt, klar. Er gibt also an, dass das parallele Programm, welches $P$ Prozessoren verwendet, $S_P(n)$-mal schneller in der Ausführung als die sequentielle Lösung ist.\\
+				Den Idealfall bildet ein Speedup von $P$, da dies bedeuten würde, dass der Einsatz von $P$ Prozessoren zu einer $P$-fachen Beschleunigung führen würde. Folglich gilt für den Speedup in der Theorie immer der folgende Zusammenhang:
+				
+				\[ S_P(n) \leq P \]
+				
+				Im Fall von \(S_P(n) = P\) spricht man von einem \textit{linearen} Speedup.
+				
+				Falls \(S_P(n) \geq P\) gilt, so ist der sequentielle Algorithmus nicht der beste sequentielle Algorithmus zur Lösung des gegebenen Problems, da die Ausführung des parallelen Programmes auf nur einem Prozessor unter Verwendung von einem Scheduling-Algorithmus wie beispielsweise Round-Robin, welcher in Kapitel \ref{ProzessScheduling} erklärt wurde, zu einer besseren Laufzeit führen würde. Aus dieser sequentiell abgearbeiteten Version des parallelen Algorithmus kann dann ein neuer sequentieller Algorithmus konstruiert werden, sodass \(S_P(n) \geq P\) nicht mehr gilt.\\
+				Die Berechnung des Speedups schließt folglich den Vergleich mit dem schnellsten sequentiellen Algorithmus mit ein. Dieser Algorithmus kann in einigen Fällen allerdings schwierig zu finden bzw. zu erstellen sein.\\
+				Aus diesem Grund wird für die Berechnung des Speedups nicht die Laufzeit des besten sequentiellen Algorithmuses verwendet, sondern diejenige des parallelen Algorithmuses unter Verwendung von nur einem Prozessor, also $t_1(n)$.
+				Unter diesen Umständen ergibt sich der Speedup durch die folgende Formel:
+				
+				\[ S_P(n) = \frac{t_1(n)}{t_P(n)} \]
+				
+				In der Praxis ist \(S_P(n) \geq P\) allerdings trotzdem möglich, in diesem Fall spricht man von einem \textit{superlinearen} Speedup. Dieser Effekt kann durch die Caches der Prozessoren auftreten. Dies ist darin begründet, dass jeder Prozessor auch einen zusätzlichen Cache beinhaltet. Wird der Algorithmus auf einem Prozessor ausgeführt, so ist es durchaus möglich, dass die vom Prozessor zu verarbeitenden Daten nicht vollständig im Cache des Prozessors Platz haben, was zu sogenannten Cache-Misses\footnote{Ein Cache-Miss tritt auf, wenn von einem Programm angeforderte Daten nicht im Cache gefunden werden können. Dies führt zu einer Ausführungsverzögerung, da das Programm dann auf anderen Speicher-Ebenen (Caches höheren Levels oder auch Hauptspeicher) nach den Daten suchen muss. \cite{CacheMissTechopedia}} während der Ausführung führt, welche die Ausführung verzögern und die Laufzeit verlängern. Wird das Programm jedoch auf mehreren Prozessoren parallel ausgeführt, so könnte es passieren, dass durch den zusätzlichen Cache-Speicher, der mit den hinzugekommenen Prozessoren einhergehen würde, nun genügend Speicher vorhanden wäre, sodass es zu keinen Cache-Misses mehr käme, was zu einem superlinearen Speedup führen könnte.\\
+				Doch ein solcher superlinearer Speedup tritt in der Praxis nur äußerst selten auf. Meist wird auf Grund des mit der Parallelisierung einhergehenden Mehraufwandes kein linearer, geschweige denn ein superlinearer Speedup erreicht.
+
+			\subsubsection{Effizienz eines parallelen Programmes}
+			
+				Eine Metrik, welche auf dem unter Kapitel \ref{Speedup} erläuterten Konzept des Speedups aufbaut, ist die sogenannte \textit{Effizienz}. Sie ist durch die folgende Formel gegeben.
+				
+				\[ E_P(n) = \frac{S_P(n)}{P} \]
+				
+				Durch das Ausdrücken des Speedups $S_P(n)$ als \( \frac{t_1(n)}{t_P(n)} \) lässt sich die Effizienz auch wie folgt ausdrücken:
+				
+				\[ E_P(n) = \frac{\frac{t_S(n)}{t_P(n)}}{P} = \frac{t_S(n)}{P \cdot t_P(n)} = \frac{t_S(n)}{C_P(n)} \]
+				
+				Die Effizienz gibt an, wie effizient die einzelnen Prozessoren genutzt werden und an der Berechnung mitwirken. Die Effizienz ließe sich folglich auch einfach durch Multiplikation mit 100 in Prozent umrechnen. Diese Zahl würde dann der Auslastung der einzelnen Prozessoren entsprechen.\\
+				Falls es zu keinem superlinearen Speedup kommt, gilt stets \( 0 \leq E_P(n) \leq 1 \).\\
+				HIER BIN ICH
+				
+				Buch und https://www.numa.uni-linz.ac.at/Staff/haase/parvor/node36.html eventuell auch als Quelle angeben.
