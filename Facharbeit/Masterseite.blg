@@ -98,6 +98,16 @@ I was expecting a `,' or a `}'---line 375 of file Literatur.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "CacheMissTechopedia" isn't style-file defined
 --line 379 of file Literatur.bib
+Warning--entry type for "AmdahlschesGesetzWikipedia" isn't style-file defined
+--line 386 of file Literatur.bib
+Warning--entry type for "GesetzeParallelierung" isn't style-file defined
+--line 393 of file Literatur.bib
+Warning--entry type for "GeneAmdahlWikipedia" isn't style-file defined
+--line 400 of file Literatur.bib
+Warning--entry type for "GustafsonsGesetzWikipedia" isn't style-file defined
+--line 407 of file Literatur.bib
+Warning--entry type for "JohnGustafsonWikipedia" isn't style-file defined
+--line 414 of file Literatur.bib
 Too many commas in name 1 of "Alefeld, Götz; Lenhardt, Ingrid und Obermaier, Holger" for entry ParalleleNumerischeVerfahren
 while executing---line 969 of file ieeetr.bst
 (There were 2 error messages)

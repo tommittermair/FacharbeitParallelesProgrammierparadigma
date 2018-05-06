@@ -23,4 +23,5 @@
 \BOOKMARK [2][-]{subsection.2.4.3}{Arten und Einteilungen von Parallelrechnern}{section.2.4}% 23
 \BOOKMARK [1][-]{section.2.5}{Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}{chapter.2}% 24
 \BOOKMARK [2][-]{subsection.2.5.1}{Kosten, Speedup und Effizienz}{section.2.5}% 25
-\BOOKMARK [0][-]{chapter*.2}{Literaturverzeichnis}{}% 26
+\BOOKMARK [1][-]{section.2.6}{Parallele Programmierkonzepte}{chapter.2}% 26
+\BOOKMARK [0][-]{chapter*.2}{Literaturverzeichnis}{}% 27
