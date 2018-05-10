@@ -16,14 +16,14 @@
 \contentsline {subsection}{\numberline {2.1.3}Lastenverteilung (load balancing)}{11}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Parallelit\IeC {\"a}t und Nebenl\IeC {\"a}ufigkeit}{11}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Implementierungsm\IeC {\"o}glichkeiten der Parallelisierung}{12}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Implementierungsm\IeC {\"o}glichkeiten der Parallelisierung auf Hardwareebene}{12}{subsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.1.1}Pipelining}{12}{subsubsection.2.2.1.1}
-\contentsline {subsubsection}{\numberline {2.2.1.2}Vektorrechner}{14}{subsubsection.2.2.1.2}
-\contentsline {subsubsection}{\numberline {2.2.1.3}Hyper-Threading}{14}{subsubsection.2.2.1.3}
-\contentsline {subsubsection}{\numberline {2.2.1.4}Virtuelle Kerne}{14}{subsubsection.2.2.1.4}
-\contentsline {subsection}{\numberline {2.2.2}Implementierungsm\IeC {\"o}glichkeiten der Parallelisierung auf Softwareebene}{14}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.1}Das Prozess-Modell}{15}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2.2}Das Thread-Modell}{20}{subsubsection.2.2.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Implementierungsm\IeC {\"o}glichkeiten der Parallelisierung auf Softwareebene}{12}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Das Prozess-Modell}{13}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Das Thread-Modell}{18}{subsubsection.2.2.1.2}
+\contentsline {subsection}{\numberline {2.2.2}Implementierungsm\IeC {\"o}glichkeiten der Parallelisierung auf Hardwareebene}{21}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Pipelining}{22}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Vektorrechner}{23}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Hyper-Threading}{24}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}Virtuelle Kerne}{24}{subsubsection.2.2.2.4}
 \contentsline {section}{\numberline {2.3}Prozess-Synchronisation \cite {ModerneBetriebssysteme}}{24}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Probleme bei der parallelen Bearbeitung}{24}{subsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.1.1}Zeitkritischer Ablauf}{24}{subsubsection.2.3.1.1}
@@ -31,14 +31,14 @@
 \contentsline {subsubsection}{\numberline {2.3.1.3}Starvation (Aushungerung) \cite {ModerneBetriebssysteme}}{28}{subsubsection.2.3.1.3}
 \contentsline {subsection}{\numberline {2.3.2}L\IeC {\"o}sungen zu den Problemen der parallelen Verarbeitung}{29}{subsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.2.1}L\IeC {\"o}sungen zum zeitkritischen Ablauf}{29}{subsubsection.2.3.2.1}
-\contentsline {subsubsection}{\numberline {2.3.2.2}L\IeC {\"o}sungen zum Deadlock}{44}{subsubsection.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.2.3}L\IeC {\"o}sungen zur Starvation}{51}{subsubsection.2.3.2.3}
+\contentsline {subsubsection}{\numberline {2.3.2.2}L\IeC {\"o}sungen zum Deadlock}{45}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.3}L\IeC {\"o}sungen zur Starvation}{50}{subsubsection.2.3.2.3}
 \contentsline {section}{\numberline {2.4}Parallelrechner}{51}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Begriffserkl\IeC {\"a}rung}{51}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Ebenen der Parallelit\IeC {\"a}t}{51}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}Ebenen der Parallelit\IeC {\"a}t}{52}{subsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.2.1}Mehrere Abarbeitungseinheiten innerhalb eines Prozessors}{52}{subsubsection.2.4.2.1}
 \contentsline {subsubsection}{\numberline {2.4.2.2}Mehrere Abarbeitungseinheiten innerhalb eines Rechners}{52}{subsubsection.2.4.2.2}
-\contentsline {subsubsection}{\numberline {2.4.2.3}Mehrere Abarbeitungseinheiten innerhalb eines Clusters}{52}{subsubsection.2.4.2.3}
+\contentsline {subsubsection}{\numberline {2.4.2.3}Mehrere Abarbeitungseinheiten innerhalb eines Clusters}{53}{subsubsection.2.4.2.3}
 \contentsline {subsubsection}{\numberline {2.4.2.4}Mehrere Abarbeitungseinheiten innerhalb eines Grids}{53}{subsubsection.2.4.2.4}
 \contentsline {subsection}{\numberline {2.4.3}Arten und Einteilungen von Parallelrechnern}{54}{subsection.2.4.3}
 \contentsline {subsubsection}{\numberline {2.4.3.1}Arten von Parallelrechnern}{54}{subsubsection.2.4.3.1}
@@ -50,5 +50,10 @@
 \contentsline {subsubsection}{\numberline {2.5.1.2}Speedup eines parallelen Programmes}{61}{subsubsection.2.5.1.2}
 \contentsline {subsubsection}{\numberline {2.5.1.3}Effizienz eines parallelen Programmes}{63}{subsubsection.2.5.1.3}
 \contentsline {subsubsection}{\numberline {2.5.1.4}Mathematische Gesetze und Modelle}{63}{subsubsection.2.5.1.4}
-\contentsline {section}{\numberline {2.6}Parallele Programmierkonzepte}{70}{section.2.6}
-\contentsline {chapter}{Literaturverzeichnis}{71}{chapter*.2}
+\contentsline {chapter}{\numberline {3}Parallele Programmierkonzepte, Anwendungsbeispiel und Vergleich}{71}{chapter.3}
+\contentsline {section}{\numberline {3.1}Parallele Programmierkonzepte}{71}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}MPI (Message Passing Interface)}{71}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}OpenMP (Open Multi-Processing)}{72}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Cilk}{73}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Anwendungsbeispiel und Vergleich der M\IeC {\"o}glichkeiten zur Realisierung von Parallelverarbeitung}{75}{section.3.2}
+\contentsline {chapter}{Literaturverzeichnis}{77}{chapter*.2}

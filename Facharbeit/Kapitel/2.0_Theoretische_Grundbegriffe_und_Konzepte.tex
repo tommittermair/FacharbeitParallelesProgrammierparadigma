@@ -56,43 +56,7 @@
 
 	\section{Implementierungsmöglichkeiten der Parallelisierung}
 	
-		Die Parallelisierung kann auf verschiedensten Arten realisiert werden. Im Allgemeinen lassen sich allerdings zwei Ebenen unterscheiden: Die Hardware- und Softwareebene.
-	
-		\subsection{Implementierungsmöglichkeiten der Parallelisierung auf Hardwareebene}
-		
-			Auf Ebene der Hardware gibt es eine Vielzahl von Möglichkeiten, Parallelisierung zu implementieren. Im Folgenden werden dabei exemplarisch zwei grundlegende Varianten erläutert.
-					
-			\subsubsection{Pipelining}
-				
-				Wie aus Punkt \ref{SequUndParaInformatik} ersichtlich wird, erfolgt die Abarbeitung eines Befehls in einem Prozessor wie an einem Fließband (engl. Pipeline), der Befehl durchläuft also mehrere, in diesem Fall fünf, Stufen. Zunächst wird der Befehl geladen, dann dekodiert, danach werden die Operanden geladen, der Befehl ausgeführt und das Ergebnis schließlich in den Speicher zurückgeschrieben.\\
-				Betrachtet man erneut die Abbildung zum Befehlszyklus \ref{fig:BefehlszylusOhnePipelining}, so erkennt man, dass die Hardware bei dieser Art der Befehlsausführung nicht effizient ausgenutzt wird. Betrachtet man die fünf Phasen der Befehlsausführung als Stufen einer Pipeline, so kann man die Befehlsausführung auch anders, überlappend, organisieren. Man nutzt also aus, dass die auf einem Prozessor befindlichen Funktionseinheiten bei der Abarbeitung eines Befehls kaum alle gleichzeitig beansprucht werden. Wenn ein Befehl eine Phase abschließt, so muss diese Phase nicht bis zum Abschluss der gesamten Befehlsabarbeitung ungenutzt bleiben, sondern der nächste Befehl könnte direkt diese Phase betreten. Somit wird innerhalb der Pipeline versucht, alle Stufen gleichzeitig für aufeinanderfolgende Befehle zu nutzen und somit die Hardware-Auslastung zu verbessern. Dadurch werden mehrere Befehle gleichzeitig abgearbeitet. Die Pipeline-Verarbeitung kommt in vielen modernen Prozessoren zum Einsatz.\\
-				Die Vorteile der Pipeline-Verarbeitung im Gegensatz zur Sequentialität des Befehlszyklus soll nun an Hand eines Beispiels der Abarbeitung von drei Befehlen verdeutlicht werden.
-				Die Abbildung \ref{fig:BefehlszylusMitPipelining} soll diesen Vorgang grafisch veranschaulichen. Nimmt man an, dass die Bearbeitung in jeder Phase im Optimalfall einen Taktzyklus benötigt, so dauert die Ausführung dieser drei Befehle ohne Pipelining ganze 15 Taktzyklen, während die Verwendung von Pipeling zu einer Abarbeitungsdauer von 8 Taktzyklen führt. Dies entspricht nahezu einer Halbierung der benötigten Zeit, ohne zusätzliche Hardware ankaufen zu müssen. Des Weiteren wird, sobald die Pipeline-Bearbeitung begonnen hat - zumindest theoretisch, falls keine Verzögerungen eintreten - in jedem Taktzyklus ein Befehl abgeschlossen, während dies bei der sequentiellen Bearbeitung nur alle fünf Taktzyklen passiert. Somit wird klar, dass sich Pipelining durchaus lohnt.\\
-				Nicht immer kann eine Pipeline allerdings optimal ausgenutzt werden. Wenn beispielsweise Datenabhängigkeiten bestehen, das bedeutet, dass das berechnete Ergebnis eines Befehls Voraussetzung für die Ausführung eines folgenden Befehls ist, so müssen sogenannte Wartetakte eingeführt werden, welche die Ausführung verzögern. \cite{AufbauFunktionsweiseMikroprozessoren}
-				
-				\begin{figure}
-					\centering	
-					\includegraphics[width=11cm]{Abbildungen/Befehlszylus_mit_Pipelining.png}
-					\caption{Grafische Darstellung der Abarbeitung von drei Befehlen nach dem Schema des Befehlszyklus unter Anwendung der Pipelining-Verarbeitung.}
-					\label{fig:BefehlszylusMitPipelining}
-				\end{figure}
-			
-				Quelle (zitieren ist schwierig, muss noch eine Lösung gefunden werden):
-				https://www.elektronik-kompendium.de/sites/com/1705221.htm --> Vielleicht Netzwerktechnik-Fibel: Grundlagen, Übertragungstechnik und Protokolle, Anwendungen und Dienste, Sicherheit --> Buch zur Webseite
-				
-			\subsubsection{Vektorrechner}
-				\label{Vektorrechner}
-			
-				Eine weitere Möglichkeit der Realisierung von Parallelem Rechnen sind die sogenannten \textit{Vektorrechner}, auch \textit{Vektorprozessoren} oder \textit{Arrayrechner} genannt.\\
-				Das im Namen dieser Technologie enthaltene \textit{Vektor} oder \textit{Array} rührt daher, dass die gleichen Berechnungen gleichzeitig auf einer Menge von Daten ausgeführt werden. Diese Daten sind in diesem Fall meist in Form eines \textit{n}-elementigen Arrays, also eines \textit{n}-dimensionalen Vektors, organisiert.
-				Diese Art der Prozessoren sind den gewöhnlichen CPUs, welche die gleiche Operation nacheinander auf den Daten ausführen würden, um ein vielfaches überlegen, falls es sich bei der zu bewerkstelligenden Aufgabe um eine Operation handelt, die auf viele Daten ausgeführt werden muss. Somit können sich erhebliche Performance-Gewinne erzielen lassen.\\
-				Vektorrechner werden vor allem in der Simulationstechnik verwendet, wo viele gleichartige Daten auf gleiche Weise verarbeitet werden müssen. Dies ist beispielsweise in der Geologie und Meteorologie des Öfteren der Fall.
-				Allerdings birgt diese Technologie den Nachteil, dass keine Standard-CPUs hier verwendet werden können, da das Vektorrechnen in der Hardware der CPU implementiert sein muss. Aus diesem Grund ergeben sich für Vektorrechner meist erhöht Kosten im Vergleich zu gewöhnlichen Prozessoren. In der jüngeren Vergangenheit entfernte sich der Trend somit von dieser Art der Parallelrechner und ging zu großen Rechen-Clustern über. Dies sind Verbünde von vielen Standardprozessoren, die über schnelle Leitungen verbunden sind. Dadurch können Kosten eingespart werden, da durch die industrielle Herstellung der Preis von gewöhnlichen CPUs stark gesunken ist.\\
-				Da gewöhnliche CPUs nicht in Vektoren von Daten arbeiten können, werden sie mit Betrachtung der mathematischen Hintergründe auch \textit{Skalarprozessoren} genannt. \cite{VektorrechnerWikipedia}
-				
-			\subsubsection{Hyper-Threading}
-			
-			\subsubsection{Virtuelle Kerne}
+		Die Parallelisierung kann auf verschiedensten Arten realisiert werden. Im Allgemeinen lassen sich allerdings zwei Ebenen unterscheiden: Die Software- und Hardwareebene.
 				
 		\subsection{Implementierungsmöglichkeiten der Parallelisierung auf Softwareebene}
 
@@ -243,6 +207,42 @@
 						Der zweite Ansatz besteht darin, dass der Scheduler nicht mehr zwischen Prozessen unterscheidet, sondern nur noch über eine Liste von Threads verfügt, von denen er weiß, dass diese rechenbereit sind. Somit wird die Grenze zwischen den Prozessen aufgehoben und der Fokus liegt auf den Threads, also den Abarbeitungssträngen. Auch bei diesem Ansatz kann der Scheduler Strategien anwenden, welche ähnlich zu den unter Punkt \ref{ProzessScheduling} genannten Strategien sind. \cite{ModerneBetriebssysteme}
 				\end{description}
 			
+		\subsection{Implementierungsmöglichkeiten der Parallelisierung auf Hardwareebene}
+
+			Auf Ebene der Hardware gibt es eine Vielzahl von Möglichkeiten, Parallelisierung zu implementieren. Im Folgenden werden dabei exemplarisch zwei grundlegende Varianten erläutert.
+			
+			\subsubsection{Pipelining}
+			
+				Wie aus Punkt \ref{SequUndParaInformatik} ersichtlich wird, erfolgt die Abarbeitung eines Befehls in einem Prozessor wie an einem Fließband (engl. Pipeline), der Befehl durchläuft also mehrere, in diesem Fall fünf, Stufen. Zunächst wird der Befehl geladen, dann dekodiert, danach werden die Operanden geladen, der Befehl ausgeführt und das Ergebnis schließlich in den Speicher zurückgeschrieben.\\
+				Betrachtet man erneut die Abbildung zum Befehlszyklus \ref{fig:BefehlszylusOhnePipelining}, so erkennt man, dass die Hardware bei dieser Art der Befehlsausführung nicht effizient ausgenutzt wird. Betrachtet man die fünf Phasen der Befehlsausführung als Stufen einer Pipeline, so kann man die Befehlsausführung auch anders, überlappend, organisieren. Man nutzt also aus, dass die auf einem Prozessor befindlichen Funktionseinheiten bei der Abarbeitung eines Befehls kaum alle gleichzeitig beansprucht werden. Wenn ein Befehl eine Phase abschließt, so muss diese Phase nicht bis zum Abschluss der gesamten Befehlsabarbeitung ungenutzt bleiben, sondern der nächste Befehl könnte direkt diese Phase betreten. Somit wird innerhalb der Pipeline versucht, alle Stufen gleichzeitig für aufeinanderfolgende Befehle zu nutzen und somit die Hardware-Auslastung zu verbessern. Dadurch werden mehrere Befehle gleichzeitig abgearbeitet. Die Pipeline-Verarbeitung kommt in vielen modernen Prozessoren zum Einsatz.\\
+				Die Vorteile der Pipeline-Verarbeitung im Gegensatz zur Sequentialität des Befehlszyklus soll nun an Hand eines Beispiels der Abarbeitung von drei Befehlen verdeutlicht werden.
+				Die Abbildung \ref{fig:BefehlszylusMitPipelining} soll diesen Vorgang grafisch veranschaulichen. Nimmt man an, dass die Bearbeitung in jeder Phase im Optimalfall einen Taktzyklus benötigt, so dauert die Ausführung dieser drei Befehle ohne Pipelining ganze 15 Taktzyklen, während die Verwendung von Pipeling zu einer Abarbeitungsdauer von 8 Taktzyklen führt. Dies entspricht nahezu einer Halbierung der benötigten Zeit, ohne zusätzliche Hardware ankaufen zu müssen. Des Weiteren wird, sobald die Pipeline-Bearbeitung begonnen hat - zumindest theoretisch, falls keine Verzögerungen eintreten - in jedem Taktzyklus ein Befehl abgeschlossen, während dies bei der sequentiellen Bearbeitung nur alle fünf Taktzyklen passiert. Somit wird klar, dass sich Pipelining durchaus lohnt.\\
+				Nicht immer kann eine Pipeline allerdings optimal ausgenutzt werden. Wenn beispielsweise Datenabhängigkeiten bestehen, das bedeutet, dass das berechnete Ergebnis eines Befehls Voraussetzung für die Ausführung eines folgenden Befehls ist, so müssen sogenannte Wartetakte eingeführt werden, welche die Ausführung verzögern. \cite{AufbauFunktionsweiseMikroprozessoren}
+				
+				\begin{figure}
+					\centering	
+					\includegraphics[width=11cm]{Abbildungen/Befehlszylus_mit_Pipelining.png}
+					\caption{Grafische Darstellung der Abarbeitung von drei Befehlen nach dem Schema des Befehlszyklus unter Anwendung der Pipelining-Verarbeitung.}
+					\label{fig:BefehlszylusMitPipelining}
+				\end{figure}
+				
+				Quelle (zitieren ist schwierig, muss noch eine Lösung gefunden werden):
+				https://www.elektronik-kompendium.de/sites/com/1705221.htm --> Vielleicht Netzwerktechnik-Fibel: Grundlagen, Übertragungstechnik und Protokolle, Anwendungen und Dienste, Sicherheit --> Buch zur Webseite
+			
+			\subsubsection{Vektorrechner}
+				\label{Vektorrechner}
+				
+				Eine weitere Möglichkeit der Realisierung von Parallelem Rechnen sind die sogenannten \textit{Vektorrechner}, auch \textit{Vektorprozessoren} oder \textit{Arrayrechner} genannt.\\
+				Das im Namen dieser Technologie enthaltene \textit{Vektor} oder \textit{Array} rührt daher, dass die gleichen Berechnungen gleichzeitig auf einer Menge von Daten ausgeführt werden. Diese Daten sind in diesem Fall meist in Form eines \textit{n}-elementigen Arrays, also eines \textit{n}-dimensionalen Vektors, organisiert.
+				Diese Art der Prozessoren sind den gewöhnlichen CPUs, welche die gleiche Operation nacheinander auf den Daten ausführen würden, um ein vielfaches überlegen, falls es sich bei der zu bewerkstelligenden Aufgabe um eine Operation handelt, die auf viele Daten ausgeführt werden muss. Somit können sich erhebliche Performance-Gewinne erzielen lassen.\\
+				Vektorrechner werden vor allem in der Simulationstechnik verwendet, wo viele gleichartige Daten auf gleiche Weise verarbeitet werden müssen. Dies ist beispielsweise in der Geologie und Meteorologie des Öfteren der Fall.
+				Allerdings birgt diese Technologie den Nachteil, dass keine Standard-CPUs hier verwendet werden können, da das Vektorrechnen in der Hardware der CPU implementiert sein muss. Aus diesem Grund ergeben sich für Vektorrechner meist erhöht Kosten im Vergleich zu gewöhnlichen Prozessoren. In der jüngeren Vergangenheit entfernte sich der Trend somit von dieser Art der Parallelrechner und ging zu großen Rechen-Clustern über. Dies sind Verbünde von vielen Standardprozessoren, die über schnelle Leitungen verbunden sind. Dadurch können Kosten eingespart werden, da durch die industrielle Herstellung der Preis von gewöhnlichen CPUs stark gesunken ist.\\
+				Da gewöhnliche CPUs nicht in Vektoren von Daten arbeiten können, werden sie mit Betrachtung der mathematischen Hintergründe auch \textit{Skalarprozessoren} genannt. \cite{VektorrechnerWikipedia}
+			
+			\subsubsection{Hyper-Threading}
+			
+			\subsubsection{Virtuelle Kerne}
+			
 	\section{Prozess-Synchronisation \cite{ModerneBetriebssysteme}}
 		\label{ProzessSynchronisation}
 	
@@ -258,6 +258,7 @@
 		Ein häufiges bei der IPC auftretendes Problem sind die bereits schon erwähnten \textit{kritischen Aktivitäten} oder auch \textit{Zeitkritischen Abläufe}, auf welche im Folgenden eingegangen werden soll.
 		
 		\subsection{Probleme bei der parallelen Bearbeitung}
+			\label{ProblemeParalleleBearbeitung}
 		
 			\subsubsection{Zeitkritischer Ablauf}
 				\label{ZeitkritischerAblauf}
@@ -431,7 +432,7 @@
 						\begin{itemize}
 							\item Strikter Wechsel
 							\item Monitor
-							\item Message Passing
+							\item Message Passing\footnote{Auf das Message-Passing-Programmiermodell wird unter Kapitel \ref{MPI} eingegangen.}
 							\item Barrieren
 						\end{itemize}
 					
@@ -727,15 +728,14 @@
 		
 		Die Bewertung der Güte von Programmen ist eine grundlegende Voraussetzung, wenn man effiziente Programme erstellen möchte. Da es bei der parallelen Programmierung nahezu ausschließlich um das Erzielen einer Performance-Verbesserung geht, spielt hier die Analyse und die Optimierung der Abläufe innerhalb eines Programmes eine zentrale Rolle. Aus diesem Grund wurden einige Kenngrößen und Modelle entwickelt, die die Performance-Analyse und -Vorhersage von Programmen mit Parallelverarbeitung ermöglichen.\\
 		Die Größe, welche es in diesem Zusammenhang vor allem zu analysieren und wenn möglich reduzieren gilt, ist die \textit{Ausführungszeit} des Programmes, auch \textit{Laufzeit} genannt. Der Benutzer eines Rechner-Systems ist an sehr kurzen Antwort- bzw. Reaktionszeiten interessiert, was wiederum auf die Zeit zwischen dem Start und der Terminierung eines Programmes, also die Ausführungszeit, führt.\\
-		Auf der anderen Seite zielen Rechenzentren, welche extrem komplexen Berechnungen mittels Supercomputer zu lösen versuchen, auf einen hohen \textit{Durchsatz} ab, wobei dieser Durchsatz die durchschnittliche Anzahl an Arbeitseinheiten, welche pro Zeiteinheit verrichtet werden können, darstellt.
+		Auf der anderen Seite zielen Rechenzentren, welche extrem komplexen Berechnungen mittels Supercomputer zu lösen versuchen, auf einen hohen \textit{Durchsatz} ab, wobei dieser Durchsatz die durchschnittliche Anzahl an Arbeitseinheiten, welche pro Zeiteinheit verrichtet werden können, darstellt. \cite{ParaProgRauber}
 		
 		\subsection{Kosten, Speedup und Effizienz}
 		
 			Die Laufzeit eines parallelen Programmes auf einer speziellen Ausführungsplattform ist ein wichtiges Kriterium zur Bewertung des Programmes.\\
 			Die \textit{parallele Laufzeit} eines Programmes $t_P(n)$ eines Programmes ist dabei die Zeit zwischen dem Starten des Programmes auf dem ersten Prozessor und dem Ende der Ausführung auf dem letzten beteiligten Prozessor. Dabei steht $t$ für die Laufzeit, $P$ für die Anzahl an beteiligten, parallel arbeitenden Prozessoren und $n$ für die Größe des zu lösenden Problems. Diese sogenannte \textit{Problemgröße} hängt von den Eingabe-Daten ab. Ein Beispiel hierfür ist die Anzahl von Gleichungen, welche von einer Software gelöst werden muss.\\
 			Des Weiteren ist auch $t_S(n)$ von Bedeutung. Dies ist die Laufzeit des schnellsten sequentiellen Programmes, das ein Problem der Größe $n$ löst.
-			Aus diesen Kennzahlen lassen sich einige weitere Kenngrößen ableiten, welche im Folgenden erläutert werden sollen.\\
-			
+			Aus diesen Kennzahlen lassen sich einige weitere Kenngrößen ableiten, welche im Folgenden erläutert werden sollen. \cite{ParaProgRauber}			
 			
 			\subsubsection{Kosten eines parallelen Programmes}
 			
@@ -744,7 +744,7 @@
 				\[ C_P(n) = P \cdot t_P(n) \]
 				
 				Die daraus resultierende Zahl gibt also an, wie viel Arbeit alle Prozessoren zusammen verrichtet haben. Dabei wird davon ausgegangen, dass das Programm vollkommen parallel abläuft und die Last auf alle Prozessen genau im gleichen Maße verteilt wird.\\
-				Ein solches Programm wird \textit{kosten-optimal} genannt, falls $C_P(n) = t_S(n)$ gilt. Das bedeutet, dass das kosten-optimale parallele Programm exakt gleich viele Operationen wie das schnellste sequentielle Programm ausführt. Ist dies der Fall, so würde durch die parallele Ausführung an sich \textbf{kein} zusätzlicher Aufwand, z.B. für Kommunikation oder Synchronisation, entstehen.
+				Ein solches Programm wird \textit{kosten-optimal} genannt, falls $C_P(n) = t_S(n)$ gilt. Das bedeutet, dass das kosten-optimale parallele Programm exakt gleich viele Operationen wie das schnellste sequentielle Programm ausführt. Ist dies der Fall, so würde durch die parallele Ausführung an sich \textbf{kein} zusätzlicher Aufwand, z.B. für Kommunikation oder Synchronisation, entstehen. \cite{ParaProgRauber}
 				
 			\subsubsection{Speedup eines parallelen Programmes}
 				\label{Speedup}
@@ -769,7 +769,7 @@
 				\[ S_P(n) = \frac{t_1(n)}{t_P(n)} \]
 				
 				In der Praxis ist \(S_P(n) \geq P\) allerdings trotzdem möglich, in diesem Fall spricht man von einem \textit{superlinearen} Speedup. Dieser Effekt kann durch die Caches der Prozessoren auftreten. Dies ist darin begründet, dass jeder Prozessor auch einen zusätzlichen Cache beinhaltet. Wird der Algorithmus auf einem Prozessor ausgeführt, so ist es durchaus möglich, dass die vom Prozessor zu verarbeitenden Daten nicht vollständig im Cache des Prozessors Platz haben, was zu sogenannten Cache-Misses\footnote{Ein Cache-Miss tritt auf, wenn von einem Programm angeforderte Daten nicht im Cache gefunden werden können. Dies führt zu einer Ausführungsverzögerung, da das Programm dann auf anderen Speicher-Ebenen (Caches höheren Levels oder auch Hauptspeicher) nach den Daten suchen muss. \cite{CacheMissTechopedia}} während der Ausführung führt, welche die Ausführung verzögern und die Laufzeit verlängern. Wird das Programm jedoch auf mehreren Prozessoren parallel ausgeführt, so könnte es passieren, dass durch den zusätzlichen Cache-Speicher, der mit den hinzugekommenen Prozessoren einhergehen würde, nun genügend Speicher vorhanden wäre, sodass es zu keinen Cache-Misses mehr käme, was zu einem superlinearen Speedup führen könnte.\\
-				Doch ein solcher superlinearer Speedup tritt in der Praxis nur äußerst selten auf. Meist wird auf Grund des mit der Parallelisierung einhergehenden Mehraufwandes kein linearer, geschweige denn ein superlinearer Speedup erreicht.
+				Doch ein solcher superlinearer Speedup tritt in der Praxis nur äußerst selten auf. Meist wird auf Grund des mit der Parallelisierung einhergehenden Mehraufwandes kein linearer, geschweige denn ein superlinearer Speedup erreicht. \cite{ParaProgRauber}
 
 			\subsubsection{Effizienz eines parallelen Programmes}
 			
@@ -836,7 +836,7 @@
 							\item Manchmal ist es gar nicht das oberste Ziel, ein Problem in beliebig kleiner Zeit zu lösen, sondern ein beliebig großes Problem in der selben Zeit zu lösen. Dieser Ansatz führt zum Gustafsonschen Gesetz, welches unter Kapitel \ref{GustafsonschesGesetz} behandelt wird. \cite{AmdahlschesGesetzWikipedia} \cite{GesetzeParallelierung}
 						\end{itemize}
 
-					\item [Das Gustafsonsche Gesetz]
+					\item [Das Gustafsonsche Gesetz (Gesetz von Gustafson-Barsis)]
 						\label{GustafsonschesGesetz}
 						
 						Um dem Pessimismus, der sich aus dem Amdahlschen Gesetz ergibt, entgegenzuwirken, schuf John Gustafson\footnote{John Leroy Gustafson (* 1955) ist ein amerikanischer Informatiker und Geschäftsmann.\cite{JohnGustafsonWikipedia}} im Jahre 1988 ein eigenes Gesetz, in welchem er die Parallelisierung von einem anderen Standpunkt aus betrachtete und somit zeigte, dass sich massive Parallelisierung trotzdem lohnen kann. Nach seinem Gustafsonschen Gesetz (auch bekannt als Gesetz von Gustafson-Barsis) kann man ein Problem zwar nicht in beliebig kleiner Zeit lösen, aber in einer bestimmten Zeit beliebig große Probleme lösen.\\
@@ -896,7 +896,3 @@
 						 Das Amdahlsche Gesetz sagt letztendlich aus, dass sich massive Parallelsierung nicht auszahlt, weil sich die Laufzeit eines Programmes nur bis zu einem gewissen Punkt verringern lässt. Gustafson stellt dieser Aussage entgegen, dass man die Laufzeit eines Programmes zwar nicht beliebig verkleinern, in der selben Zeit allerdings beliebig große Probleme lösen kann. Die beiden Gesetze harmonieren also vollkommen und lassen sich im folgenden Satz zusammenfassen:\\
 						 Parallelisierung bringt zwar nur bedingt einen \textit{Zeitgewinn}, dafür aber einen großen \textit{Kapazitätsgewinn}. \cite{GesetzeParallelierung}
 				\end{description}
-			
-	\section{Parallele Programmierkonzepte}
-	
-		HIER BIN ICH.

@@ -180,4 +180,13 @@ d.~f.~E. Wikipedia, ``{John Gustafson (scientist)}.''
 \bibitem{GustafsonsGesetzWikipedia}
 d.~f.~E. Wikipedia, ``{Gustafsons Gesetz}.''
 
+\bibitem{APIWikipedia}
+d.~f.~E. Wikipedia, ``{Programmierschnittstelle}.''
+
+\bibitem{OpenMPWikipedia}
+d.~f.~E. Wikipedia, ``{OpenMP}.''
+
+\bibitem{CilkWikipedia}
+d.~f.~E. Wikipedia, ``{Cilk}.''
+
 \end{thebibliography}
