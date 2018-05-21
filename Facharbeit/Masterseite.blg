@@ -114,6 +114,14 @@ Warning--entry type for "APIWikipedia" isn't style-file defined
 --line 428 of file Literatur.bib
 Warning--entry type for "CilkWikipedia" isn't style-file defined
 --line 435 of file Literatur.bib
+Warning--entry type for "RechnerorganisationUndEntwurf" isn't style-file defined
+--line 442 of file Literatur.bib
+Warning--entry type for "HyperThreadingIntel" isn't style-file defined
+--line 450 of file Literatur.bib
+Warning--entry type for "HyperThreadingWikipedia" isn't style-file defined
+--line 457 of file Literatur.bib
+Too many commas in name 1 of "Bode, Arndt; Karl, Wolfgang und Ungerer, Theo" for entry RechnerorganisationUndEntwurf
+while executing---line 969 of file ieeetr.bst
 Too many commas in name 1 of "Alefeld, Götz; Lenhardt, Ingrid und Obermaier, Holger" for entry ParalleleNumerischeVerfahren
 while executing---line 969 of file ieeetr.bst
-(There were 2 error messages)
+(There were 3 error messages)

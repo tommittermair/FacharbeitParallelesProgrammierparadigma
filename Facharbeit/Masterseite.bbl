@@ -61,15 +61,26 @@ D.~Albrecht, Julia und~Frey, {\em {Sprichwörter und Psychologie - eine
 G.~Herrtwich, Ralf und~Hommel, {\em {Nebenläufige Programme}}.
 \newblock Springer, 1994.
 
+\bibitem{ThreadsRheinwerk}
+J.~Wolf, ``{Linux-UNIX-Programmierung - Kapitel 10: Threads},'' 2006.
+
 \bibitem{AufbauFunktionsweiseMikroprozessoren}
 C.~Richter, ``{Einführung in Aufbau und Funktionsweise von
   Mikroprozessoren},'' 2005.
 
+\bibitem{RechnerorganisationUndEntwurf}
+W.~u. U.~T. Bode, Arndt;~Karl, ``{Rechnerorganisation und -entwurf - Die
+  Hardware/Software-Schnittstelle; 3. Auflage},'' 2005.
+
 \bibitem{VektorrechnerWikipedia}
 d.~f.~E. Wikipedia, ``{Vektorprozessor}.''
 
-\bibitem{ThreadsRheinwerk}
-J.~Wolf, ``{Linux-UNIX-Programmierung - Kapitel 10: Threads},'' 2006.
+\bibitem{HyperThreadingIntel}
+I.~C. Desktop Products~Group, ``{Hyper-Threading Technology Architecture and
+  Microarchitecture}.''
+
+\bibitem{HyperThreadingWikipedia}
+d.~f.~E. Wikipedia, ``{Hyper-Threading}.''
 
 \bibitem{SpoolingWikipedia}
 d.~f.~E. Wikipedia, ``{Spooling}.''

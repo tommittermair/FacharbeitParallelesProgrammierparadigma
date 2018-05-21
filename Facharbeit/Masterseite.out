@@ -14,14 +14,14 @@
 \BOOKMARK [1][-]{section.2.2}{Implementierungsm\366glichkeiten der Parallelisierung}{chapter.2}% 14
 \BOOKMARK [2][-]{subsection.2.2.1}{Implementierungsm\366glichkeiten der Parallelisierung auf Softwareebene}{section.2.2}% 15
 \BOOKMARK [2][-]{subsection.2.2.2}{Implementierungsm\366glichkeiten der Parallelisierung auf Hardwareebene}{section.2.2}% 16
-\BOOKMARK [1][-]{section.2.3}{Prozess-Synchronisation ModerneBetriebssysteme}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Prozess-Synchronisation}{chapter.2}% 17
 \BOOKMARK [2][-]{subsection.2.3.1}{Probleme bei der parallelen Bearbeitung}{section.2.3}% 18
 \BOOKMARK [2][-]{subsection.2.3.2}{L\366sungen zu den Problemen der parallelen Verarbeitung}{section.2.3}% 19
 \BOOKMARK [1][-]{section.2.4}{Parallelrechner}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.4.1}{Begriffserkl\344rung}{section.2.4}% 21
 \BOOKMARK [2][-]{subsection.2.4.2}{Ebenen der Parallelit\344t}{section.2.4}% 22
 \BOOKMARK [2][-]{subsection.2.4.3}{Arten und Einteilungen von Parallelrechnern}{section.2.4}% 23
-\BOOKMARK [1][-]{section.2.5}{Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.5}{Metriken und Modelle zur Performance-Ana-lyse und -Vorhersage paralleler Programme}{chapter.2}% 24
 \BOOKMARK [2][-]{subsection.2.5.1}{Kosten, Speedup und Effizienz}{section.2.5}% 25
 \BOOKMARK [0][-]{chapter.3}{Parallele Programmierkonzepte, Anwendungsbeispiel und Vergleich}{}% 26
 \BOOKMARK [1][-]{section.3.1}{Parallele Programmierkonzepte}{chapter.3}% 27
