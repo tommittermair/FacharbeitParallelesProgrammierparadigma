@@ -23,10 +23,11 @@
 \BOOKMARK [2][-]{subsection.2.4.3}{Arten und Einteilungen von Parallelrechnern}{section.2.4}% 23
 \BOOKMARK [1][-]{section.2.5}{Metriken und Modelle zur Performance-Ana-lyse und -Vorhersage paralleler Programme}{chapter.2}% 24
 \BOOKMARK [2][-]{subsection.2.5.1}{Kosten, Speedup und Effizienz}{section.2.5}% 25
-\BOOKMARK [0][-]{chapter.3}{Parallele Programmierkonzepte, Anwendungsbeispiel und Vergleich}{}% 26
-\BOOKMARK [1][-]{section.3.1}{Parallele Programmierkonzepte}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.1.1}{MPI \(Message Passing Interface\)}{section.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.1.2}{OpenMP \(Open Multi-Processing\)}{section.3.1}% 29
-\BOOKMARK [2][-]{subsection.3.1.3}{Cilk}{section.3.1}% 30
-\BOOKMARK [1][-]{section.3.2}{Anwendungsbeispiel und Vergleich der M\366glichkeiten zur Realisierung von Parallelverarbeitung}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter*.2}{Literaturverzeichnis}{}% 32
+\BOOKMARK [2][-]{subsection.2.5.2}{Mathematische Gesetze und Modelle}{section.2.5}% 26
+\BOOKMARK [0][-]{chapter.3}{Parallele Programmierkonzepte, Anwendungsbeispiel und Vergleich}{}% 27
+\BOOKMARK [1][-]{section.3.1}{Parallele Programmierkonzepte}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.1.1}{MPI \(Message Passing Interface\)}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.2}{OpenMP \(Open Multi-Processing\)}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.3}{Cilk}{section.3.1}% 31
+\BOOKMARK [1][-]{section.3.2}{Anwendungsbeispiel und Vergleich der M\366glichkeiten zur Realisierung von Parallelverarbeitung}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter*.2}{Literaturverzeichnis}{}% 33

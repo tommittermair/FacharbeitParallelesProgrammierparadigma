@@ -744,9 +744,9 @@
 		\subsection{Kosten, Speedup und Effizienz}
 		
 			Die Laufzeit eines parallelen Programmes auf einer speziellen Ausführungsplattform ist ein wichtiges Kriterium zur Bewertung des Programmes.\\
-			Die \textit{parallele Laufzeit} eines Programmes $t_P(n)$ eines Programmes ist dabei die Zeit zwischen dem Starten des Programmes auf dem ersten Prozessor und dem Ende der Ausführung auf dem letzten beteiligten Prozessor. Dabei steht $t$ für die Laufzeit, $P$ für die Anzahl an beteiligten, parallel arbeitenden Prozessoren und $n$ für die Größe des zu lösenden Problems. Diese sogenannte \textit{Problemgröße} hängt von den Eingabe-Daten ab. Ein Beispiel hierfür ist die Anzahl von Gleichungen, welche von einer Software gelöst werden muss.\\
-			Des Weiteren ist auch $t_S(n)$ von Bedeutung. Dies ist die Laufzeit des schnellsten sequentiellen Programmes, das ein Problem der Größe $n$ löst.
-			Aus diesen Kennzahlen lassen sich einige weitere Kenngrößen ableiten, welche im Folgenden erläutert werden sollen. \cite{ParaProgRauber}			
+			Die \textit{parallele Laufzeit} $t_P(n)$ eines Programmes ist dabei die Zeit zwischen dem Starten des Programmes auf dem ersten Prozessor und dem Ende der Ausführung auf dem letzten beteiligten Prozessor. Dabei steht $t$ für die Laufzeit, $P$ für die Anzahl an beteiligten, parallel arbeitenden Prozessoren und $n$ für die Größe des zu lösenden Problems. Diese sogenannte \textit{Problemgröße} hängt im einfachsten Fall von den Eingabe-Daten ab. Ein Beispiel hierfür ist die Anzahl von Gleichungen, welche von einer Software gelöst werden muss.\\
+			Des Weiteren ist auch $t_S(n)$ von Bedeutung. Dies ist die Laufzeit des schnellsten sequentiellen Programmes, das das gegebene Problem der Größe $n$ löst.\\
+			Aus diesen Kennzahlen lassen sich einige weitere Kenngrößen ableiten, welche im Folgenden erläutert werden sollen. \cite{ParaProgRauber}
 			
 			\subsubsection{Kosten eines parallelen Programmes}
 			
@@ -770,16 +770,16 @@
 				
 				\[ S_P(n) \leq P \]
 				
-				Im Fall von \(S_P(n) = P\) spricht man von einem \textit{linearen} Speedup.
+				Im Fall von \(S_P(n) = P\) spricht man von einem \textit{linearen} Speedup. Dies ist in der Theorie der Optimalfall.\\
 				
 				Falls \(S_P(n) \geq P\) gilt, so ist der sequentielle Algorithmus nicht der beste sequentielle Algorithmus zur Lösung des gegebenen Problems, da die Ausführung des parallelen Programmes auf nur einem Prozessor unter Verwendung von einem Scheduling-Algorithmus wie beispielsweise Round-Robin, welcher in Kapitel \ref{ProzessScheduling} erklärt wurde, zu einer besseren Laufzeit führen würde. Aus dieser sequentiell abgearbeiteten Version des parallelen Algorithmus kann dann ein neuer sequentieller Algorithmus konstruiert werden, sodass \(S_P(n) \geq P\) nicht mehr gilt.\\
-				Die Berechnung des Speedups schließt folglich den Vergleich mit dem schnellsten sequentiellen Algorithmus mit ein. Dieser Algorithmus kann in einigen Fällen allerdings schwierig zu finden bzw. zu erstellen sein.\\
-				Aus diesem Grund wird für die Berechnung des Speedups nicht die Laufzeit des besten sequentiellen Algorithmuses verwendet, sondern diejenige des parallelen Algorithmuses unter Verwendung von nur einem Prozessor, also $t_1(n)$.
+				Die Berechnung des Speedups schließt wie bereits erwähnt den Vergleich mit dem schnellsten sequentiellen Algorithmus mit ein. Dieser Algorithmus kann in einigen Fällen allerdings schwierig zu finden bzw. zu erstellen sein.\\
+				Aus diesem Grund wird für die Berechnung des Speedups in der Praxis oft nicht die Laufzeit des besten sequentiellen Algorithmuses verwendet, sondern diejenige des parallelen Algorithmuses unter Verwendung von nur einem Prozessor, also $t_1(n)$.
 				Unter diesen Umständen ergibt sich der Speedup durch die folgende Formel:
 				
 				\[ S_P(n) = \frac{t_1(n)}{t_P(n)} \]
 				
-				In der Praxis ist \(S_P(n) \geq P\) allerdings trotzdem möglich, in diesem Fall spricht man von einem \textit{superlinearen} Speedup. Dieser Effekt kann durch die Caches der Prozessoren auftreten. Dies ist darin begründet, dass jeder Prozessor auch einen zusätzlichen Cache beinhaltet. Wird der Algorithmus auf einem Prozessor ausgeführt, so ist es durchaus möglich, dass die vom Prozessor zu verarbeitenden Daten nicht vollständig im Cache des Prozessors Platz haben, was zu sogenannten Cache-Misses\footnote{Ein Cache-Miss tritt auf, wenn von einem Programm angeforderte Daten nicht im Cache gefunden werden können. Dies führt zu einer Ausführungsverzögerung, da das Programm dann auf anderen Speicher-Ebenen (Caches höheren Levels oder auch Hauptspeicher) nach den Daten suchen muss. \cite{CacheMissTechopedia}} während der Ausführung führt, welche die Ausführung verzögern und die Laufzeit verlängern. Wird das Programm jedoch auf mehreren Prozessoren parallel ausgeführt, so könnte es passieren, dass durch den zusätzlichen Cache-Speicher, der mit den hinzugekommenen Prozessoren einhergehen würde, nun genügend Speicher vorhanden wäre, sodass es zu keinen Cache-Misses mehr käme, was zu einem superlinearen Speedup führen könnte.\\
+				In der Praxis ist \(S_P(n) \geq P\) allerdings trotzdem möglich, in diesem Fall spricht man von einem \textit{superlinearen} Speedup. Dieser Effekt kann durch die Caches der Prozessoren auftreten. Dies ist darin begründet, dass jeder Prozessor auch einen zusätzlichen Cache beinhaltet. Wird der Algorithmus auf einem Prozessor ausgeführt, so ist es durchaus möglich, dass die vom Prozessor zu verarbeitenden Daten nicht vollständig im Cache des Prozessors Platz haben, was zu sogenannten Cache-Misses\footnote{Ein Cache-Miss tritt auf, wenn von einem Programm angeforderte Daten nicht im Cache gefunden werden können. Dies führt zu einer Ausführungsverzögerung, da das Programm dann auf anderen Speicher-Ebenen (in Caches höheren Levels oder auch im Hauptspeicher) nach den Daten suchen muss. \cite{CacheMissTechopedia}} während der Ausführung führt, welche die Ausführung verzögern und die Laufzeit verlängern. Wird das Programm jedoch auf mehreren Prozessoren parallel ausgeführt, so könnte es passieren, dass durch den zusätzlichen Cache-Speicher, der mit den hinzugekommenen Prozessoren einhergeht, nun genügend Speicher vorhanden sein könnte, sodass es zu keinen (oder weniger) Cache-Misses käme, was zu einem superlinearen Speedup führen könnte.\\
 				Doch ein solcher superlinearer Speedup tritt in der Praxis nur äußerst selten auf. Meist wird auf Grund des mit der Parallelisierung einhergehenden Mehraufwandes kein linearer, geschweige denn ein superlinearer Speedup erreicht. \cite{ParaProgRauber}
 
 			\subsubsection{Effizienz eines parallelen Programmes}
@@ -788,122 +788,123 @@
 				
 				\[ E_P(n) = \frac{S_P(n)}{P} \]
 				
-				Durch das Ausdrücken des Speedups $S_P(n)$ als \( \frac{t_1(n)}{t_P(n)} \) lässt sich die Effizienz auch wie folgt ausdrücken:
+				Durch das Ausdrücken des Speedups $S_P(n)$ als \( \frac{t_S(n)}{t_P(n)} \) lässt sich die Effizienz auch wie folgt ausdrücken:
 				
 				\[ E_P(n) = \frac{\frac{t_S(n)}{t_P(n)}}{P} = \frac{t_S(n)}{P \cdot t_P(n)} = \frac{t_S(n)}{C_P(n)} \]
 				
 				Die Effizienz gibt an, wie effizient die einzelnen Prozessoren genutzt werden und an der Berechnung mitwirken. Sie ließe sich folglich auch einfach durch Multiplikation mit 100 in Prozent angeben. Diese Zahl würde dann der Auslastung der einzelnen Prozessoren entsprechen.\\
 				Falls es zu keinem superlinearen Speedup kommt, gilt stets \( 0 \leq E_P(n) \leq 1 \).\\
-				Ein idealer Speedup $S_P(n) = P$ entspricht einer Effizienz von $E_P(n) = 1$. \cite{ParaProgRauber}
+				Ein idealer, linearer Speedup $S_P(n) = P$ entspricht einer Effizienz von $E_P(n) = 1 = 100\%$.\\
+				Die Effizienz gibt folglich auch darüber Auskunft, wie nahe die Beschleunigung, welche durch die Parallelisierung erreicht wird, an der idealen Beschleunigung liegt. Eine Effizienz von 100\% entspricht dabei dem Ideal, da ein Einsatz von $P$ Prozessoren in diesem Fall eine $P$-fache Beschleunigung mit sich bringen würde. \cite{ParaProgRauber}
+			
+		\subsection{Mathematische Gesetze und Modelle}
+			
+			Um Aussagen über den Nutzen der Parallelisierung im Allgemeinen zu treffen, wurden verschiedenste mathematische Modelle entwickelt, welche die Parallelisierung teilweise aus vollkommen verschiedenen Blickwinkeln aus betrachten.\\
+			Im Folgenden wird auf die beiden wichtigsten Gesetze, nämlich das \textit{Amdahlsche Gesetz} und das \textit{Gustafsonsche Gesetz} eingegangen.
+			
+			\begin{description}
+				\item [Das Amdahlsche Gesetz]
 				
-			\subsubsection{Mathematische Gesetze und Modelle}
+					Dieses Gesetz, welches 1967 von Gene Amdahl\footnote{Gene Myron Amdahl (1922 - 2015) war ein US-amerikanischer Computerarchitekt und Hi-Tech-Unternehmer norwegischer Abstammung. \cite{GeneAmdahlWikipedia}} veröffentlicht wurde, beschäftigt sich mit der Beschleunigung von Programmen durch eine parallele Ausführung. Amdahl stellte sich die Frage, wie weit diese Beschleunigung getrieben werden kann.\\
+					Dieses Gesetz geht davon aus, dass ein Programm im Wesentlichen aus nur zwei Teilen besteht: Einem sequentiellen Anteil, der nicht parallelisierbar ist, und einem parallelen Anteil, der durch Parallelisierung \textit{beliebig} beschleunigt werden kann.\\
+					Amdahl nimmt an, dass das Programm zunächst auf einem Ein-Prozessor-System gestartet wird und normiert die hierbei gemessene Laufzeit auf 1. Den parallelisierbaren Anteil der Laufzeit nennt man $t_{Par}$, den sequentiellen Anteil folglich $1 - t_{Par}$.\\
+					Auf einem System mit $P$ Prozessoren verhält sich das Programm nun anders: Der sequentielle Anteil $1 - t_{Par}$ ändert sich nicht, der parallele Anteil $t_{Par}$ wird im Optimalfall auf alle Prozessoren gleichermaßen aufgeteilt und wird $P$-mal schneller ausgeführt, weshalb aus $t_{Par}$ der Term $\frac{t_{Par}}{P}$ wird. Die Laufzeit $t_{Ges}(P)$ auf einem $P$-Prozessor-System lässt sich also durch den folgenden Term angeben.
+					
+					\[ t_{Ges}(P) = (1 - t_{Par}) + \frac{t_{Par}}{P} \]
 				
-				Um Aussagen über den Sinn der Parallelisierung im Allgemeinen zu treffen, wurden verschiedenste mathematische Modelle entwickeln, welche die Parallelisierung teilweise aus vollkommen verschiedenen Blickwinkeln aus betrachten.\\
-				Im Folgenden wird auf die beiden wichtigsten Gesetze, nämlich das \textit{Amdahlsche Gesetz} und das \textit{Gustafsonsche Gesetz} eingegangen.
+					Aus dem obigen Term wird auch schnell wieder klar, dass für $P = 1$, also auf einem Ein-Prozessor-System, die gesamte Laufzeit $t_{Ges}(1)$ genau 1 ist.\\
+					Der Geschwindigkeitsgewinn, also der Speedup, lässt sich nun sehr einfach errechnen. Dabei wird in der folgenden Betrachtung die Problemgröße $n$ vernachlässigt, um den Grundgedanken Amdahls besser folgen zu können.
+					
+					\[ S_P = \frac{t_{Ges}(1)}{t_{Ges}(P)} = \frac{1}{(1 - t_{Par}) + \frac{t_{Par}}{P}} \]
 				
-				\begin{description}
-					\item [Das Amdahlsche Gesetz]
+					Der obige Term entspricht bereits dem Amdahlschen Gesetz.\\
+					Eine wichtige und oft zitierte Konsequenz aus dem obigen Gesetz ist eine Aussage über die maximale Beschleunigung, die mittels Parallelisierung erzielt werden kann. Bildet man den Grenzwert des obigen Speedups für beliebig viele Prozessoren, so kommt man zur folgenden Rechnung.
 					
-						Dieses Gesetz, welches 1967 von Gene Amdahl\footnote{Gene Myron Amdahl (1922 - 2015) war ein US-amerikanischer Computerarchitekt und Hi-Tech-Unternehmer norwegischer Abstammung. \cite{GeneAmdahlWikipedia}} veröffentlicht wurde, beschäftigt sich mit der Beschleunigung von Programmen durch eine parallele Ausführung. Amdahl stellte sich die Frage, wie weit die Beschleunigung getrieben werden kann.\\
-						Dieses Gesetz geht davon aus, dass ein Programm im Wesentlichen aus nur zwei Teilen besteht: Einem sequentiellen Anteil, der nicht parallelisierbar ist, und einem parallelen Anteil, der durch Parallelisierung beliebig beschleunigt werden kann.\\
-						Amdahl nimmt an, dass das Programm zunächst auf einem Ein-Prozessor-System gestartet wird und normiert die hierbei gemessene Laufzeit auf 1. Den parallelisierbaren Anteil der Laufzeit nennt man $t_{Par}$, den sequentiellen Anteil folglich $1 - t_{Par}$.\\
-						Auf einem System mit $P$ Prozessoren verhält sich das Programm nun anders: Der sequentielle Anteil $1 - t_{Par}$ ändert sich nicht, der parallele Anteil $t_{Par}$ wird im Optimalfall auf alle Prozessoren aufgeteilt und wird $P$-mal schneller ausgeführt, weshalb aus $t_{Par}$ der Term $\frac{t_{Par}}{P}$ wird. Die Laufzeit $t_{Ges}(P)$ auf einem $P$-Prozessor-System lässt sich also durch den folgenden Term angeben.
-						
-						\[ t_{Ges}(P) = (1 - t_{Par}) + \frac{t_{Par}}{P} \]
+					\[ \lim\limits_{P \to \infty} S_P = \lim\limits_{P \to \infty} \frac{1}{(1 - t_{Par}) + \frac{t_{Par}}{P}} = \frac{1}{(1 - t_{Par}) + 0} = \frac{1}{1 - t_{Par}} \]
+				
+					Aus dem obigen Zusammenhang wird klar, dass ein Programm durch Parallelisierung \textit{nicht beliebig} beschleunigt werden kann, sondern bestimmte Grenzen existieren. Für den Speedup gilt laut Amdahl also die folgende Ungleichung:
 					
-						Aus dem obigen Term wird auch schnell wieder klar, dass für $P = 1$, also auf einem Ein-Prozessor-System, die gesamte Laufzeit $t_{Ges}(1)$ genau 1 ist.\\
-						Der Geschwindigkeitsgewinn, also der Speedup, lässt sich nun sehr einfach errechnen.
-						
-						\[ S_P(n) = \frac{t_{Ges}(1)}{t_{Ges}(P)} = \frac{1}{(1 - t_{Par}) + \frac{t_{Par}}{P}} \]
+					\[ S_P < \frac{1}{1 - t_{Par}} \]
 					
-						Der obige Term entspricht bereits dem Amdahlschen Gesetz.\\
-						Eine wichtige und oft zitierte Konsequenz aus dem obigen Gesetz ist eine Aussage über die maximale Beschleunigung, die mittels Parallelisierung erzielt werden kann. Bildet man den Grenzwert des obigen Speedups für beliebig viele Prozessoren, so kommt man zur folgenden Rechnung.
-						
-						\[ \lim\limits_{P \to \infty} S_P(n) = \lim\limits_{P \to \infty} \frac{1}{(1 - t_{Par}) + \frac{t_{Par}}{P}} = \frac{1}{(1 - t_{Par}) + 0} = \frac{1}{1 - t_{Par}} \]
+					Im Nenner des obigen Bruches steht genau die sequentielle Laufzeit $1 - t_{Par}$, welche durch Parallelisierung nicht beeinflusst werden kann. Dieses Gesetz sagt also aus, dass die Verwendung von mehr Prozessoren nicht immer einen Mehrwert mit sich bringt, sondern eine Grenze für den Speedup existiert, der sich der Speedup bei Verwendung von beliebig vielen Prozessoren annähert.\\
+					Dieses Modell führte zu viel Pessimismus in Bezug auf massive Parallelisierung, da sich beispielsweise ein zu 90\% parallelisierbares Programm mit $t_{Par} = 0,9$ auch bei Verwendung von beliebig vielen Prozessoren nur um den Faktor 10 ($\frac{1}{1 - t_{Par}} = \frac{1}{1 - 0,9} = 10$) beschleunigen lässt.\\
+					Das in Abbildung \ref{fig:Amdahlsches_Gesetz} dargestellte Diagramm zeigt den Zusammenhang zwischen dem Speedup und der Anzahl der verwendeten Prozessoren für verschieden gut parallelisierbare Programme. Die Prozessor-Achse P ist dabei logarithmisch eingeteilt, dass bedeutet, dass sich die Anzahl der verwendeten Prozessoren bei jedem Schritt verdoppelt.
 					
-						Aus dem obigen Zusammenhang wird klar, dass ein Programm durch Parallelisierung nicht beliebig beschleunigt werden kann, sondern bestimmte Grenzen existieren. Für den Speedup gilt laut Amdahl also die folgende Ungleichung:
-						
-						\[ S_P < \frac{1}{1 - t_{Par}} \]
-						
-						Im Nenner des obigen Bruches steht genau die sequentielle Laufzeit $1 - t_{Par}$, welche durch Parallelisierung nicht beeinflusst werden kann.\\
-						Dieses Modell führte zu viel Pessimismus in Bezug auf massive Parallelisierung, da sich beispielsweise ein zu 90 \% parallelisierbares Programm $t_{Par} = 0,9$ auch bei Verwendung von beliebig vielen Prozessoren nur um den Faktor 10 ($\frac{1}{1 - t_{Par}} = \frac{1}{1 - 0,9} = 10$) beschleunigen lässt.\\
-						Das in Abbildung \ref{fig:Amdahlsches_Gesetz} dargestellte Diagramm zeigt den Zusammenhang zwischen dem Speedup und der Anzahl der verwendeten Prozessoren für verschieden gut parallelisierbare Programme. Die Prozessor-Achse P ist dabei logarithmisch eingeteilt, dass bedeutet, dass sich die Anzahl der verwendeten Prozessoren bei jedem Schritt verdoppelt.
-						
-						\begin{figure}
-							\centering	
-							\includegraphics[width=10cm]{Abbildungen/Amdahlsches_Gesetz.png}
-							\caption{Grafische Darstellung des Zusammenhangs zwischen dem aus dem Amdahlschen Gesetz ableitbaren Speedup und der Anzahl der verwendeten Prozessoren für verschieden gut parallelisierbare Programme. \cite{GesetzeParallelierung}}
-							\label{fig:Amdahlsches_Gesetz}
-						\end{figure}
-						
-						Eine weitere Folge aus diesem Modell ist das Gesetz des abnehmenden Gewinns. Wenn bereits viele Prozessoren verwendet werden, so wirkt sich die Hinzunahme eines weiteren Prozessors nur mehr geringfügig auf die gesamte Laufzeit des Programmes aus.
-						
-						Aus den bereits bekannten Gründen führte dieses Modell in der Vergangenheit zu einer negativen Einstellung in Bezug auf die Parallelisierung. Dabei sei allerdings darauf hingewiesen, dass dieses Gesetz nur ein Modell ist und deshalb bestimmten Grenzen unterworfen ist.\\
-						Die folgenden Sachverhalte werden vom Amdahlschen Gesetz nicht beachtet:
-						
-						\begin{itemize}
-							\item Umso mehr Prozessoren an einem Problem gemeinsam arbeiten, umso größer wird auch der Kommunikationsaufwand, welcher den zu erwartenden Speedup nochmals senkt.
-							\item Mit einem dazukommenden Prozessor gehen auch andere zusätzliche Ressourcen einher. Beispielsweise ist jeder zusätzliche Prozessor mit einem eigenen Cache ausgestattet, weshalb für die Berechnungen insgesamt mehr Cache zur Verfügung steht. Es kann auch dazu kommen, dass ein Problem, dass auf einem Ein-Prozessor-System nicht auf ein Mal im Speicher Platz hatte, durch die Parallelisierung in Teilprobleme zerlegt wurde, sodass diese in den Caches der beteiligten Prozessoren Platz haben. In diesem Fall können die Teilprobleme und damit auch das gesamte Problem in einer viel schnelleren Zeit gelöst werden.
-							\item Manchmal ist es gar nicht das oberste Ziel, ein Problem in beliebig kleiner Zeit zu lösen, sondern ein beliebig großes Problem in der selben Zeit zu lösen. Dieser Ansatz führt zum Gustafsonschen Gesetz, welches unter Kapitel \ref{GustafsonschesGesetz} behandelt wird. \cite{AmdahlschesGesetzWikipedia} \cite{GesetzeParallelierung}
-						\end{itemize}
+					\begin{figure}
+						\centering	
+						\includegraphics[width=9cm]{Abbildungen/Amdahlsches_Gesetz.png}
+						\caption{Grafische Darstellung des Zusammenhangs zwischen dem aus dem Amdahlschen Gesetz ableitbaren Speedup und der Anzahl der verwendeten Prozessoren für verschieden gut parallelisierbare Programme. \cite{GesetzeParallelierung}}
+						\label{fig:Amdahlsches_Gesetz}
+					\end{figure}
+					
+					Eine weitere Folge aus diesem Modell ist das Gesetz des abnehmenden Gewinns. Wenn bereits viele Prozessoren verwendet werden, so wirkt sich die Hinzunahme eines weiteren Prozessors nur mehr geringfügig auf die gesamte Laufzeit des Programmes aus.\\
+					
+					Aus den bereits bekannten Gründen führte dieses Modell in der Vergangenheit zu einer negativen Einstellung in Bezug auf die Parallelisierung. Dabei sei allerdings darauf hingewiesen, dass dieses Gesetz nur ein Modell ist und deshalb bestimmten Grenzen unterworfen ist.\\
+					Die folgenden Sachverhalte werden vom Amdahlschen Gesetz nicht beachtet:
+					
+					\begin{itemize}
+						\item Umso mehr Prozessoren an einem Problem gemeinsam arbeiten, umso größer wird auch der Kommunikationsaufwand, welcher den zu erwartenden Speedup nochmals senkt.
+						\item Mit einem dazukommenden Prozessor gehen auch andere zusätzliche Ressourcen einher. Beispielsweise ist jeder zusätzliche Prozessor mit einem eigenen Cache ausgestattet, weshalb für die Berechnungen insgesamt mehr Cache zur Verfügung steht. Es kann auch dazu kommen, dass ein Problem, dass auf einem Ein-Prozessor-System nicht auf ein Mal im Speicher Platz hatte, durch die Parallelisierung in Teilprobleme zerlegt werden kann, sodass diese in den Caches der beteiligten Prozessoren Platz haben. In diesem Fall können die Teilprobleme und damit auch das gesamte Problem in einer viel schnelleren Zeit gelöst werden.
+						\item Manchmal ist es gar nicht das höchste Ziel, ein Problem in beliebig kleiner Zeit zu lösen, sondern ein beliebig großes Problem in immer der selben Zeit zu lösen. Dieser Ansatz führt zum Gustafsonschen Gesetz, welches unter Kapitel \ref{GustafsonschesGesetz} behandelt wird. \cite{AmdahlschesGesetzWikipedia} \cite{GesetzeParallelierung}
+					\end{itemize}
 
-					\item [Das Gustafsonsche Gesetz (Gesetz von Gustafson-Barsis)]
-						\label{GustafsonschesGesetz}
-						
-						Um dem Pessimismus, der sich aus dem Amdahlschen Gesetz ergibt, entgegenzuwirken, schuf John Gustafson\footnote{John Leroy Gustafson (* 1955) ist ein amerikanischer Informatiker und Geschäftsmann.\cite{JohnGustafsonWikipedia}} im Jahre 1988 ein eigenes Gesetz, in welchem er die Parallelisierung von einem anderen Standpunkt aus betrachtete und somit zeigte, dass sich massive Parallelisierung trotzdem lohnen kann. Nach seinem Gustafsonschen Gesetz (auch bekannt als Gesetz von Gustafson-Barsis) kann man ein Problem zwar nicht in beliebig kleiner Zeit lösen, aber in einer bestimmten Zeit beliebig große Probleme lösen.\\
-						Eine grundlegende Säule dieses Modells ist die Einbeziehung der Problemgröße $n$, welche von Amdahl vernachlässigt wurde. Die Problemgröße kann man sich im einfachsten Fall als die Größe der Eingabedaten des Programmes vorstellen. Das ursprünglich zu lösende Problem hat in diesem Fall die Problemgröße $n = 1$. Die Laufzeit dieses Programmes auf einem Ein-Prozessor-System wird wiederum auf 1 normiert. Der parallele Anteil des Programmes hat auf diesem System einen Anteil von $t'_{Par}$.\\
-						Nun hat sich Gustafson Gedanken darüber gemacht, wie sich die Laufzeit verändert, wenn die Problemgröße $n$ erhöht wird. Er argumentiert dabei, dass sich diese Erhöhung nur auf den parallelen Anteil der Laufzeit auswirkt, da hierbei oft beispielsweise Vektor-Operationen berechnet werden, deren Dimension direkt von der Größe der Eingabedaten abhängt. Der sequentielle Anteil besteht in diesem Modell hingegen vor allem aus Initialisierungen, auf welche die Problemgröße keinen Einfluss ausübt. Dies führt im Allgemeinen zur folgenden Laufzeit $t_{Ges}(P, n)$.
-						
-						\[ t_{Ges}(P, n) = (1 - t'_{Par}) + n \cdot t'_{Par}, P = 1 \]
-						
-						Analog zum Amdahlschen Gesetz stellte sich nun auch Gustafon die Frage, wie sich der Einsatz von $P$-Prozessor-Systemen auf die gesamte Laufzeit $t_{Ges}(P, n)$ auswirkt. In diesem Fall bleibt auch hier der sequentielle Anteil unverändert, während der parallele Anteil im Optimalfall wiederum $P$-mal schneller ausgeführt wird. Für ein allgemeines $P$ ergibt sich also die folgende Laufzeit.
-						
-						\[ t_{Ges}(P, n) = (1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P} \]
-						
-						Auch aus den obigen beiden Termen lässt sich wieder der Speedup ermitteln.
-						
-						\[ S_P(n) = \frac{t_{Ges}(1, n)}{t_{Ges}(P, n)} = \frac{(1 - t'_{Par}) + n \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P}} \]
-						
-						Die obige Formel entspricht also dem Speedup in Abhängigkeit von der Anzahl der verwendeten Prozessoren P und der Problemgröße n.\\
-						Nun wird dieser Zusammenhang für den Spezialfall $n = 1$ betrachtet.
-						
-						\[ S_P(1) = \frac{t_{Ges}(1, 1)}{t_{Ges}(P, 1)} = \frac{(1 - t'_{Par}) + 1 \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{1 \cdot t'_{Par}}{P}} = \frac{(1 - t'_{Par}) + t'_{Par}}{(1 - t'_{Par}) + \frac{t'_{Par}}{P}} = \frac{1}{(1 - t'_{Par}) + \frac{t'_{Par}}{P}} \]
-						
-						Man erkennt das Amdahlsche Gesetz wieder, weshalb klar wird, dass ein enger Zusammenhang zwischen den beiden Gesetzen besteht.\\
-						Gustafson beleuchtet nun allerdings einen vollkommen anderen Aspekt als Amdahl. Während Amdahl von einer konstanten Problemgröße ausging und für ihn vor allem die Minimierung der Laufzeit das Ziel darstellte, war Gustafsons Ansatz, dass nicht die Problemgröße, sondern die Laufzeit konstant gehalten werden soll. Gustafson fragte sich nun, welche Problemgröße $n$ man in der ursprünglichen Laufzeit 1 auf einem $P$-Prozessor-System handhaben kann.\\
-						
-						\[ t_{Ges}(P, n) = 1 \]
-						\[ 1 = (1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P} \]
-						\[ P = P \cdot (1 - t'_{Par}) + n \cdot t'_{Par} \]
-						\[ P = P - P \cdot t'_{Par} + n \cdot t'_{Par} \]
-						\[ P \cdot t'_{Par} = n \cdot t'_{Par} \]
-						\[ P = n \]
-						
-						Das Ergebnis dieser Rechnung ist sehr optimistisch und stellt die Parallelisierung in ein anderes Licht. Nach Gustafson kann man auf einem $P$-Prozessor-System ein Problem der Größe $n = P$ in der Laufzeit 1 berechnen, vollkommen unabhängig von der Größe der sequentiellen und parallelen Anteil des Programmes. Durch Parallelisierung erhält man also zwar nur einen begrenzten Speedup, aber einen beliebig hohen Kapazitätsgewinn, der mit der Anzahl der verwendeten Prozessoren linear wächst.\\
-						Allerdings war Gustafson diese Erkenntnis nicht genug, sodass er versuchte, aus den berechneten Zusammenhängen einen Speedup herzuleiten, wobei ihm allerdings ein Denkfehler unterlief. Er überlegte sich, welche Laufzeit das neue, größere Problem auf einem Ein-Prozessor-System benötigen würde. Hierbei setzte er den Zusammenhang $n = P$ in die folgende, bereits hergeleitete Formel des Speedups ein.
-						
-						\[ S_P(n) = \frac{(1 - t'_{Par}) + n \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P}} \]
-						
-						Nun wird in den obigen Term $n = P$ eingesetzt.
-						
-						\[ S_P(n) = \frac{(1 - t'_{Par}) + P \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{P \cdot t'_{Par}}{P}} \]
-						
-						\[ S_P(n) = \frac{(1 - t'_{Par}) + P \cdot t'_{Par}}{(1 - t'_{Par}) + t'_{Par}} \]
-						
-						\[ S_P(n) = \frac{(1 - t'_{Par}) + P \cdot t'_{Par}}{1} \]
-						
-						Im Nenner steht nun die ursprüngliche Laufzeit, die bekanntlich auf 1 normiert wurde. Somit ergibt sich das Gustafsonsche Gesetz.
-						
-						\[ S_P(n) = (1 - t'_{Par}) + P \cdot t'_{Par} \]
-						
-						Der Denkfehler wird klar, wenn man sich vor Augen hält, dass dieser Speedup auf der Annahme einer konstanten Laufzeit basiert.\\
-						Der Fehler wird anhand der Analogie mit einem Supermarkt schnell klar. Gibt es in einem Supermarkt beispielsweise eine Aktion, in der man zwei Stück eines Produktes zum Preis von einem erhält, so würde man laut dem Gustafsonschen Gesetz 50 \% des Geldes sparen, wenn wir statt einem Stück zwei Stücke kaufen. Und genau hierin liegt die Falle: Man hat gar kein Geld gespart, sondern ein Stück gratis dazu erhalten. Der Gewinn ist in diesem Fall also materiell und nicht finanziell.\\
-						Dieser sehr fragwürdige Schritt Gustafsons sorgte in der Vergangenheit für viele Verwirrungen und Kontroversen. \cite{GustafsonsGesetzWikipedia} \cite{GesetzeParallelierung}
+				\item [Das Gustafsonsche Gesetz (Gesetz von Gustafson-Barsis)]
+					\label{GustafsonschesGesetz}
 					
-					\item [Zusammenhang zwischen dem Amdahlschen und dem Gustafsonschen Gesetz]
-						 
-						 Amdahl geht von einer konstanten Problemgröße und auch von einem konstanten parallelisierbaren Anteil aus, wobei das Ziel ist, die Laufzeit durch Einsatz von Parallelisierung zu verringern.\\
-						 Gustafson betrachtet den Sachverhalt aus einem anderen Blickwinkel. Dieser geht von einem mit wachsender Problemgröße verschwindend klein werdenden sequentiellen Anteil aus.\\
-						 Das Amdahlsche Gesetz sagt letztendlich aus, dass sich massive Parallelsierung nicht auszahlt, weil sich die Laufzeit eines Programmes nur bis zu einem gewissen Punkt verringern lässt. Gustafson stellt dieser Aussage entgegen, dass man die Laufzeit eines Programmes zwar nicht beliebig verkleinern, in der selben Zeit allerdings beliebig große Probleme lösen kann. Die beiden Gesetze harmonieren also vollkommen und lassen sich im folgenden Satz zusammenfassen:\\
-						 Parallelisierung bringt zwar nur bedingt einen \textit{Zeitgewinn}, dafür aber einen großen \textit{Kapazitätsgewinn}. \cite{GesetzeParallelierung}
-				\end{description}
+					Um dem Pessimismus, der sich aus dem Amdahlschen Gesetz ergibt, entgegenzuwirken, schuf John Gustafson\footnote{John Leroy Gustafson (* 1955) ist ein amerikanischer Informatiker und Geschäftsmann.\cite{JohnGustafsonWikipedia}} im Jahre 1988 ein eigenes Gesetz, in welchem er die Parallelisierung von einem anderen Standpunkt aus betrachtete und somit zeigte, dass sich massive Parallelisierung trotzdem lohnen kann. Nach seinem Gustafsonschen Gesetz (auch bekannt als Gesetz von Gustafson-Barsis) kann man ein Problem zwar nicht in beliebig kleiner Zeit lösen, aber in einer bestimmten Zeit beliebig große Probleme berechnen.\\
+					Eine grundlegende Säule dieses Modells ist die Einbeziehung der Problemgröße $n$, welche von Amdahl vernachlässigt wurde. Die Problemgröße kann man sich im einfachsten Fall als die Größe der Eingabedaten des Programmes vorstellen. Das ursprünglich zu lösende Problem hat in diesem Fall die Problemgröße $n = 1$. Die Laufzeit dieses Programmes auf einem Ein-Prozessor-System wird wiederum auf 1 normiert. Der parallele Anteil des Programmes hat auf diesem System einen Anteil von $t'_{Par}$.\\
+					Nun hat sich Gustafson Gedanken darüber gemacht, wie sich die Laufzeit verändert, wenn die Problemgröße $n$ erhöht wird. Er argumentiert dabei, dass sich diese Erhöhung nur auf den parallelen Anteil der Laufzeit auswirkt, da hierbei oft beispielsweise Vektor-Operationen berechnet werden, deren Dimension direkt von der Größe der Eingabedaten abhängt. Der sequentielle Anteil besteht in diesem Modell hingegen vor allem aus Initialisierungsvorgängen, auf welche die Problemgröße keinen Einfluss ausübt. Dies führt im Allgemeinen zur folgenden Laufzeit $t_{Ges}(P, n)$, wobei hier $P = 1$ gilt.
+					
+					\[ t_{Ges}(1, n) = (1 - t'_{Par}) + n \cdot t'_{Par} \]
+					
+					Analog zum Amdahlschen Gesetz stellte sich nun auch Gustafon die Frage, wie sich der Einsatz von $P$-Prozessor-Systemen auf die gesamte Laufzeit $t_{Ges}(P, n)$ auswirkt. In diesem Fall bleibt auch hier der sequentielle Anteil unverändert, während der parallele Anteil im Optimalfall wiederum $P$-mal schneller ausgeführt wird. Für ein allgemeines $P$ ergibt sich also die folgende Laufzeit.
+					
+					\[ t_{Ges}(P, n) = (1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P} \]
+					
+					Auch aus den obigen beiden Termen lässt sich wieder der Speedup ermitteln.
+					
+					\[ S_P(n) = \frac{t_{Ges}(1, n)}{t_{Ges}(P, n)} = \frac{(1 - t'_{Par}) + n \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P}} \]
+					
+					Die obige Formel entspricht also dem Speedup in Abhängigkeit von der Anzahl der verwendeten Prozessoren $P$ und der Problemgröße $n$.\\
+					Nun wird dieser Zusammenhang für den Spezialfall $n = 1$ betrachtet.
+					
+					\[ S_P(1) = \frac{t_{Ges}(1, 1)}{t_{Ges}(P, 1)} = \frac{(1 - t'_{Par}) + 1 \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{1 \cdot t'_{Par}}{P}} = \frac{1 - t'_{Par} + t'_{Par}}{(1 - t'_{Par}) + \frac{t'_{Par}}{P}} = \frac{1}{(1 - t'_{Par}) + \frac{t'_{Par}}{P}} \]
+					
+					Man erkennt das Amdahlsche Gesetz wieder, weshalb klar wird, dass ein enger Zusammenhang zwischen den beiden Gesetzen besteht.\\
+					Gustafson beleuchtet nun allerdings einen vollkommen anderen Aspekt als Amdahl. Während Amdahl von einer konstanten Problemgröße ausging ($n = 1$) und für ihn vor allem die Minimierung der Laufzeit das Ziel darstellte, war Gustafsons Ansatz, dass nicht die Problemgröße, sondern die Laufzeit konstant gehalten werden soll. Gustafson fragte sich nun, welche Problemgröße $n$ man in der ursprünglichen Laufzeit 1 auf einem $P$-Prozessor-System handhaben kann.\\
+					
+					\[ t_{Ges}(P, n) = 1 \]
+					\[ 1 = (1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P} \]
+					\[ P = P \cdot (1 - t'_{Par}) + n \cdot t'_{Par} \]
+					\[ P = P - P \cdot t'_{Par} + n \cdot t'_{Par} \]
+					\[ P \cdot t'_{Par} = n \cdot t'_{Par} \]
+					\[ P = n \]
+					
+					Das Ergebnis dieser Rechnung ist sehr optimistisch und stellt die Parallelisierung in ein anderes Licht. Nach Gustafson kann man auf einem $P$-Prozessor-System ein Problem der Größe $n = P$ in der Laufzeit 1 berechnen, vollkommen unabhängig von der Größe des sequentiellen und parallelen Anteils des Programmes. Durch Parallelisierung erhält man also zwar nur einen begrenzten Speedup, aber einen beliebig hohen Kapazitätsgewinn (Leistungsgewinn), der mit der Anzahl der verwendeten Prozessoren linear wächst.\\
+					Allerdings war Gustafson diese Erkenntnis nicht genug, sodass er versuchte, aus den berechneten Zusammenhängen einen Speedup herzuleiten, wobei ihm allerdings ein Denkfehler unterlief. Er überlegte sich, welche Laufzeit das neue, größere Problem auf einem Ein-Prozessor-System benötigen würde. Hierbei setzte er den Zusammenhang $n = P$ in die folgende, bereits hergeleitete Formel des Speedups ein.
+					
+					\[ S_P(n) = \frac{(1 - t'_{Par}) + n \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{n \cdot t'_{Par}}{P}} \]
+					
+					Nun wird in den obigen Term $n = P$ eingesetzt.
+					
+					\[ S_P(n) = \frac{(1 - t'_{Par}) + P \cdot t'_{Par}}{(1 - t'_{Par}) + \frac{P \cdot t'_{Par}}{P}} \]
+					
+					\[ S_P(n) = \frac{(1 - t'_{Par}) + P \cdot t'_{Par}}{1 - t'_{Par} + t'_{Par}} \]
+					
+					\[ S_P(n) = \frac{(1 - t'_{Par}) + P \cdot t'_{Par}}{1} \]
+					
+					Im Nenner steht nun die ursprüngliche Laufzeit, die bekanntlich auf 1 normiert wurde. Somit ergibt sich das Gustafsonsche Gesetz.
+					
+					\[ S_P(n) = (1 - t'_{Par}) + P \cdot t'_{Par} \]
+					
+					Der Denkfehler wird klar, wenn man sich vor Augen hält, dass dieser Speedup auf der Annahme einer konstanten Laufzeit basiert.\\
+					Der Fehler wird anhand der Analogie mit einem Supermarkt schnell klar. Gibt es in einem Supermarkt beispielsweise eine Aktion, in der man zwei Stücke eines Produktes zum Preis von einem erhält, so würde man laut dem Gustafsonschen Gesetz 50 \% des Geldes sparen, wenn wir statt einem Stück zwei Stücke kaufen. Und genau hierin liegt die Falle: Man hat gar kein Geld gespart, sondern ein Stück gratis dazu erhalten. Der Gewinn ist in diesem Fall also materiell (im Sinne der Leistung, Kapazität) und nicht finanziell (im Sinne der Zeit).\\
+					Dieser sehr fragwürdige Schritt Gustafsons sorgte in der Vergangenheit für viele Verwirrungen und Kontroversen. \cite{GustafsonsGesetzWikipedia} \cite{GesetzeParallelierung}
+				
+				\item [Zusammenhang zwischen dem Amdahlschen und dem Gustafsonschen Gesetz]
+				 
+				 Amdahl geht von einer konstanten Problemgröße und auch von einem konstanten parallelisierbaren Anteil aus, wobei das Ziel ist, die Laufzeit durch Einsatz von Parallelisierung zu minimieren.\\
+				 Gustafson betrachtet den Sachverhalt aus einem anderen Blickwinkel. Dieser geht von einem mit wachsender Problemgröße verschwindend klein werdenden sequentiellen Anteil aus.\\
+				 Das Amdahlsche Gesetz sagt letztendlich aus, dass sich massive Parallelsierung nicht auszahlt, weil sich die Laufzeit eines Programmes nur bis zu einem gewissen Punkt verringern lässt. Gustafson stellt dieser Aussage entgegen, dass man die Laufzeit eines Programmes zwar nicht beliebig verkleinern, in der selben Zeit allerdings beliebig große Probleme lösen kann. Die beiden Gesetze harmonieren also vollkommen und lassen sich im folgenden (bereits erwähnten) Satz zusammenfassen:\\
+				 Parallelisierung bringt zwar nur bedingt einen \textit{Zeitgewinn}, dafür aber einen großen \textit{Kapazitätsgewinn} (\textit{Leistungsgewinn}). \cite{GesetzeParallelierung}
+			\end{description}
