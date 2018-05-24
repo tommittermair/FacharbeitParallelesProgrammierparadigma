@@ -13,14 +13,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage{times}
+\usepackage{lmodern}
 \usepackage{url}
 \usepackage{appendix}
-\usepackage{hyperref}
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 \usepackage{listings}
-
-% use bibliography style
-\bibliographystyle{ieeetr}
+\usepackage[pdftex, pdfauthor={Thomas Mittermair}, pdftitle={Paralleles Programmierparadigma}]{hyperref}	% Set title and author used in the pdf meta data.
+\usepackage{microtype} % tweak spacing and sizing so everything fits nicely
+\usepackage[style=ieee, backend=bibtex]{biblatex} 
+\addbibresource{Literatur.bib} % Zuweisung der *.bib bei Biblatex.
 
 % specify margins for two-sided print
 \oddsidemargin 3cm

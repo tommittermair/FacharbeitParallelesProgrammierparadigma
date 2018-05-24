@@ -1,203 +1,1457 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{ModerneBetriebssysteme}
-A.~S. Tanenbaum, {\em {Moderne Betriebssysteme}}.
-\newblock Pearson Studium, 2., aktualisierte auflage~ed., 2003.
+\datalist[entry]{none/global//global/global}
+  \entry{SequentiellDuden}{online}{}
+    \name{author}{1}{}{%
+      {{hash=GBI}{%
+         family={GmbH},
+         familyi={G\bibinitperiod},
+         given={Bibliographisches\bibnamedelima Institut},
+         giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GBI1}
+    \strng{fullhash}{GBI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{sequentiell}}
+    \verb{url}
+    \verb https://www.duden.de/rechtschreibung/sequenziell
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SequentiellDuden}
-B.~I. GmbH, ``{sequentiell},'' 2018.
+  \entry{ParallelDuden}{online}{}
+    \name{author}{1}{}{%
+      {{hash=GBI}{%
+         family={GmbH},
+         familyi={G\bibinitperiod},
+         given={Bibliographisches\bibnamedelima Institut},
+         giveni={B\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GBI1}
+    \strng{fullhash}{GBI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{parallel}}
+    \verb{url}
+    \verb https://www.duden.de/rechtschreibung/parallel
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{ParallelDuden}
-B.~I. GmbH, ``{parallel},'' 2018.
+  \entry{Kausalitaet}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SAVH}{%
+         family={Spektrum Akademischer\bibnamedelima Verlag},
+         familyi={S\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+         given={Heidelberg},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SAVH1}
+    \strng{fullhash}{SAVH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Lexikon der Physik. Kausalität}}
+    \verb{url}
+    \verb http://www.spektrum.de/lexikon/physik/kausalitaet/7841
+    \endverb
+    \field{year}{1998}
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{Kausalitaet}
-H.~Spektrum Akademischer~Verlag, ``{Lexikon der Physik. Kausalität},'' 1998.
+  \entry{ParaProgLoogen}{online}{}
+    \name{author}{1}{}{%
+      {{hash=LR}{%
+         family={Loogen},
+         familyi={L\bibinitperiod},
+         given={Rita},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LR2}
+    \strng{fullhash}{LR2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Parallele Programmierung}}
+    \verb{url}
+    \verb http://www.mathematik.uni-marburg.de/~loogen/Lehre/ws08/ParProg/Folie
+    \verb n/ParProg0.pdf
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{ParaProgLoogen}
-R.~Loogen, ``{Parallele Programmierung},'' 2009.
+  \entry{Objektorientierung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=ST}{%
+         family={Slawig},
+         familyi={S\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ST1}
+    \strng{fullhash}{ST1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Objektorientierte Programmierung – Grundlagen und
+  -Begriffe}}
+    \verb{url}
+    \verb http://www3.math.tu-berlin.de/Vorlesungen/WS03/Programmiermethoden/oo
+    \verb .pdf
+    \endverb
+    \field{year}{2004}
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{Objektorientierung}
-T.~Slawig, ``{Objektorientierte Programmierung – Grundlagen und -Begriffe},''
-  2004.
+  \entry{PhasenBefehlsbearbeitung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SC}{%
+         family={Siemers},
+         familyi={S\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SC1}
+    \strng{fullhash}{SC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Prozessorgrundlagen: Von-Neumann-Architektur, Teil 3 -
+  Phasen der Befehlsbearbeitung}}
+    \verb{url}
+    \verb https://www.tecchannel.de/a/prozessorgrundlagen-von-neumann-architekt
+    \verb ur-teil-3,402319,16
+    \endverb
+    \field{year}{2004}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{PhasenBefehlsbearbeitung}
-C.~Siemers, ``{Prozessorgrundlagen: Von-Neumann-Architektur, Teil 3 - Phasen
-  der Befehlsbearbeitung},'' 2004.
+  \entry{FunktionsweiseComputersysteme}{online}{}
+    \name{author}{1}{}{%
+      {{hash=ML}{%
+         family={Morgenstern},
+         familyi={M\bibinitperiod},
+         given={Laura},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ML1}
+    \strng{fullhash}{ML1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Einführung in die Funktionsweise von Computersystemen}}
+    \verb{url}
+    \verb https://osg.informatik.tu-chemnitz.de/lehre/efc/gau.pdf
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{13}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{FunktionsweiseComputersysteme}
-L.~Morgenstern, ``{Einführung in die Funktionsweise von Computersystemen},''
-  2017.
+  \entry{ParaProgRauber}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RGTuR}{%
+         family={Rauber},
+         familyi={R\bibinitperiod},
+         suffix={Thomas und\bibnamedelima Rünger},
+         suffixi={T\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+         given={Gudula},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{RTuRG1}
+    \strng{fullhash}{RTuRG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-3-642-37800-3}
+    \field{title}{{Parallel Programming for Multicore and Cluster Systems;
+  Second Edition}}
+    \field{year}{2013}
+  \endentry
 
-\bibitem{ParaProgRauber}
-G.~Rauber, Thomas und~Rünger, {\em {Parallel Programming for Multicore and
-  Cluster Systems; Second Edition}}.
-\newblock Springer, 2013.
+  \entry{GrundlagenParallelisierung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=KSPuG}{%
+         family={Kegel},
+         familyi={K\bibinitperiod},
+         suffix={Philipp und\bibnamedelima Gorlatch},
+         suffixi={P\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+         given={Sergei},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KPuGS1}
+    \strng{fullhash}{KPuGS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Grundlagen der Parallelisierung}}
+    \verb{url}
+    \verb https://www.uni-muenster.de/AMM/num/Vorlesungen/CUDA-2009/philipp_keg
+    \verb el-parallele_systeme.pdf
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{GrundlagenParallelisierung}
-S.~Kegel, Philipp und~Gorlatch, ``{Grundlagen der Parallelisierung},'' 2009.
+  \entry{EndeHardwareMiniaturisierung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BF}{%
+         family={Beyaz},
+         familyi={B\bibinitperiod},
+         given={Ferhat},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BF1}
+    \strng{fullhash}{BF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Parallele Multiprozessorsysteme - Das Ende der Hardware
+  Miniaturisierung?}}
+    \verb{url}
+    \verb https://www.mi.fu-berlin.de/inf/groups/ag-tech/teaching/2008-09_WS/S_
+    \verb 19565_Proseminar_Technische_Informatik/beyaz09parallele.pdf
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{EmpirieDuden}
-B.~I. GmbH, ``{Empirie},'' 2018.
+  \entry{LRZ}{online}{}
+    \name{author}{1}{}{%
+      {{hash=LR}{%
+         family={Leibniz-Rechenzentrum},
+         familyi={L\bibinitperiod-R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LR1}
+    \strng{fullhash}{LR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{SuperMUC Petascale System}}
+    \verb{url}
+    \verb https://www.lrz.de/services/compute/supermuc/systemdescription/
+    \endverb
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{EndeHardwareMiniaturisierung}
-F.~Beyaz, ``{Parallele Multiprozessorsysteme - Das Ende der Hardware
-  Miniaturisierung?},'' 2009.
+  \entry{TeileUndHerrsche}{online}{}
+    \name{author}{1}{}{%
+      {{hash=MB}{%
+         family={Möller},
+         familyi={M\bibinitperiod},
+         given={B.},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MB1}
+    \strng{fullhash}{MB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Die Teile-und-Herrsche-Strategie}}
+    \verb{url}
+    \verb https://www.informatik.uni-augsburg.de/lehrstuehle/dbis/pmi/lectures/
+    \verb vorhergehende_semester/ws1112/Informatik_III/Skript/Skript4/kap08_4.p
+    \verb df
+    \endverb
+    \field{year}{2012}
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{LRZ}
-Leibniz-Rechenzentrum, ``{SuperMUC Petascale System}.''
+  \entry{EinfacheSortierverfahren}{online}{}
+    \name{author}{1}{}{%
+      {{hash=ES}{%
+         family={Edelkamp},
+         familyi={E\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ES1}
+    \strng{fullhash}{ES1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Algorithmen und Datenstrukturen - Einfache
+  Sortierverfahren}}
+    \verb{url}
+    \verb https://pdfs.semanticscholar.org/fb1e/ff65a8a1d461b627799911e321b37de
+    \verb c8bf2.pdf
+    \endverb
+    \field{urlday}{10}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{TeileUndHerrsche}
-B.~Möller, ``{Die Teile-und-Herrsche-Strategie},'' 2012.
+  \entry{SprichwortKette}{book}{}
+    \name{author}{1}{}{%
+      {{hash=ADJuF}{%
+         family={Albrecht},
+         familyi={A\bibinitperiod},
+         suffix={Julia und\bibnamedelima Frey},
+         suffixi={J\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  F\bibinitperiod},
+         given={Dieter},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{AJuFD1}
+    \strng{fullhash}{AJuFD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-3-662-50381-2}
+    \field{title}{{Sprichwörter und Psychologie - eine Annäherung}}
+    \verb{url}
+    \verb http://www.springer.com/cda/content/document/cda_downloaddocument/978
+    \verb 3662503805-c1.pdf?SGWID=0-0-45-1595833-p180110131
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{13}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{EinfacheSortierverfahren}
-S.~Edelkamp, ``{Algorithmen und Datenstrukturen - Einfache Sortierverfahren}.''
+  \entry{NebenlaeufigeProg}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HGRuH}{%
+         family={Herrtwich},
+         familyi={H\bibinitperiod},
+         suffix={Ralf und\bibnamedelima Hommel},
+         suffixi={R\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+         given={Günter},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{HRuHG1}
+    \strng{fullhash}{HRuHG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-3-540-57783-6}
+    \field{title}{{Nebenläufige Programme}}
+    \field{year}{1994}
+  \endentry
 
-\bibitem{SprichwortKette}
-D.~Albrecht, Julia und~Frey, {\em {Sprichwörter und Psychologie - eine
-  Annäherung}}.
-\newblock Springer, 2017.
+  \entry{ModerneBetriebssysteme}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TAS}{%
+         family={Tanenbaum},
+         familyi={T\bibinitperiod},
+         given={Andrew\bibnamedelima S.},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson Studium}%
+    }
+    \strng{namehash}{TAS1}
+    \strng{fullhash}{TAS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2., aktualisierte Auflage}
+    \field{isbn}{3-8273-7019-1}
+    \field{title}{{Moderne Betriebssysteme}}
+    \field{year}{2003}
+  \endentry
 
-\bibitem{NebenlaeufigeProg}
-G.~Herrtwich, Ralf und~Hommel, {\em {Nebenläufige Programme}}.
-\newblock Springer, 1994.
+  \entry{ThreadsRheinwerk}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WJ}{%
+         family={Wolf},
+         familyi={W\bibinitperiod},
+         given={Jürgen},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Rheinwerk-Verlag}%
+    }
+    \strng{namehash}{WJ1}
+    \strng{fullhash}{WJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2., aktualisierte und erweiterte Auflage}
+    \field{title}{{Linux-UNIX-Programmierung - Kapitel 10: Threads}}
+    \verb{url}
+    \verb http://openbook.rheinwerk-verlag.de/linux_unix_programmierung/Kap10-0
+    \verb 00.htm#RxxKap10000040002FE1F043100
+    \endverb
+    \field{year}{2006}
+    \field{urlday}{25}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{ThreadsRheinwerk}
-J.~Wolf, ``{Linux-UNIX-Programmierung - Kapitel 10: Threads},'' 2006.
+  \entry{AufbauFunktionsweiseMikroprozessoren}{online}{}
+    \name{author}{1}{}{%
+      {{hash=RC}{%
+         family={Richter},
+         familyi={R\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RC1}
+    \strng{fullhash}{RC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Einführung in Aufbau und Funktionsweise von
+  Mikroprozessoren}}
+    \verb{url}
+    \verb http://www.ch-r.de/et/nue-atmmk-mikroprozessoren.pdf
+    \endverb
+    \field{year}{2005}
+    \field{urlday}{13}
+    \field{urlmonth}{02}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{AufbauFunktionsweiseMikroprozessoren}
-C.~Richter, ``{Einführung in Aufbau und Funktionsweise von
-  Mikroprozessoren},'' 2005.
+  \entry{RechnerorganisationUndEntwurf}{online}{}
+    \name{author}{1}{}{%
+      {{hash=uKWuUTBA}{%
+         prefix={und Karl Wolfgang\bibnamedelima und},
+         prefixi={u\bibinitperiod\bibinitdelim K\bibinitperiod
+  W\bibinitperiod\bibinitdelim u\bibinitperiod},
+         family={Ungerer\bibnamedelima Theo},
+         familyi={U\bibinitperiod\bibinitdelim T\bibinitperiod},
+         given={Bode\bibnamedelima Arndt},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Spektrum Akademischer Verlag}%
+    }
+    \strng{namehash}{UTBAuKWu1}
+    \strng{fullhash}{UTBAuKWu1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{3-8274-1595-0}
+    \field{title}{{Rechnerorganisation und -entwurf - Die
+  Hardware/Software-Schnittstelle; 3. Auflage}}
+    \field{year}{2005}
+  \endentry
 
-\bibitem{RechnerorganisationUndEntwurf}
-W.~u. U.~T. Bode, Arndt;~Karl, ``{Rechnerorganisation und -entwurf - Die
-  Hardware/Software-Schnittstelle; 3. Auflage},'' 2005.
+  \entry{VektorrechnerWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Vektorprozessor}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Vektorprozessor
+    \endverb
+    \field{urlday}{25}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{VektorrechnerWikipedia}
-d.~f.~E. Wikipedia, ``{Vektorprozessor}.''
+  \entry{HyperThreadingIntel}{online}{}
+    \name{author}{1}{}{%
+      {{hash=DPGIC}{%
+         family={Desktop Products\bibnamedelima Group},
+         familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+         given={Intel\bibnamedelima Corp.},
+         giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPGIC1}
+    \strng{fullhash}{DPGIC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Hyper-Threading Technology Architecture and
+  Microarchitecture}}
+    \verb{url}
+    \verb http://www.cs.virginia.edu/~mc2zk/cs451/vol6iss1_art01.pdf
+    \endverb
+    \field{urlday}{21}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{HyperThreadingIntel}
-I.~C. Desktop Products~Group, ``{Hyper-Threading Technology Architecture and
-  Microarchitecture}.''
+  \entry{HyperThreadingWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Hyper-Threading}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Hyper-Threading
+    \endverb
+    \field{urlday}{21}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{HyperThreadingWikipedia}
-d.~f.~E. Wikipedia, ``{Hyper-Threading}.''
+  \entry{SpoolingWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Spooling}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Spooling
+    \endverb
+    \field{urlday}{27}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SpoolingWikipedia}
-d.~f.~E. Wikipedia, ``{Spooling}.''
+  \entry{DeadlockWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Deadlock (Informatik)}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Deadlock_(Informatik)
+    \endverb
+    \field{urlday}{27}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{DeadlockWikipedia}
-d.~f.~E. Wikipedia, ``{Deadlock (Informatik)}.''
+  \entry{DatenwortWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Datenwort}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Datenwort
+    \endverb
+    \field{urlday}{30}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{DatenwortWikipedia}
-d.~f.~E. Wikipedia, ``{Datenwort}.''
+  \entry{SpeicherbusWikibooks}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfB}{%
+         family={Wikibooks},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Bibliothek},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfB1}
+    \strng{fullhash}{WdfB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Computerhardware: Hauptplatine: Bus: Speicherbus}}
+    \verb{url}
+    \verb https://de.wikibooks.org/wiki/Computerhardware:_Hauptplatine:_Bus:_Sp
+    \verb eicherbus
+    \endverb
+    \field{urlday}{30}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SpeicherbusWikibooks}
-d.~f.~B. Wikibooks, ``{Computerhardware: Hauptplatine: Bus: Speicherbus}.''
+  \entry{MoveBefehlWikibooks}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfB}{%
+         family={Wikibooks},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Bibliothek},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfB1}
+    \strng{fullhash}{WdfB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Assembler-Programmierung für x86-Prozessoren/
+  Befehlsreferenz}}
+    \verb{url}
+    \verb https://de.wikibooks.org/wiki/Assembler-Programmierung_f%C3%BCr_x86-P
+    \verb rozessoren/_Befehlsreferenz#MOV_(Move)
+    \endverb
+    \field{urlday}{30}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{MoveBefehlWikibooks}
-d.~f.~B. Wikibooks, ``{Assembler-Programmierung für x86-Prozessoren/
-  Befehlsreferenz}.''
+  \entry{SpinlockWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Spinlock}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Spinlock
+    \endverb
+    \field{urlday}{31}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SpinlockWikipedia}
-d.~f.~E. Wikipedia, ``{Spinlock}.''
+  \entry{BetriebssystemeNetzmafia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=PJ}{%
+         family={Plate},
+         familyi={P\bibinitperiod},
+         given={Jürgen},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PJ1}
+    \strng{fullhash}{PJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Betriebssysteme}}
+    \verb{url}
+    \verb http://www.netzmafia.de/skripten/bs/index.html
+    \endverb
+    \field{urlday}{01}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{BetriebssystemeNetzmafia}
-J.~Plate, ``{Betriebssysteme}.''
+  \entry{DijkstraWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Edsger W. Dijkstra}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Edsger_W._Dijkstra
+    \endverb
+    \field{urlday}{29}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{DijkstraWikipedia}
-d.~f.~E. Wikipedia, ``{Edsger W. Dijkstra}.''
+  \entry{SemaphorWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Semaphor (Informatik)}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Semaphor_(Informatik)
+    \endverb
+    \field{urlday}{01}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SemaphorWikipedia}
-d.~f.~E. Wikipedia, ``{Semaphor (Informatik)}.''
+  \entry{SemaphorBorchert}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BAF}{%
+         family={Borchert},
+         familyi={B\bibinitperiod},
+         given={Andreas\bibnamedelima F.},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BAF1}
+    \strng{fullhash}{BAF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Systemnahe Software II}}
+    \verb{url}
+    \verb http://www.mathematik.uni-ulm.de/sai/ss08/soft/slides/slides-2008-06-
+    \verb 30.pdf
+    \endverb
+    \field{year}{2008}
+    \field{urlday}{01}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SemaphorBorchert}
-A.~F. Borchert, ``{Systemnahe Software II},'' 2008.
+  \entry{CompilerWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Compiler}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Compiler
+    \endverb
+    \field{urlday}{27}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{CompilerWikipedia}
-d.~f.~E. Wikipedia, ``{Compiler}.''
+  \entry{SichererUnsichererZustandBennewitz}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bennewitz},
+         familyi={B\bibinitperiod},
+         given={Maren},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Systeme I: Betriebssysteme - Kapitel 6: Deadlocks}}
+    \verb{url}
+    \verb http://hrl.informatik.uni-freiburg.de/teaching/ws13/systeme-slides/sy
+    \verb steme_kap6_deadlocks.pdf
+    \endverb
+    \field{year}{2013}
+    \field{urlday}{29}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{SichererUnsichererZustandBennewitz}
-M.~Bennewitz, ``{Systeme I: Betriebssysteme - Kapitel 6: Deadlocks},'' 2013.
+  \entry{BankieralgorithmusWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Bankieralgorithmus}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Bankieralgorithmus
+    \endverb
+    \field{urlday}{29}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{BankieralgorithmusWikipedia}
-d.~f.~E. Wikipedia, ``{Bankieralgorithmus}.''
+  \entry{ParallelrechnerAmirnaderi}{online}{}
+    \name{author}{1}{}{%
+      {{hash=AH}{%
+         family={Amirnaderi},
+         familyi={A\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AH1}
+    \strng{fullhash}{AH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{AMD MP Prozessoren}}
+    \verb{url}
+    \verb http://www.weblearn.hs-bremen.de/risse/RST/WS02/amd_mp_prozessoren.pd
+    \verb f
+    \endverb
+    \field{year}{2003}
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{ParallelrechnerAmirnaderi}
-H.~Amirnaderi, ``{AMD MP Prozessoren},'' 2003.
+  \entry{GrundlagenParallelisierungKegel}{online}{}
+    \name{author}{1}{}{%
+      {{hash=KSPuG}{%
+         family={Kegel},
+         familyi={K\bibinitperiod},
+         suffix={Philipp und\bibnamedelima Gorlatch},
+         suffixi={P\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+         given={Sergei},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KPuGS1}
+    \strng{fullhash}{KPuGS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Grundlagen der Parallelisierung}}
+    \verb{url}
+    \verb https://www.uni-muenster.de/AMM/num/Vorlesungen/CUDA-2009/philipp_keg
+    \verb el-parallele_systeme.pdf
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{GrundlagenParallelisierungKegel}
-S.~Kegel, Philipp und~Gorlatch, ``{Grundlagen der Parallelisierung},'' 2009.
+  \entry{ALUWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Arithmetisch-logische Einheit}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Arithmetisch-logische_Einheit
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{ALUWikipedia}
-d.~f.~E. Wikipedia, ``{Arithmetisch-logische Einheit}.''
+  \entry{FPUWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Gleitkommaeinheit}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Gleitkommaeinheit
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{FPUWikipedia}
-d.~f.~E. Wikipedia, ``{Gleitkommaeinheit}.''
+  \entry{RechnerverbundWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Rechnerverbund}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Rechnerverbund
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{RechnerverbundWikipedia}
-d.~f.~E. Wikipedia, ``{Rechnerverbund}.''
+  \entry{GridWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Grid-Computing}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Grid-Computing
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{GridWikipedia}
-d.~f.~E. Wikipedia, ``{Grid-Computing}.''
+  \entry{FlynnWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Michael J. Flynn}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Michael_J._Flynn
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{FlynnWikipedia}
-d.~f.~E. Wikipedia, ``{Michael J. Flynn}.''
+  \entry{BSMultiprozessorsysteme}{online}{}
+    \name{author}{1}{}{%
+      {{hash=PR}{%
+         family={Prodan},
+         familyi={P\bibinitperiod},
+         given={Radu},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PR1}
+    \strng{fullhash}{PR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Betriebssysteme für Multiprozessorsysteme}}
+    \verb{url}
+    \verb http://www.dps.uibk.ac.at/~tf/lehre/ss12/bs/vorlesungen/Multiprocesso
+    \verb r.pdf
+    \endverb
+    \field{year}{2012}
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{BSMultiprozessorsysteme}
-R.~Prodan, ``{Betriebssysteme für Multiprozessorsysteme},'' 2012.
+  \entry{MehrkernprozessorWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Mehrkernprozessor}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Mehrkernprozessor
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{MehrkernprozessorWikipedia}
-d.~f.~E. Wikipedia, ``{Mehrkernprozessor}.''
+  \entry{MehrprozessorsystemWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Mehrprozessorsystem}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Mehrprozessorsystem
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{MehrprozessorsystemWikipedia}
-d.~f.~E. Wikipedia, ``{Mehrprozessorsystem}.''
+  \entry{MulticomputerIGI}{online}{}
+    \name{author}{1}{}{%
+      {{hash=IGDoK}{%
+         family={IGI\bibnamedelima Global},
+         familyi={I\bibinitperiod\bibinitdelim G\bibinitperiod},
+         given={Disseminator of\bibnamedelima Knowledge},
+         giveni={D\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IGDoK1}
+    \strng{fullhash}{IGDoK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{What is Multicomputer}}
+    \verb{url}
+    \verb https://www.igi-global.com/dictionary/assembling-parallel-programs-la
+    \verb rge-scale/19520
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{MulticomputerIGI}
-D.~o.~K. IGI~Global, ``{What is Multicomputer}.''
+  \entry{TaxonomieWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Taxonomie}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Taxonomie
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{TaxonomieWikipedia}
-d.~f.~E. Wikipedia, ``{Taxonomie}.''
+  \entry{FlynnsTaxonomie}{online}{}
+    \name{author}{1}{}{%
+      {{hash=ZM}{%
+         family={Zemann},
+         familyi={Z\bibinitperiod},
+         given={Maik},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZM1}
+    \strng{fullhash}{ZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Flynn's Taxonomie}}
+    \verb{url}
+    \verb http://www.ti.uni-bielefeld.de/downloads/SS04/parallele_rechner/vortr
+    \verb aege/flynn/flynn.pdf
+    \endverb
+    \field{year}{2004}
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{FlynnsTaxonomie}
-M.~Zemann, ``{Flynn's Taxonomie},'' 2004.
+  \entry{FlynnscheKlassifikationWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Flynnsche Klassifikation}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Flynnsche_Klassifikation
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{FlynnscheKlassifikationWikipedia}
-d.~f.~E. Wikipedia, ``{Flynnsche Klassifikation}.''
+  \entry{EntwicklungParallelerProgramme}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BVBuS}{%
+         family={Bauer},
+         familyi={B\bibinitperiod},
+         suffix={Bernhard und\bibnamedelima Schöbel},
+         suffixi={B\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+         given={Viviane},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BBuSV1}
+    \strng{fullhash}{BBuSV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Entwicklung parallel ablaufender Programme}}
+    \verb{url}
+    \verb https://www.informatik.uni-augsburg.de/lehrstuehle/swt/vs/lehre/archi
+    \verb v/SS_08/seminar/downloads/seminarband.pdf
+    \endverb
+    \field{year}{2008}
+    \field{urlday}{06}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{EntwicklungParallelerProgramme}
-V.~Bauer, Bernhard und~Schöbel, ``{Entwicklung parallel ablaufender
-  Programme},'' 2008.
+  \entry{ParalleleNumerischeVerfahren}{online}{}
+    \name{author}{1}{}{%
+      {{hash=uLIuOHAG}{%
+         prefix={und Lenhardt Ingrid\bibnamedelima und},
+         prefixi={u\bibinitperiod\bibinitdelim L\bibinitperiod
+  I\bibinitperiod\bibinitdelim u\bibinitperiod},
+         family={Obermaier\bibnamedelima Holger},
+         familyi={O\bibinitperiod\bibinitdelim H\bibinitperiod},
+         given={Alefeld\bibnamedelima Götz},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{OHAGuLIu1}
+    \strng{fullhash}{OHAGuLIu1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{978-3-540-42519-9}
+    \field{title}{{Parallele numerische Verfahren}}
+    \verb{url}
+    \verb http://www.springer.com/cda/content/document/cda_downloaddocument/978
+    \verb 3540425199-c1.pdf?SGWID=0-0-45-96268-p2213021
+    \endverb
+    \field{year}{2002}
+    \field{urlday}{08}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{ParalleleNumerischeVerfahren}
-I.~u. O.~H. Alefeld, Götz;~Lenhardt, ``{Parallele numerische Verfahren},''
-  2002.
+  \entry{CacheMissTechopedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=STTIE}{%
+         family={Site},
+         familyi={S\bibinitperiod},
+         given={Techopedia The IT\bibnamedelima Education},
+         giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod
+  I\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STTIE1}
+    \strng{fullhash}{STTIE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Cache Miss}}
+    \verb{url}
+    \verb https://www.techopedia.com/definition/6308/cache-miss
+    \endverb
+    \field{urlday}{14}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{CacheMissTechopedia}
-T.~T. I.~E. Site, ``{Cache Miss}.''
+  \entry{GeneAmdahlWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Gene Amdahl}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Gene_Amdahl
+    \endverb
+    \field{urlday}{06}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{GeneAmdahlWikipedia}
-d.~f.~E. Wikipedia, ``{Gene Amdahl}.''
+  \entry{GesetzeParallelierung}{online}{}
+    \name{author}{1}{}{%
+      {{hash=GYVuR}{%
+         family={Grabsch},
+         familyi={G\bibinitperiod},
+         suffix={Volker und\bibnamedelima Radunz},
+         suffixi={V\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+         given={Yves},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GVuRY1}
+    \strng{fullhash}{GVuRY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Seminarvortrag - Amdahlsches und Gustafsonsches Gesetz}}
+    \verb{url}
+    \verb https://njh.eu/Amdahlsches_und_Gustafsonsches_Gesetz.pdf
+    \endverb
+    \field{urlday}{06}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{GesetzeParallelierung}
-Y.~Grabsch, Volker und~Radunz, ``{Seminarvortrag - Amdahlsches und
-  Gustafsonsches Gesetz}.''
+  \entry{AmdahlschesGesetzWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Amdahlsches Gesetz}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Amdahlsches_Gesetz
+    \endverb
+    \field{urlday}{06}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{AmdahlschesGesetzWikipedia}
-d.~f.~E. Wikipedia, ``{Amdahlsches Gesetz}.''
+  \entry{JohnGustafsonWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{John Gustafson (scientist)}}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/John_Gustafson_(scientist)
+    \endverb
+    \field{urlday}{06}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{JohnGustafsonWikipedia}
-d.~f.~E. Wikipedia, ``{John Gustafson (scientist)}.''
+  \entry{GustafsonsGesetzWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Gustafsons Gesetz}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Gustafsons_Gesetz
+    \endverb
+    \field{urlday}{06}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{GustafsonsGesetzWikipedia}
-d.~f.~E. Wikipedia, ``{Gustafsons Gesetz}.''
+  \entry{APIWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Programmierschnittstelle}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Programmierschnittstelle
+    \endverb
+    \field{urlday}{10}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{APIWikipedia}
-d.~f.~E. Wikipedia, ``{Programmierschnittstelle}.''
+  \entry{OpenMPWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{OpenMP}}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/OpenMP
+    \endverb
+    \field{urlday}{10}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
 
-\bibitem{OpenMPWikipedia}
-d.~f.~E. Wikipedia, ``{OpenMP}.''
-
-\bibitem{CilkWikipedia}
-d.~f.~E. Wikipedia, ``{Cilk}.''
-
-\end{thebibliography}
+  \entry{CilkWikipedia}{online}{}
+    \name{author}{1}{}{%
+      {{hash=WdfE}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+         given={die freie\bibnamedelima Enzyklopädie},
+         giveni={d\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim
+  E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WdfE1}
+    \strng{fullhash}{WdfE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{Cilk}}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Cilk
+    \endverb
+    \field{urlday}{10}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+\enddatalist
+\endinput

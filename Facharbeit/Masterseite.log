@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.25)  24 MAY 2018 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.25)  24 MAY 2018 20:01
 entering extended mode
 **./Masterseite.tex
 (Masterseite.tex
@@ -461,6 +461,42 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\lmo
+dern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\ur
 l.sty"
 \Urlmuskip=\muskip10
@@ -473,6 +509,43 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@ppsavesec=\count91
 \c@@ppsaveapp=\count92
 )
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocbib
+ind\tocbibind.sty"
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+)
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
+gs\listings.sty"
+\lst@mode=\count93
+\lst@gtempboxa=\box26
+\lst@token=\toks17
+\lst@length=\count94
+\lst@currlwidth=\dimen106
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen109
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
+gs\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box27
+)
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
+gs\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
 ef\hyperref.sty"
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
@@ -535,9 +608,9 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen106
-\Hy@linkcounter=\count93
-\Hy@pagecounter=\count94
+\@linkdim=\dimen110
+\Hy@linkcounter=\count101
+\Hy@pagecounter=\count102
 
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
 ef\pd1enc.def"
@@ -545,7 +618,7 @@ File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count95
+\Hy@SavedSpaceFactor=\count103
 
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mikt
 ex\hyperref.cfg"
@@ -558,12 +631,12 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count96
+\c@Hy@tempcnt=\count104
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen107
-\Fld@menulength=\count97
-\Field@Width=\dimen108
-\Fld@charsize=\dimen109
+\XeTeXLinkMargin=\dimen111
+\Fld@menulength=\count105
+\Field@Width=\dimen112
+\Fld@charsize=\dimen113
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -573,17 +646,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count98
-\c@Item=\count99
-\c@Hfootnote=\count100
+\Hy@abspage=\count106
+\c@Item=\count107
+\c@Hfootnote=\count108
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver: hpdftex.
 
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
 ef\hpdftex.def"
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count101
-\c@bookmark@seq@number=\count102
+\Fld@listcount=\count109
+\c@bookmark@seq@number=\count110
 
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
 ek\rerunfilecheck.sty"
@@ -593,43 +666,336 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tocbib
-ind\tocbibind.sty"
-Package: tocbibind 2010/10/13 v1.5k extra ToC listings
-Package tocbibind Info: The document has chapter divisions on input line 50.
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microt
+ype\microtype.sty"
+Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+\MT@toks=\toks18
+\MT@count=\count111
+LaTeX Info: Redefining \textls on input line 793.
+\MT@outer@kern=\dimen114
+LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
+\MT@listname@count=\count112
 
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microt
+ype\microtype-pdftex.def"
+File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
-Package tocbibind Note: Using chapter style headings, unless overridden.
-
+LaTeX Info: Redefining \lsstyle on input line 913.
+LaTeX Info: Redefining \lslig on input line 913.
+\MT@outer@space=\skip53
 )
-("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
-gs\listings.sty"
-\lst@mode=\count103
-\lst@gtempboxa=\box26
-\lst@token=\toks17
-\lst@length=\count104
-\lst@currlwidth=\dimen110
-\lst@column=\count105
-\lst@pos=\count106
-\lst@lostspace=\dimen111
-\lst@width=\dimen112
-\lst@newlines=\count107
-\lst@lineno=\count108
-\lst@maxwidth=\dimen113
+Package microtype Info: Loading configuration file microtype.cfg.
 
-("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
-gs\lstmisc.sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count109
-\lst@skipnumbers=\count110
-\lst@framebox=\box27
-)
-("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
-gs\listings.cfg"
-File: listings.cfg 2015/06/04 1.6 listings configuration
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microt
+ype\microtype.cfg"
+File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
-) (Masterseite.aux)
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\biblatex.sty"
+Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolb
+ox\etoolbox.sty"
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count113
+)
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\logreq
+\logreq.sty"
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count114
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\logreq
+\logreq.def"
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\i
+fthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xstrin
+g\xstring.sty"
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xstr
+ing\xstring.tex"
+\@xs@message=\write3
+\integerpart=\count115
+\decimalpart=\count116
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count117
+\c@listtotal=\count118
+\c@listcount=\count119
+\c@liststart=\count120
+\c@liststop=\count121
+\c@citecount=\count122
+\c@citetotal=\count123
+\c@multicitecount=\count124
+\c@multicitetotal=\count125
+\c@instcount=\count126
+\c@maxnames=\count127
+\c@minnames=\count128
+\c@maxitems=\count129
+\c@minitems=\count130
+\c@citecounter=\count131
+\c@savedcitecounter=\count132
+\c@uniquelist=\count133
+\c@uniquename=\count134
+\c@refsection=\count135
+\c@refsegment=\count136
+\c@maxextratitle=\count137
+\c@maxextratitleyear=\count138
+\c@maxextradate=\count139
+\c@maxextraalpha=\count140
+\c@abbrvpenalty=\count141
+\c@highnamepenalty=\count142
+\c@lownamepenalty=\count143
+\c@maxparens=\count144
+\c@parenlevel=\count145
+\blx@tempcnta=\count146
+\blx@tempcntb=\count147
+\blx@tempcntc=\count148
+\blx@maxsection=\count149
+\blx@maxsegment@0=\count150
+\blx@notetype=\count151
+\blx@parenlevel@text=\count152
+\blx@parenlevel@foot=\count153
+\blx@sectionciteorder@0=\count154
+\labelnumberwidth=\skip54
+\labelalphawidth=\skip55
+\biblabelsep=\skip56
+\bibitemsep=\skip57
+\bibnamesep=\skip58
+\bibinitsep=\skip59
+\bibparsep=\skip60
+\bibhang=\skip61
+\blx@bcfin=\read1
+\blx@bcfout=\write4
+\c@mincomprange=\count155
+\c@maxcomprange=\count156
+\c@mincompwidth=\count157
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\blx-dm.def"
+File: blx-dm.def 2018/03/04 v3.11 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count158
+\c@savedafterword=\count159
+\c@annotator=\count160
+\c@savedannotator=\count161
+\c@author=\count162
+\c@savedauthor=\count163
+\c@bookauthor=\count164
+\c@savedbookauthor=\count165
+\c@commentator=\count166
+\c@savedcommentator=\count167
+\c@editor=\count168
+\c@savededitor=\count169
+\c@editora=\count170
+\c@savededitora=\count171
+\c@editorb=\count172
+\c@savededitorb=\count173
+\c@editorc=\count174
+\c@savededitorc=\count175
+\c@foreword=\count176
+\c@savedforeword=\count177
+\c@holder=\count178
+\c@savedholder=\count179
+\c@introduction=\count180
+\c@savedintroduction=\count181
+\c@namea=\count182
+\c@savednamea=\count183
+\c@nameb=\count184
+\c@savednameb=\count185
+\c@namec=\count186
+\c@savednamec=\count187
+\c@translator=\count188
+\c@savedtranslator=\count189
+\c@shortauthor=\count190
+\c@savedshortauthor=\count191
+\c@shorteditor=\count192
+\c@savedshorteditor=\count193
+\c@labelname=\count194
+\c@savedlabelname=\count195
+\c@institution=\count196
+\c@savedinstitution=\count197
+\c@lista=\count198
+\c@savedlista=\count199
+\c@listb=\count266
+\c@savedlistb=\count267
+\c@listc=\count268
+\c@savedlistc=\count269
+\c@listd=\count270
+\c@savedlistd=\count271
+\c@liste=\count272
+\c@savedliste=\count273
+\c@listf=\count274
+\c@savedlistf=\count275
+\c@location=\count276
+\c@savedlocation=\count277
+\c@organization=\count278
+\c@savedorganization=\count279
+\c@origlocation=\count280
+\c@savedoriglocation=\count281
+\c@origpublisher=\count282
+\c@savedorigpublisher=\count283
+\c@publisher=\count284
+\c@savedpublisher=\count285
+\c@language=\count286
+\c@savedlanguage=\count287
+\c@origlanguage=\count288
+\c@savedoriglanguage=\count289
+\c@pageref=\count290
+\c@savedpageref=\count291
+\shorthandwidth=\skip62
+\shortjournalwidth=\skip63
+\shortserieswidth=\skip64
+\shorttitlewidth=\skip65
+\shortauthorwidth=\skip66
+\shorteditorwidth=\skip67
+\locallabelnumberwidth=\skip68
+\locallabelalphawidth=\skip69
+\localshorthandwidth=\skip70
+\localshortjournalwidth=\skip71
+\localshortserieswidth=\skip72
+\localshorttitlewidth=\skip73
+\localshortauthorwidth=\skip74
+\localshorteditorwidth=\skip75
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\blx-compat.def"
+File: blx-compat.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\blx-bibtex.def"
+File: blx-bibtex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\biblatex.def"
+File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
+\c@textcitecount=\count292
+\c@textcitetotal=\count293
+\c@textcitemaxnames=\count294
+\c@biburlnumpenalty=\count295
+\c@biburlucpenalty=\count296
+\c@biburllcpenalty=\count297
+\c@smartand=\count298
+)
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex-ieee\ieee.bbx"
+File: ieee.bbx 2017/03/27 v1.2d biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\bbx\numeric-comp.bbx"
+File: numeric-comp.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\bbx\numeric.bbx"
+File: numeric.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\bbx\standard.bbx"
+File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count299
+\c@bbx:relatedtotal=\count300
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex-ieee\ieee.cbx"
+File: ieee.cbx 2017/03/27 v1.2d biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\cbx\numeric-comp.cbx"
+File: numeric-comp.cbx 2018/03/04 v3.11 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count301
+\c@cbx@tempcntb=\count302
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\biblatex.cfg"
+File: biblatex.cfg 
+)))
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\lbx\english.lbx"
+File: english.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\lbx\ngerman.lbx"
+File: ngerman.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\lbx\german.lbx"
+File: german.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\biblat
+ex\lbx\german.lbx"
+File: german.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
+))
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count303
+\@quotereset=\count304
+(Masterseite.aux)
 \openout1 = `Masterseite.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -646,21 +1012,26 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 10.
 
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1l
+mr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\context\base
 \supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen114
+\scratchcounter=\count305
+\scratchdimen=\dimen115
 \scratchbox=\box28
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen115
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks19
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen116
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks20
 )
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
 ek\epstopdf-base.sty"
@@ -677,6 +1048,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count311
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 10.
 
@@ -688,31 +1060,46 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 diek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count312
 )
 LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
 LaTeX Info: Redefining \nameref on input line 10.
  (Masterseite.out) (Masterseite.out)
-\@outlinefile=\write3
-\openout3 = `Masterseite.out'.
+\@outlinefile=\write5
+\openout5 = `Masterseite.out'.
 
-\c@lstlisting=\count118
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 17.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 17.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 17.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 17.
+LaTeX Info: Redefining \microtypecontext on input line 10.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
 
-(Kapitel/0.1_Titelblatt.tex
-<Abbildungen/Fallmerayer_Logo.jpg, id=135, 426.8748pt x 426.8748pt>
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microt
+ype\mt-cmr.cfg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout4 = `Masterseite-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Masterseite.bbl' found.
+ (Masterseite.bbl)
+Package biblatex Info: Reference section=0 on input line 10.
+Package biblatex Info: Reference segment=0 on input line 10.
+ (Kapitel/0.1_Titelblatt.tex
+<Abbildungen/Fallmerayer_Logo.jpg, id=131, 426.8748pt x 426.8748pt>
 File: Abbildungen/Fallmerayer_Logo.jpg Graphic file (type jpg)
 <use Abbildungen/Fallmerayer_Logo.jpg>
 Package pdftex.def Info: Abbildungen/Fallmerayer_Logo.jpg  used on input line 9
@@ -735,88 +1122,111 @@ Package babel Info: Redefining german shorthand "~
 
 
 {C:/Users/Thomas Mittermair/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} 
-<./Abbildungen/Fallmerayer_Logo.jpg>])
-(Kapitel/0.2_Abstract.tex
+<./Abbildungen/Fallmerayer_Logo.jpg>]) (Kapitel/0.2_Abstract.tex
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 12.
 pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.10 \end{abstract}
+l.12 \end{abstract}
                     [1
 
 ]) (Masterseite.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
 
-Overfull \hbox (5.3919pt too wide) in paragraph at lines 19--19
- [][] [][]\T1/cmr/m/n/10.95 Implementierungsmöglichkeiten der Par-al-le-li-sie-
-rung 
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1
+lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 7.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\oml
+lmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 7.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\oms
+lmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 7.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omx
+lmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 7.
+
+Overfull \hbox (2.66147pt too wide) in paragraph at lines 37--37
+ [][] [][]\T1/lmr/m/n/10.95 (-20) Implementierungsmöglichkeiten der Par-al-le-l
+i-sie-rung 
  []
 
 
-Overfull \hbox (5.3919pt too wide) in paragraph at lines 22--22
- [][] [][]\T1/cmr/m/n/10.95 Implementierungsmöglichkeiten der Par-al-le-li-sie-
-rung 
+Overfull \hbox (2.66147pt too wide) in paragraph at lines 43--43
+ [][] [][]\T1/lmr/m/n/10.95 (-20) Implementierungsmöglichkeiten der Par-al-le-l
+i-sie-rung 
  []
 
 
-Overfull \hbox (3.09163pt too wide) in paragraph at lines 52--52
- [] [][]\T1/cmr/bx/n/10.95 Parallele Pro-gram-mier-kon-zep-te, An-wen-dungs-bei
+Overfull \hbox (5.60136pt too wide) in paragraph at lines 109--109
+ [] [][]\T1/lmr/bx/n/10.95 Parallele Pro-gram-mier-kon-zep-te, An-wen-dungs-bei
 -spiel und 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 109.
 pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 ...ungsbeispiel und Vergleich}{73}{chapter.3}
+l.109 ...ngsbeispiel und Vergleich}{71}{chapter.3}
                                                    [1
 
 
 ])
-\tf@toc=\write4
-\openout4 = `Masterseite.toc'.
+\tf@toc=\write6
+\openout6 = `Masterseite.toc'.
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 34.
+(babel)             in language  on input line 29.
  [2]
 (Kapitel/1.0_Einleitung_und_Motivation.tex
 Kapitel 1.
@@ -854,9 +1264,9 @@ Package babel Info: Redefining german shorthand "~
 
 
 ]
-Overfull \hbox (0.24104pt too wide) in paragraph at lines 38--39
-[]\T1/cmr/bx/n/10.95 Instruction-Fetch-Phase (IF), Befehlholungs-Phase\T1/cmr/m
-/n/10.95 : In
+Overfull \hbox (2.16266pt too wide) in paragraph at lines 38--39
+[]\T1/lmr/bx/n/10.95 Instruction-Fetch-Phase (IF), Befehlholungs-Phase\T1/lmr/m
+/n/10.95 (-20) : In
  []
 
 Package babel Info: Redefining german shorthand "f
@@ -872,35 +1282,11 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 40.
 [2]
-Overfull \hbox (1.44392pt too wide) in paragraph at lines 40--41
-\T1/cmr/m/n/10.95 Phase kann auch als Un-ter-pha-se der Instruction-Decode-Phas
-e
- []
-
-
-Overfull \hbox (6.51373pt too wide) in paragraph at lines 40--41
-\T1/cmr/m/n/10.95 be-trach-tet wer-den, da die Ope-ran-den, wel-che in der Inst
-ruction-
- []
-
-
-Overfull \hbox (9.25217pt too wide) in paragraph at lines 40--41
-\T1/cmr/m/n/10.95 Decode-Phase er-mit-telt wur-den, in die-ser Pha-se aus dem H
-aupt-
- []
-
-
-Overfull \hbox (2.83595pt too wide) in paragraph at lines 42--43
-\T1/cmr/bx/n/10.95 Phase\T1/cmr/m/n/10.95 : In die-ser Pha-se wer-den die Er-ge
-b-nis-se aus der Execute-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-<Abbildungen/Befehlszylus_ohne_Pipelining.png, id=226, 712.1004pt x 104.5506pt>
+<Abbildungen/Befehlszylus_ohne_Pipelining.png, id=218, 712.1004pt x 104.5506pt>
 
 File: Abbildungen/Befehlszylus_ohne_Pipelining.png Graphic file (type png)
 <use Abbildungen/Befehlszylus_ohne_Pipelining.png>
@@ -926,9 +1312,9 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 61.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 61.
-LaTeX Font Info:    External font `cmex10' loaded for size
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 64.
-LaTeX Font Info:    External font `cmex10' loaded for size
+LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 64.
 
 Underfull \hbox (badness 10000) in paragraph at lines 63--65
@@ -941,9 +1327,6 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 66.
-
-Underfull \vbox (badness 1762) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 70.
 Package babel Info: Redefining german shorthand "|
@@ -956,7 +1339,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 70.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 70.
- [4]
+[4]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 76.
 Package babel Info: Redefining german shorthand "|
@@ -975,9 +1358,8 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 82.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 82.
-
-[5]
-<Abbildungen/Moorsches_Gesetz.png, id=264, 803.0pt x 721.69624pt>
+ [5]
+<Abbildungen/Moorsches_Gesetz.png, id=256, 803.0pt x 721.69624pt>
 File: Abbildungen/Moorsches_Gesetz.png Graphic file (type png)
 <use Abbildungen/Moorsches_Gesetz.png>
 Package pdftex.def Info: Abbildungen/Moorsches_Gesetz.png  used on input line 8
@@ -991,43 +1373,43 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 90.
 )
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 35.
  [6 <./Abbildungen/Moorsches_Gesetz.png>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
  [7]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 36.
  [8
 
 ]
@@ -1078,15 +1460,6 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 26.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 26.
-
-Overfull \hbox (5.45717pt too wide) in paragraph at lines 28--31
-\T1/cmr/m/n/10.95 Abarbeitungsstrang auf die Ter-mi-nie-rung \T1/cmr/m/it/10.95
- al-ler \T1/cmr/m/n/10.95 Kind-Abarbeitungsstränge
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 31.
 Package babel Info: Redefining german shorthand "|
@@ -1106,25 +1479,19 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 39.
-
-Overfull \hbox (2.15712pt too wide) in paragraph at lines 45--47
-\T1/cmr/m/n/10.95 kom-men von-ein-an-der un-ab-hän-gig ab-ge-ar-bei-tet wer-den
- kön-nen. Exi-
- []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 47.
-[11]
+(babel)             in language  on input line 49.
+ [11]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 53.
 Package babel Info: Redefining german shorthand "|
@@ -1132,8 +1499,8 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 53.
 
-Overfull \hbox (2.96597pt too wide) in paragraph at lines 57--57
-[]\T1/cmr/bx/n/12 Implementierungsmöglichkeiten der Par-al-le-li-sie-rung
+Overfull \hbox (3.05276pt too wide) in paragraph at lines 57--57
+[]\T1/lmr/bx/n/12 Implementierungsmöglichkeiten der Par-al-le-li-sie-rung
  []
 
 Package babel Info: Redefining german shorthand "f
@@ -1156,19 +1523,19 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 74.
 [12]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 87.
  [13]
-<Abbildungen/Prozesszustaende.png, id=324, 625.8582pt x 363.759pt>
+<Abbildungen/Prozesszustaende.png, id=317, 625.8582pt x 363.759pt>
 File: Abbildungen/Prozesszustaende.png Graphic file (type png)
 <use Abbildungen/Prozesszustaende.png>
 Package pdftex.def Info: Abbildungen/Prozesszustaende.png  used on input line 9
@@ -1187,108 +1554,103 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 108.
  [14 <./Abbildungen/Prozesszustaende.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 114.
 
 
-("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\o
-mscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\oms
+lmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 114.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 126.
  [15]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 135.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 135.
- [16]
-Overfull \hbox (8.71185pt too wide) in paragraph at lines 141--143
-[]\T1/cmr/bx/n/10.95 Round-Robin-Scheduling (Zeitscheiben-Verfahren)\T1/cmr/m/n
-/10.95 :
+Overfull \hbox (9.2026pt too wide) in paragraph at lines 141--143
+[]\T1/lmr/bx/n/10.95 Round-Robin-Scheduling (Zeitscheiben-Verfahren)\T1/lmr/m/n
+/10.95 (-20) :
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 144.
+(babel)             in language  on input line 143.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 144.
-[17]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 165.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 165.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 165.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 165.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 165.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 165.
- [18]
-Overfull \hbox (1.32661pt too wide) in paragraph at lines 184--186
-[]\T1/cmr/m/n/10.95 Während Pro-zes-se meist voll-kom-men
- []
+(babel)             in language  on input line 143.
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 153.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 186.
-[19]
-Overfull \hbox (0.54247pt too wide) in paragraph at lines 195--198
-[]\T1/cmr/m/n/10.95 Normalerweise sind Threads \T1/cmr/m/it/10.95 joina-
- []
+(babel)             in language  on input line 153.
+ [17]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 165.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 165.
 
+[18]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 198.
-[20]
-Overfull \hbox (2.96597pt too wide) in paragraph at lines 206--206
-[]\T1/cmr/bx/n/12 Implementierungsmöglichkeiten der Par-al-le-li-sie-rung
+(babel)             in language  on input line 186.
+ [19]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 204.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 204.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 204.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 204.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 204.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 204.
+ [20]
+Overfull \hbox (3.05276pt too wide) in paragraph at lines 206--206
+[]\T1/lmr/bx/n/12 Implementierungsmöglichkeiten der Par-al-le-li-sie-rung
  []
 
 Package babel Info: Redefining german shorthand "f
@@ -1310,7 +1672,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 217.
 [21]
-<Abbildungen/Befehlszylus_mit_Pipelining.png, id=396, 419.6478pt x 107.9232pt>
+<Abbildungen/Befehlszylus_mit_Pipelining.png, id=388, 419.6478pt x 107.9232pt>
 File: Abbildungen/Befehlszylus_mit_Pipelining.png Graphic file (type png)
 <use Abbildungen/Befehlszylus_mit_Pipelining.png>
 Package pdftex.def Info: Abbildungen/Befehlszylus_mit_Pipelining.png  used on i
@@ -1329,14 +1691,6 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 240.
  [22]
-Overfull \hbox (0.20363pt too wide) in paragraph at lines 243--244
-\T1/cmr/m/it/10.95 Hyper-Threading \T1/cmr/m/n/10.95 ist ei-ne Tech-no-lo-gie v
-on In-tel, die hard-wa-re-sei-ti-ges Mul-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 244.
 Package babel Info: Redefining german shorthand "|
@@ -1363,17 +1717,17 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 259.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 267.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 267.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 267.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 267.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 267.
+(babel)             in language  on input line 279.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 267.
+(babel)             in language  on input line 279.
  [24]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 279.
@@ -1388,7 +1742,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 279.
  [25]
-<Abbildungen/Zeitkritischer_Ablauf_Drucker_Spooler.png, id=434, 442.2924pt x 40
+<Abbildungen/Zeitkritischer_Ablauf_Drucker_Spooler.png, id=426, 442.2924pt x 40
 8.5664pt>
 File: Abbildungen/Zeitkritischer_Ablauf_Drucker_Spooler.png Graphic file (type 
 png)
@@ -1408,26 +1762,27 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 292.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 292.
- [26 <./Abbildungen/Zeitkritischer_Ablauf_Drucker_Spooler.png>]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 300.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 300.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 300.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 300.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 300.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 300.
- [27]
-<Abbildungen/Deadlock_Schema.png, id=452, 467.8278pt x 292.4526pt>
+
+[26 <./Abbildungen/Zeitkritischer_Ablauf_Drucker_Spooler.png>]
+<Abbildungen/Deadlock_Schema.png, id=438, 467.8278pt x 292.4526pt>
 File: Abbildungen/Deadlock_Schema.png Graphic file (type png)
 <use Abbildungen/Deadlock_Schema.png>
 Package pdftex.def Info: Abbildungen/Deadlock_Schema.png  used on input line 30
 3.
 (pdftex.def)             Requested size: 227.62204pt x 142.29451pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 309.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 309.
+ [27]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 322.
 Package babel Info: Redefining german shorthand "|
@@ -1465,7 +1820,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 329.
 [29]
-<Abbildungen/Mutex_kritische_Regionen.jpg, id=472, 356.532pt x 178.38644pt>
+<Abbildungen/Mutex_kritische_Regionen.jpg, id=464, 356.532pt x 178.38644pt>
 File: Abbildungen/Mutex_kritische_Regionen.jpg Graphic file (type jpg)
 <use Abbildungen/Mutex_kritische_Regionen.jpg>
 Package pdftex.def Info: Abbildungen/Mutex_kritische_Regionen.jpg  used on inpu
@@ -1477,14 +1832,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--347
  []
 
 
-Overfull \hbox (11.95258pt too wide) in paragraph at lines 351--355
-[]\T1/cmr/m/n/10.95 Um zu
- []
-
-
-Overfull \hbox (3.79059pt too wide) in paragraph at lines 351--355
-\T1/cmr/m/n/10.95 durch so-ge-nann-te In-ter-rupts, auch Un-ter-bre-chun-gen ge
--nannt. Durch
+Overfull \hbox (0.50735pt too wide) in paragraph at lines 351--355
+[]\T1/lmr/m/n/10.95 (-20) Um
  []
 
 Package babel Info: Redefining german shorthand "f
@@ -1500,117 +1849,95 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 355.
 [30]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 355.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 355.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 355.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 355.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 355.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 355.
- [31 <./Abbildungen/Mutex_kritische_Regionen.jpg>]
-Overfull \hbox (31.69003pt too wide) in paragraph at lines 358--359
+Overfull \hbox (34.0768pt too wide) in paragraph at lines 358--359
 []
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 367.
+(babel)             in language  on input line 359.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 367.
+(babel)             in language  on input line 359.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 367.
+(babel)             in language  on input line 359.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 367.
+(babel)             in language  on input line 359.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 367.
+(babel)             in language  on input line 359.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 367.
-[32]
-Overfull \hbox (6.05904pt too wide) in paragraph at lines 370--371
-\T1/cmr/m/n/10.95 oder \T1/cmr/m/it/10.95 TSL \T1/cmr/m/n/10.95 ge-nannt. Dies 
-ist ei-ne In-struk-ti-on auf Maschinencode-
- []
-
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 372.
+(babel)             in language  on input line 359.
+[31 <./Abbildungen/Mutex_kritische_Regionen.jpg>]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 368.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 368.
+ [32]
 (Quellcode/TSL_Syntax.asm)
-Overfull \hbox (0.43477pt too wide) in paragraph at lines 374--379
-\T1/cmr/m/n/10.95 und spei-chert den aus-ge-le-se-nen Wert ins Re-gi-ster \T1/c
-mr/m/it/10.95 RE-GI-STER\T1/cmr/m/n/10.95 .
- []
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 379.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 379.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 379.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 379.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 379.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 379.
+ [33] (Quellcode/TSL_enterRegion_leaveRegion.asm
+Underfull \vbox (badness 5475) has occurred while \output is active []
 
-
-Overfull \hbox (54.67636pt too wide) in paragraph at lines 374--379
-\T1/cmr/m/it/10.95 en-ter-Re-gi-on \T1/cmr/m/n/10.95 und \T1/cmr/m/it/10.95 lea
--veR-egi-on \T1/cmr/m/n/10.95 schrei-ben. Das \T1/cmr/m/it/10.95 en-ter-Re-gi-o
-n\T1/cmr/m/n/10.95 -Unterprogramm
- []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 7.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 379.
-[33] (Quellcode/TSL_enterRegion_leaveRegion.asm
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 4.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 4.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 4.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 7.
  [34])
-Overfull \hbox (7.2295pt too wide) in paragraph at lines 382--385
-\T1/cmr/m/n/10.95 Dieses Ver-fah-ren zur Rea-li-sie-rung von ge-gen-sei-ti-gem 
-Aus-schluss
- []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 385.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 385.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 385.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 385.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 385.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 385.
-[35]
-Overfull \hbox (10.60461pt too wide) in paragraph at lines 389--394
+Overfull \hbox (12.83923pt too wide) in paragraph at lines 389--394
 []
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 394.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 394.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 394.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 394.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 394.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 396.
-[36]
+(babel)             in language  on input line 394.
+[35]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 402.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 402.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 402.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 402.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 402.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 402.
+ [36]
 ("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listin
 gs\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1620,31 +1947,33 @@ gs\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (Quellcode/Erzeuger-Verbraucher-Problem_mit_zeitkritischem_Ablauf.c
+Underfull \vbox (badness 5475) has occurred while \output is active []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 10.
  [37]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 34.
 
 [38])
 Package babel Info: Redefining german shorthand "f
@@ -1677,41 +2006,36 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 415.
 [40]
-Overfull \hbox (132.21652pt too wide) in paragraph at lines 418--419
+Overfull \hbox (135.6115pt too wide) in paragraph at lines 418--419
 []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 419.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 419.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 419.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 419.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 419.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 419.
- [41]
 (Quellcode/Erzeuger-Verbraucher-Problem_Loesung_Semaphoren.c
-Underfull \vbox (badness 5475) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 3.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 3.
+ [41]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 27.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 27.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 27.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 27.
  [42])
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 424.
@@ -1727,31 +2051,25 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 424.
 
 [43]
-Overfull \hbox (12.7948pt too wide) in paragraph at lines 428--430
+Overfull \hbox (16.03575pt too wide) in paragraph at lines 428--430
 []
  []
 
-
-Overfull \hbox (1.70308pt too wide) in paragraph at lines 438--440
-\T1/cmr/m/n/10.95 be-kann-tes Pro-blem der Prozess-Synchronisationsproblematik.
- Auch
- []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 451.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 451.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 451.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 451.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 451.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 451.
 [44]
-Overfull \hbox (8.14214pt too wide) in paragraph at lines 465--467
-[]\T1/cmr/m/n/10.95 Ist beim Ent-wickeln
+Overfull \hbox (8.49542pt too wide) in paragraph at lines 465--467
+[]\T1/lmr/m/n/10.95 (-20) Ist beim Ent-wickeln
  []
 
 Package babel Info: Redefining german shorthand "f
@@ -1767,41 +2085,36 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 467.
 [45]
-Overfull \hbox (8.17102pt too wide) in paragraph at lines 470--471
-[]\T1/cmr/m/n/10.95 Die ra-di-kal-
+Overfull \hbox (8.12613pt too wide) in paragraph at lines 470--471
+[]\T1/lmr/m/n/10.95 (-20) Die ra-di-kal-
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 471.
+(babel)             in language  on input line 478.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 471.
+(babel)             in language  on input line 478.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 471.
+(babel)             in language  on input line 478.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 471.
+(babel)             in language  on input line 478.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 471.
+(babel)             in language  on input line 478.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 471.
+(babel)             in language  on input line 478.
 [46]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 485.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 485.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 485.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 485.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 485.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 485.
+(babel)             in language  on input line 499.
  [47]
-Overfull \hbox (11.63951pt too wide) in paragraph at lines 488--499
-\T1/cmr/m/n/10.95 Zunächst wird an-ge-nom-men, dass es zum er-sten Zu-stand kom
-mt.
- []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "|
@@ -1814,7 +2127,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 499.
-[48]
+ [48]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "|
@@ -1829,17 +2142,17 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 499.
  [49]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 499.
+(babel)             in language  on input line 544.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 499.
+(babel)             in language  on input line 544.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 499.
+(babel)             in language  on input line 544.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 499.
+(babel)             in language  on input line 544.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 499.
+(babel)             in language  on input line 544.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 499.
+(babel)             in language  on input line 544.
  [50]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 545.
@@ -1853,29 +2166,26 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 547.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 547.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 553.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 553.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 553.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 558.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 558.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 552.
+(babel)             in language  on input line 558.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 558.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 558.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 558.
  [51]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 553.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 553.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 553.
-<Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png, id=749, 237.0456pt x 281.8
+<Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png, id=742, 237.0456pt x 281.8
 53pt>
 File: Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png Graphic file (type png
 )
@@ -1883,7 +2193,7 @@ File: Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png Graphic file (type png
 Package pdftex.def Info: Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png  us
 ed on input line 567.
 (pdftex.def)             Requested size: 113.81102pt x 135.3266pt.
-<Abbildungen/Ebenen_der_Parallelitaet_Rechner.png, id=752, 237.0456pt x 281.853
+<Abbildungen/Ebenen_der_Parallelitaet_Rechner.png, id=745, 237.0456pt x 281.853
 pt>
 File: Abbildungen/Ebenen_der_Parallelitaet_Rechner.png Graphic file (type png)
 <use Abbildungen/Ebenen_der_Parallelitaet_Rechner.png>
@@ -1902,30 +2212,29 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 591.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 591.
-
-[52]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 591.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 591.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 591.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 591.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 591.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 591.
- [53 <./Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png> <./Abbildungen/Eben
-en_der_Parallelitaet_Rechner.png>]
-<Abbildungen/Ebenen_der_Parallelitaet_Cluster.png, id=776, 237.5274pt x 303.052
+ [52 <./Abbildungen/Ebenen_der_Parallelitaet_Prozessor.png>]
+<Abbildungen/Ebenen_der_Parallelitaet_Cluster.png, id=763, 237.5274pt x 303.052
 2pt>
 File: Abbildungen/Ebenen_der_Parallelitaet_Cluster.png Graphic file (type png)
 <use Abbildungen/Ebenen_der_Parallelitaet_Cluster.png>
 Package pdftex.def Info: Abbildungen/Ebenen_der_Parallelitaet_Cluster.png  used
  on input line 594.
 (pdftex.def)             Requested size: 113.81102pt x 145.20906pt.
-<Abbildungen/Ebenen_der_Parallelitaet_Grid.png, id=780, 450.0012pt x 370.0224pt
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 604.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 604.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 604.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 604.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 604.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 604.
+ [53 <./Abbildungen/Ebenen_der_Parallelitaet_Rechner.png> <./Abbildungen/Ebenen
+_der_Parallelitaet_Cluster.png>]
+<Abbildungen/Ebenen_der_Parallelitaet_Grid.png, id=777, 450.0012pt x 370.0224pt
 >
 File: Abbildungen/Ebenen_der_Parallelitaet_Grid.png Graphic file (type png)
 <use Abbildungen/Ebenen_der_Parallelitaet_Grid.png>
@@ -1938,134 +2247,89 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 612.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 612.
+
+Overfull \hbox (5.93872pt too wide) in paragraph at lines 623--625
+[]\T1/lmr/m/n/10.95 (-20) Unter ei-nem \T1/lmr/m/it/10.95 (-20) Multikernprozes
+sor-System\T1/lmr/m/n/10.95 (-20) ,
+ []
+
+
+Overfull \hbox (15.65102pt too wide) in paragraph at lines 627--629
+[]\T1/lmr/m/n/10.95 (-20) Ein \T1/lmr/m/it/10.95 (-20) Multiprozessor-System \T
+1/lmr/m/n/10.95 (-20) oder \T1/lmr/m/it/10.95 (-20) Mehrprozessor-
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 620.
+(babel)             in language  on input line 629.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 620.
+(babel)             in language  on input line 629.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 620.
+(babel)             in language  on input line 629.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 620.
+(babel)             in language  on input line 629.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 620.
+(babel)             in language  on input line 629.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 620.
- [54 <./Abbildungen/Ebenen_der_Parallelitaet_Cluster.png>]
-Overfull \hbox (8.62953pt too wide) in paragraph at lines 623--625
-[]\T1/cmr/m/n/10.95 Unter ei-nem \T1/cmr/m/it/10.95 Multikernprozessor-System\T
-1/cmr/m/n/10.95 ,
- []
-
-
-Overfull \hbox (0.86041pt too wide) in paragraph at lines 623--625
-\T1/cmr/m/n/10.95 auch \T1/cmr/m/it/10.95 Mehrkernprozessor-System \T1/cmr/m/n/
-10.95 ge-nannt, ver-steht man einen Rech-
- []
-
-
-Overfull \hbox (18.78246pt too wide) in paragraph at lines 627--629
-[]\T1/cmr/m/n/10.95 Ein \T1/cmr/m/it/10.95 Multiprozessor-System \T1/cmr/m/n/10
-.95 oder \T1/cmr/m/it/10.95 Mehrprozessor-
- []
-
-
-Overfull \hbox (14.63948pt too wide) in paragraph at lines 631--633
-[]\T1/cmr/m/n/10.95 Von ei-nem \T1/cmr/m/it/10.95 Multicomputer-System \T1/cmr/
-m/n/10.95 spricht man,
- []
-
-
-Overfull \hbox (7.01588pt too wide) in paragraph at lines 635--635
-[]\T1/cmr/bx/n/10.95 Einteilung der Ar-chi-tek-tu-ren nach der Flynn-schen Klas
+(babel)             in language  on input line 629.
+[54 <./Abbildungen/Ebenen_der_Parallelitaet_Grid.png>]
+Overfull \hbox (7.46019pt too wide) in paragraph at lines 635--635
+[]\T1/lmr/bx/n/10.95 Einteilung der Ar-chi-tek-tu-ren nach der Flynn-schen Klas
 -
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 638.
+(babel)             in language  on input line 667.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 638.
+(babel)             in language  on input line 667.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 638.
+(babel)             in language  on input line 667.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 638.
+(babel)             in language  on input line 667.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 638.
+(babel)             in language  on input line 667.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 638.
-[55 <./Abbildungen/Ebenen_der_Parallelitaet_Grid.png>]
-Overfull \hbox (10.50684pt too wide) in paragraph at lines 665--667
-[]\T1/cmr/m/n/10.95 Ein SISD-System ver-fügt nur
- []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 672.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 672.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 672.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 672.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 672.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 672.
-[56]
-Overfull \hbox (2.58723pt too wide) in paragraph at lines 675--678
-[]\T1/cmr/m/n/10.95 In ei-nem SIMD-System
+(babel)             in language  on input line 667.
+[55]
+Overfull \hbox (2.88368pt too wide) in paragraph at lines 675--678
+[]\T1/lmr/m/n/10.95 (-20) In ei-nem SIMD-System
  []
 
 
-Overfull \hbox (1.62941pt too wide) in paragraph at lines 681--684
-[]\T1/cmr/m/n/10.95 Ein MIMD-System
- []
-
-
-Overfull \hbox (2.54341pt too wide) in paragraph at lines 681--684
-\T1/cmr/m/n/10.95 Schritt lädt je-de Ein-heit einen ei-ge-nen Be-fehl und ein e
-i-ge-nes Daten-
+Overfull \hbox (2.32224pt too wide) in paragraph at lines 681--684
+[]\T1/lmr/m/n/10.95 (-20) Ein MIMD-System
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 688.
+(babel)             in language  on input line 684.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 688.
+(babel)             in language  on input line 684.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 688.
+(babel)             in language  on input line 684.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 688.
+(babel)             in language  on input line 684.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 688.
+(babel)             in language  on input line 684.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 688.
-[57] (Quellcode/if-Statement_SIMD-Systeme.c)
-Overfull \hbox (13.66924pt too wide) in paragraph at lines 701--704
-[]\T1/cmr/m/n/10.95 Rechner mit ver-teil-tem Spei-
- []
-
-
-Overfull \hbox (4.32692pt too wide) in paragraph at lines 706--709
-[]\T1/cmr/m/n/10.95 Ein an-de-rer An-satz ist
+(babel)             in language  on input line 684.
+[56] (Quellcode/if-Statement_SIMD-Systeme.c)
+Overfull \hbox (11.79263pt too wide) in paragraph at lines 701--704
+[]\T1/lmr/m/n/10.95 (-20) Rechner mit ver-teil-tem Spei-
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 709.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 709.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 709.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 709.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 709.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 709.
-[58]
-Overfull \hbox (3.79694pt too wide) in paragraph at lines 712--714
-\T1/cmr/m/n/10.95 Sogenannte \T1/cmr/m/it/10.95 Sym-me-tri-sche Mul-ti-pro-zes-
-so-ren \T1/cmr/m/n/10.95 (SMP) sind UMA-
- []
-
-<Abbildungen/Parallelrechner_mit_verteiltem_Speicher.png, id=871, 415.7934pt x 
+(babel)             in language  on input line 704.
+[57]
+<Abbildungen/Parallelrechner_mit_verteiltem_Speicher.png, id=857, 415.7934pt x 
 337.26pt>
 File: Abbildungen/Parallelrechner_mit_verteiltem_Speicher.png Graphic file (typ
 e png)
@@ -2073,7 +2337,20 @@ e png)
 Package pdftex.def Info: Abbildungen/Parallelrechner_mit_verteiltem_Speicher.pn
 g  used on input line 722.
 (pdftex.def)             Requested size: 199.16928pt x 161.5536pt.
-<Abbildungen/Parallelrechner_mit_gemeinsamem_Speicher.png, id=872, 414.348pt x 
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 725.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 725.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 725.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 725.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 725.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 725.
+ [58]
+<Abbildungen/Parallelrechner_mit_gemeinsamem_Speicher.png, id=865, 414.348pt x 
 235.6002pt>
 File: Abbildungen/Parallelrechner_mit_gemeinsamem_Speicher.png Graphic file (ty
 pe png)
@@ -2081,6 +2358,9 @@ pe png)
 Package pdftex.def Info: Abbildungen/Parallelrechner_mit_gemeinsamem_Speicher.p
 ng  used on input line 729.
 (pdftex.def)             Requested size: 199.16928pt x 113.24857pt.
+
+Underfull \vbox (badness 1112) has occurred while \output is active []
+
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 737.
 Package babel Info: Redefining german shorthand "|
@@ -2093,23 +2373,10 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 737.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 737.
-[59]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 737.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 737.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 737.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 737.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 737.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 737.
- [60 <./Abbildungen/Parallelrechner_mit_verteiltem_Speicher.png> <./Abbildungen
+ [59 <./Abbildungen/Parallelrechner_mit_verteiltem_Speicher.png> <./Abbildungen
 /Parallelrechner_mit_gemeinsamem_Speicher.png>]
-Overfull \hbox (2.43733pt too wide) in paragraph at lines 738--738
-[]\T1/cmr/bx/n/14.4 Metriken und Mo-del-le zur Performance-Ana-
+Overfull \hbox (31.65117pt too wide) in paragraph at lines 738--738
+[]\T1/lmr/bx/n/14.4 Metriken und Mo-del-le zur Performance-Analyse
  []
 
 Package babel Info: Redefining german shorthand "f
@@ -2136,7 +2403,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 750.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 750.
-[61]
+[60]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 770.
 Package babel Info: Redefining german shorthand "|
@@ -2149,7 +2416,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 770.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 770.
- [62]
+ [61]
 Underfull \hbox (badness 10000) in paragraph at lines 773--774
 
  []
@@ -2166,7 +2433,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 784.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 784.
-[63]
+[62]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 800.
 Package babel Info: Redefining german shorthand "|
@@ -2174,156 +2441,134 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 800.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 812.
+(babel)             in language  on input line 811.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 812.
+(babel)             in language  on input line 811.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 812.
+(babel)             in language  on input line 811.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 812.
+(babel)             in language  on input line 811.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 812.
+(babel)             in language  on input line 811.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 812.
+(babel)             in language  on input line 811.
+ [63]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 826.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 826.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 826.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 826.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 826.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 826.
  [64]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 823.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 823.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 823.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 823.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 823.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 823.
- [65]
-<Abbildungen/Amdahlsches_Gesetz.png, id=929, 558.888pt x 479.8728pt>
+<Abbildungen/Amdahlsches_Gesetz.png, id=919, 558.888pt x 479.8728pt>
 File: Abbildungen/Amdahlsches_Gesetz.png Graphic file (type png)
 <use Abbildungen/Amdahlsches_Gesetz.png>
 Package pdftex.def Info: Abbildungen/Amdahlsches_Gesetz.png  used on input line
- 835.
+ 834.
 (pdftex.def)             Requested size: 256.0748pt x 219.87282pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
+Underfull \hbox (badness 10000) in paragraph at lines 839--840
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 847.
+(babel)             in language  on input line 840.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 847.
+(babel)             in language  on input line 840.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 847.
+(babel)             in language  on input line 840.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 847.
+(babel)             in language  on input line 840.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 847.
+(babel)             in language  on input line 840.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 847.
+(babel)             in language  on input line 840.
+[65 <./Abbildungen/Amdahlsches_Gesetz.png>]
+Overfull \hbox (14.14545pt too wide) in paragraph at lines 850--850
+[]\T1/lmr/bx/n/10.95 Das Gu-staf-son-sche Ge-setz (Ge-setz von Gustafson-Barsis
+) 
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 856.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 856.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 856.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 856.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 856.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 856.
 [66]
-Underfull \hbox (badness 1845) in paragraph at lines 854--854
-[][][]\T1/cmr/m/n/9 John Leroy Gu-staf-son (* 1955) ist ein ame-ri-ka-ni-scher 
-In-for-ma-ti-ker und
+Overfull \hbox (52.27681pt too wide) detected at line 870
+\OML/lmm/m/it/10.95 S[]\OT1/lmr/m/n/10.95 (1) = [] = [] = [] = []
  []
 
 
-Overfull \hbox (17.22978pt too wide) in paragraph at lines 854--857
-[]\T1/cmr/m/n/10.95 Um dem
- []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 857.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 857.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 857.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 857.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 857.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 857.
-[67 <./Abbildungen/Amdahlsches_Gesetz.png>]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 870.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 870.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 870.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 870.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 870.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 870.
- [68]
-Overfull \hbox (79.6495pt too wide) detected at line 871
-\OML/cmm/m/it/10.95 S[]\OT1/cmr/m/n/10.95 (1) = [] = [] = [] = []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 873--875
+Underfull \hbox (badness 10000) in paragraph at lines 872--874
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 885.
+(babel)             in language  on input line 875.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 885.
+(babel)             in language  on input line 875.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 885.
+(babel)             in language  on input line 875.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 885.
+(babel)             in language  on input line 875.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 885.
+(babel)             in language  on input line 875.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 885.
-[69]
-Overfull \hbox (87.5706pt too wide) in paragraph at lines 906--910
-[]
- []
-
+(babel)             in language  on input line 875.
+[67]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 910.
+(babel)             in language  on input line 902.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 910.
+(babel)             in language  on input line 902.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 910.
+(babel)             in language  on input line 902.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 910.
+(babel)             in language  on input line 902.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 910.
+(babel)             in language  on input line 902.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 910.
-[70])
+(babel)             in language  on input line 902.
+ [68])
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 45.
- [71]
+(babel)             in language  on input line 40.
+ [69]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 45.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 45.
- [72
+(babel)             in language  on input line 40.
+ [70
 
 ]
 (Kapitel/3.0_Parallele_Programmierkonzepte_Anwendungsbeispiel_und_Vergleich.tex
@@ -2358,7 +2603,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 22.
-[73
+[71
 
 ]
 Package babel Info: Redefining german shorthand "f
@@ -2379,7 +2624,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 31.
- [74]
+ [72]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 32.
 Package babel Info: Redefining german shorthand "|
@@ -2398,7 +2643,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 41.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 41.
- [75]
+ [73]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 42.
 Package babel Info: Redefining german shorthand "|
@@ -2409,152 +2654,275 @@ Package babel Info: Redefining german shorthand "~
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
- [76]
+(babel)             in language  on input line 44.
+ [74]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 
-[77]
+[75]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
- [78
-
-] (Masterseite.bbl
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 1.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 63.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 63.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 63.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 63.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 63.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 63.
- [79
+(babel)             in language  on input line 44.
+ [76
 
 ]
-Underfull \hbox (badness 2435) in paragraph at lines 95--96
-[]\T1/cmr/m/n/10.95 d. f. B. Wi-ki-books, ``Com-pu-ter-hard-wa-re: Haupt-pla-ti
--ne: Bus:
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 46.
+
+("C:\Users\Thomas Mittermair\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1l
+mtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (41.56694pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) , (2018). par-al-lel, Adres-se: []$\T1/lmtt/m/n/10.
+95 https : / / www . duden . de / rechtschreibung /
  []
 
 
-Underfull \hbox (badness 8019) in paragraph at lines 98--100
-[]\T1/cmr/m/n/10.95 d. f. B. Wi-ki-books, ``Assembler-Programmierung für x86-
+Overfull \hbox (4.6669pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) C. Sie-mers. (2004). Pro-zes-sor-grund-la-gen: Von-Ne
+umann-Architektur,
+ []
+
+
+Overfull \hbox (30.59985pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 tecchannel . de / a / prozessorgrundlagen -[] von -[] neuman
+n -[] architektur -[]
+ []
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (4.16772pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 19565 _ Proseminar _ Technische _ Informatik / beyaz09parall
+ele .
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 131.
-[80])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+(babel)             in language  on input line 46.
+[77
+
+]
+Overfull \hbox (47.57068pt too wide) in paragraph at lines 47--47
+[]$\T1/lmtt/m/n/10.95 https : / / www . lrz . de / services / compute / supermu
+c / systemdescription/$[]
+ []
+
+
+Overfull \hbox (0.46375pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) B. Möl-ler. (2012). Die Teile-und-Herrsche-Strategie,
+ Adres-se: []$\T1/lmtt/m/n/10.95 https :
+ []
+
+
+Overfull \hbox (2.24944pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) J. Wolf. (2006). Linux-UNIX-Programmierung - Ka-pi-te
+l 10: Threads,
+ []
+
+
+Overfull \hbox (8.9793pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 programmierung / Kap10 -[] 000 . htm # RxxKap10000040002FE1F
+043100$[]
+ []
+
+
+Overfull \hbox (0.59152pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 wikipedia . org / wiki / Vektorprozessor$[] \T1/lmr/m/n/10.9
+5 (-20) (be-sucht am 25.03.2018). 
+ []
+
+
+Overfull \hbox (1.09152pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 wikipedia . org / wiki / Hyper -[] Threading$[] \T1/lmr/m/n/
+10.95 (-20) (be-sucht am 21.05.2018). 
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 52.
- [81]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+(babel)             in language  on input line 46.
+[78]
+Overfull \hbox (56.15013pt too wide) in paragraph at lines 47--47
+\T1/lmr/m/n/10.95 (-20) Speicher-bus, Adres-se: []$\T1/lmtt/m/n/10.95 https : /
+ / de . wikibooks . org / wiki / Computerhardware :
+ []
+
+
+Overfull \hbox (14.72803pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 Programmierung _ f % C3 % BCr _ x86 -[] Prozessoren / _Befeh
+lsreferenz #
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 46.
+[79]
+Overfull \hbox (12.08899pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 wikipedia . org / wiki / Mehrkernprozessor$[] \T1/lmr/m/n/10
+.95 (-20) (be-sucht am 05.04.2018). 
+ []
+
+
+Overfull \hbox (1.22287pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) d. f. E. Wi-ki-pe-dia. (). Ta-xo-no-mie, Adres-se: []
+$\T1/lmtt/m/n/10.95 https : / / de . wikipedia .
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 46.
+[80]
+Overfull \hbox (11.62267pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) , (). John Gu-staf-son (scien-tist), Adres-se: []$\
+T1/lmtt/m/n/10.95 https : / / en . wikipedia .
+ []
+
+
+Overfull \hbox (6.6277pt too wide) in paragraph at lines 47--47
+\T1/lmtt/m/n/10.95 org / wiki / John _ Gustafson _ (scientist)$[] \T1/lmr/m/n/1
+0.95 (-20) (be-sucht am 06.05.2018). 
+ []
+
+
+Overfull \hbox (8.14142pt too wide) in paragraph at lines 47--47
+[]\T1/lmr/m/n/10.95 (-20) , (). Pro-gram-mier-schnitt-stel-le, Adres-se: []$\
+T1/lmtt/m/n/10.95 https : / / de . wikipedia .
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 47.
+[81]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (Masterseite.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `Masterseite.out' has not changed.
-(rerunfilecheck)             Checksum: 86CE75D4287CBB57892B7FB8E7F0AE2D;2999.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
+(rerunfilecheck)             Checksum: 52053261E5115BC393817148A180F5A3;2912.
+Package logreq Info: Writing requests to 'Masterseite.run.xml'.
+\openout1 = `Masterseite.run.xml'.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 8953 strings out of 493303
- 133951 string characters out of 3124562
- 302396 words of memory out of 3000000
- 11981 multiletter control sequences out of 15000+200000
- 19460 words of font info for 42 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 37i,11n,52p,2681b,2042s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecti0900.pk> <C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Thomas Mittermair\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\
-Thomas Mittermair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm0800.pk> <C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Thomas Mittermair\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Thomas Mitter
-mair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <
-C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecti1095.pk> <C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Thomas Mittermair\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Thom
-as Mittermair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
-095.pk> <C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecrm1728.pk> <C:\Users\Thomas Mittermair\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk><C:/Users/Thomas Mittermair/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
-/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Thomas Mittermair/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
-Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Thomas Mittermair/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Thomas 
-Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on Masterseite.pdf (85 pages, 1643074 bytes).
+ 17720 strings out of 493303
+ 302676 string characters out of 3124562
+ 715870 words of memory out of 3000000
+ 20401 multiletter control sequences out of 15000+200000
+ 88019 words of font info for 162 fonts, out of 3000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 44i,11n,52p,2717b,3686s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-ec.enc}{C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Thomas Mittermair/AppData/Local/Program
+s/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Thomas Mittermair/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users/Thomas Mitt
+ermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/U
+sers/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmbx12.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/lm/lmcsc10.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Thomas Mittermair/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Thomas Mit
+termair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/U
+sers/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmr10.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmr12.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/Thomas Mittermair/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/Thomas Mitterma
+ir/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/T
+homas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr9.p
+fb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmri10.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/lm/lmri9.pfb><C:/Users/Thomas Mittermair/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Thomas Mittermair/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Thom
+as Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
+><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmtt10.pfb>
+Output written on Masterseite.pdf (85 pages, 1797183 bytes).
 PDF statistics:
- 1720 PDF objects out of 1728 (max. 8388607)
- 352 named destinations out of 1000 (max. 500000)
- 340 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1295 PDF objects out of 1440 (max. 8388607)
+ 354 named destinations out of 1000 (max. 500000)
+ 24396 words of extra memory for PDF output out of 24883 (max. 10000000)
 
