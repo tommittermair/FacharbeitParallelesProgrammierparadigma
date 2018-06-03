@@ -4,10 +4,11 @@
 #include <string.h>
 #include <mpi.h>
 
-// Fuer die Kompilierung und Ausfuehrung muss eine MPI-Implementierung, zum Beispiel OpenMPI, auf dem Rechner installiert werden. Anleitung zur Installation von OpenMPI: https://ireneli.eu/2016/02/15/installation/
+// Fuer die Kompilierung und Ausfuehrung muss eine MPI-Implementierung, zum Beispiel MPICH, auf dem Rechner installiert werden. Die Installation ist durch folgenden Befehl moeglich: sudo apt install mpich
 
 // Kompilierung: mpicc -o prime_number_calculation_parallel_mpi prime_number_calculation_parallel_mpi.c
-// Ausfuehrung: mpirun -np <Anzahl von zu erstellenden Prozessen> prime_number_calculation_parallel_mpi
+// Ausfuehrung: mpirun -np <Anzahl von zu erstellenden Prozessen> ./prime_number_calculation_parallel_mpi
+// Das Gesamt-Programm laesst sich durch Ausfuehrung des Shell-Scripts ausfuehren: ./prime_number_calculation_parallel_mpi_shell_script.sh
 
 // Konstanten:
 #define ARRAY_SIZE 100000
