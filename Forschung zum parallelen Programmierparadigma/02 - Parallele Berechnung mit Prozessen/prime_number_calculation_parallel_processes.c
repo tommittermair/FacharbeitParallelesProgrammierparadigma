@@ -76,7 +76,6 @@ int main(int argc, char *argv[]) {
 
 	while (number_of_processes <= MAXIMUM_NUMBER_OF_PROCESSES) {
 		average_measured_time = 0;
-		data->number_of_calulating_processes = 0;
 		bool calculations_right_specific_number_of_processes = true;
 
 		printf("\tBerechnung mittels %ld Prozess(en):\n", number_of_processes);
@@ -85,6 +84,7 @@ int main(int argc, char *argv[]) {
 
 		for (i = 1; i <= NUMBER_OF_REPEATS; i++) {
 			initialize_prime_array(data->prime_array);
+			data->number_of_calulating_processes = 0;
 
 			if (gettimeofday(&begin, (struct timezone *) 0)) {	// Zeitmessung starten.
 				fprintf(stderr, "Fehler beim Zeitmessen.\n");

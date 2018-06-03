@@ -1,210 +1,300 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <sys/time.h>
 #include <string.h>
-#include <unistd.h>
-#include <pthread.h>
+#include <mpi.h>
 
-// Kompilierung: gcc prime_number_calculation_parallel_threads.c -o prime_number_calculation_parallel_threads -pthread
-// Ausfuehrung: ./prime_number_calculation_parallel_threads
+// Fuer die Kompilierung und Ausfuehrung muss eine MPI-Implementierung, zum Beispiel OpenMPI, auf dem Rechner installiert werden. Anleitung zur Installation von OpenMPI: https://ireneli.eu/2016/02/15/installation/
+
+// Kompilierung: mpicc -o prime_number_calculation_parallel_mpi prime_number_calculation_parallel_mpi.c
+// Ausfuehrung: mpirun -np <Anzahl von zu erstellenden Prozessen> prime_number_calculation_parallel_mpi
 
 // Konstanten:
 #define ARRAY_SIZE 100000
-#define NUMBER_OF_REPEATS 50	// In dieser Variable wird gespeichert, wie oft das Programm hintereinander ausgefuehrt wird, um eine anstaendige Zeitmessung zu gewaehrleisten und Ausreiser auszugleichen.
-#define MAXIMUM_NUMBER_OF_THREADS 32000	// In dieser Variable wird die maximale Anzahl an Threads gespeichert, die im Rahmen dieses Programmes erstellt wird. Auf meinem Rechner lassen sich nicht mehr als 32.000 Threads erzeugen. Dies habe ich durch Ausloten der Grenzen festgestellt.
+#define MASTER_RANK 0
+#define START_INDEX 0
+#define END_INDEX 1
+#define TRUE 1
+#define FALSE 0
 
-// Funktions-Deklarationen:
-void initialize_prime_array();
-void find_prime_numbers_parallel_threads(long number_of_threads);
-void * thread_function(void * arg);
-bool check_if_calculation_is_right();
+void initialize_prime_array(int prime_array[], int length);
+void find_prime_numbers_parallel_mpi(int prime_array[], long number_of_mpi_slave_processes);
+bool check_if_calculation_is_right(int prime_array[]);
 
-// Struktur:
-struct data {
-	long start_index;	// Start-Index fuer die Berechnung
-	long end_index;	// End-Index fuer die Berechnung
-};
+void main(int argc, char *argv[]) {
+	int size;	// In dieser Variable wird die Anzahl der erzeugten Prozesse gespeichert.
+	int my_rank;	// In dieser Variable wird eine (fortlaufende) Zahl gespeichert, mit welcher die erzeugten Prozesse identifiziert werden koennen. Der Rank eines Prozesses bewegt sich immer im Intervall von 0 bis (size - 1).
+	bool calculations_right = true;
 
-// Globale Variablen:
-bool prime_array[ARRAY_SIZE];		// Dieses Array besteht aus Elementen mit den Indizes von 0 bis 99.999. Ein Element des Array wird auf true gesetzt, wenn es sich beim dazugehoerigen Index um eine Primzahl handelt, ansonsten wird das Element auf false gesetzt.
+	MPI_Init(&argc, &argv);		// MPI wird initialisiert. Von diesem Punkt an koennen Funktionen der MPI-Bibliothek verwendet werden.
+	MPI_Comm_size(MPI_COMM_WORLD, &size);
+	MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 
-// Funktionen:
-int main(int argc, char *argv[]) {
-	double average_measured_time = 0;	// Durchschnittlich gemessene Zeit.
-	bool all_calculations_right = true;	// Diese Variable speichert, ob alle Berechnungen tatsaechlich die Primzahlen berechnet haben. Die Ueberpruefung geschieht mittels einer Datei, in welcher die Primzahlen von 1 bis 100.000 enthalten sind.
-	long number_of_threads = 1;	// Anzahl von eingesetzten Threads im jeweiligen Durchlauf.
-	long seconds, useconds;		// Benoetigt fuer die Zeitmessung.
-	struct timeval begin, end;	// Benoetigt fuer die Zeitmessung.
-	FILE * file_ptr;	// Wird fuer das Auslesen der tatsaechlichen Primzahlen aus der Datei benoetigt.
-	int i;
+	printf("I am process %d out of %d\n", my_rank, size);
 
-	printf("Parallele Berechnung der Primzahlen von 1 bis 100.000 mit Hilfe von Threads und %d Wiederholung(en):\n", NUMBER_OF_REPEATS);
 
-	file_ptr = fopen("./prime_number_calculation_parallel_threads_csv.csv", "w");		// In diese Datei werden die Ergebnisse der Zeitmessung geschrieben.
+	if (my_rank == MASTER_RANK) {	// Der 0. Prozess wird zum Master-Prozess auserwaehlt, welcher die Arbeit auf die anderen Prozesse und die Teilloesungen wieder zu einer gesamten Loesung des Problems kombiniert.
+	
+		int prime_array[ARRAY_SIZE];		// Dieses Array besteht aus Elementen mit den Indizes von 0 bis 99.999. Ein Element des Array wird auf true gesetzt, wenn es sich beim dazugehoerigen Index um eine Primzahl handelt, ansonsten wird das Element auf false gesetzt.
+		int current_prime_array_index = 0;
+		long number_of_mpi_slave_processes = size - 1;
 
-	// Tabellen-Kopf der CSV-Datei erstellen:
-	fprintf(file_ptr, "Anzahl von Threads;");
 
-	for (i = 1; i <= NUMBER_OF_REPEATS; i++) {
-		fprintf(file_ptr, "%d. Berechnung [s];", i);
-	}
+		double t1; 
+		t1 = MPI_Wtime();	// Returns the time in seconds since an arbitrary time in the past. 
 
-	fprintf(file_ptr, "Durchschnittswert [s]\n");
-
-	while (number_of_threads <= MAXIMUM_NUMBER_OF_THREADS) {
-		average_measured_time = 0;
-		bool calculations_right_specific_number_of_threads = true;
-
-		printf("\tBerechnung mittels %ld Thread(s):\n", number_of_threads);
-		fprintf(file_ptr, "%ld;", number_of_threads);
-
-		for (i = 1; i <= NUMBER_OF_REPEATS; i++) {
-			initialize_prime_array();
-
-			if (gettimeofday(&begin, (struct timezone *) 0)) {	// Zeitmessung starten.
-				fprintf(stderr, "Fehler beim Zeitmessen.\n");
-				return EXIT_FAILURE;
-			}
-
-			find_prime_numbers_parallel_threads(number_of_threads);
 		
-			if (gettimeofday(&end, (struct timezone *) 0)) {	// Zeitmessung beenden.
-				fprintf(stderr, "Fehler beim Zeitmessen.\n");
-				return EXIT_FAILURE;
-			}
 
-			// Laufzeit-Berechnung:
-			seconds = end.tv_sec - begin.tv_sec;		// Sekunden, die das Programm zur Ausfuehrung benoetigt hat, berechnen.
-			useconds = end.tv_usec - begin.tv_usec;		// Mikro-Sekunden, die das Programm zur Ausfuehrung benoetigt hat, berechnen.
-			if (useconds < 0) {
-				useconds += 1000000;	// Mikro-Sekunden muessen immer als positive Zahl angegeben werden.
-				seconds--;
-			}
+		find_prime_numbers_parallel_mpi(prime_array, number_of_mpi_slave_processes);		// Nur (size - 1) MPI-Porzesse koennen fuer die Berechnung genutzt werden, da der Master-Prozess selbst keine Berechnungen durchfuehrt.
+	
+		
 
-			double measured_time = seconds + (((double) useconds) / 1000000);
-			average_measured_time = average_measured_time + measured_time;
 
-			printf("\t\t%d. Berechnung: %f s. ", i, measured_time);
-			fprintf(file_ptr, "%f;", measured_time);
 
-			// Ueberpruefen, ob die berechneten Primzahlen korrekt sind:
-			if (!check_if_calculation_is_right()) {
-				calculations_right_specific_number_of_threads = false;
-				printf("Die %d. Berechnung der Primzahlen mit %ld Thread(s) weist Fehler auf.\n", i, number_of_threads);
+
+
+		long diffenence = ARRAY_SIZE / number_of_mpi_slave_processes;	// Anzahl von Indizes, die jeder Thread abarbeiten muss. Der letzte Thread muss den Rest abarbeiten, der uebrig bleibt, da die Rechnung nicht immer restlos ist.
+		long current_start_index;
+		long current_end_index;
+		long i = 0;
+
+		current_start_index = 0;
+
+		for (i = 1; i <= number_of_mpi_slave_processes; i++) {
+			if (i == number_of_mpi_slave_processes) {
+				current_end_index = ARRAY_SIZE - 1;		// Letzter Thread arbeitet den Rest ab.
 			} else {
-				printf("Die %d. Berechnung der Primzahlen mit %ld Thread(s) ist korrekt.\n", i, number_of_threads);
+				current_end_index = current_start_index + diffenence - 1;
+			}
+		
+			
+
+
+			long part_array_size = (current_end_index - current_start_index) + 1;		// Der Puffer, der gesendet wird, soll zwei long-Variablen enthalten.
+			int * part_prime_array = (int *) malloc(part_array_size * sizeof(int));		// Diese Nachricht wird an die jeweiligen Prozesse uebermittelt. Sie besteht aus 2 Longs, wobei der erste Long der Start-Index fuer die Berechnung und der zweite Long der End-Index fuer die Berechnung ist.
+
+
+			MPI_Status status;
+
+			MPI_Recv(part_prime_array, part_array_size, MPI_INT, i, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+
+			printf("Master: Nachricht von %ld erhalten.\n", i);
+
+			/*
+				int MPI Recv(void *rmessage,
+				int count,
+				MPI Datatype datatype,
+				int source,
+				int tag,
+				MPI Comm comm,
+				MPI Status *status)
+
+				This operation is blocking. The parameters have the following meaning:
+				 - rmessage specifies the receive buffer in which the message should be stored;
+				 - count is the maximum number of elements that should be received;
+				 - datatype is the data type of the elements to be received;
+				 - source specifies the rank of the sending process which sends the message;
+				 - tag is the message tag that the message to be received must have;
+				 - comm is the communicator used for the communication;
+				 - status specifies a data structure which contains information about a message after the completion of the receive operation.
+			*/
+
+			int j;
+
+			for (j = 0; j < part_array_size; j++) {
+				prime_array[current_prime_array_index] = part_prime_array[j];
+				current_prime_array_index++;
+			}
+
+
+			current_start_index = current_end_index + 1;
+		}
+
+		// Laufzeit-Berechnung:v
+		double measured_time = MPI_Wtime() - t1;
+
+
+
+		//average_measured_time = average_measured_time + measured_time;
+
+		printf("Berechnung: %f s. ", measured_time);
+		//fprintf(file_ptr, "%f;", measured_time);
+
+		// Ueberpruefen, ob die berechneten Primzahlen korrekt sind:
+		if (!check_if_calculation_is_right(prime_array)) {
+			calculations_right = false;
+			printf("Die Berechnung der Primzahlen weist Fehler auf.\n");
+		} else {
+			printf("Die Berechnung der Primzahlen ist korrekt.\n");
+		}
+
+	} else {	// Alle anderen Prozesse sind Slave-Prozesse, welche die eigentliche Arbeit verrichten.
+
+		int receive_message_length = 2;	// Der Puffer, der gesendet wird, soll zwei long-Variablen enthalten.
+		long * receive_message = (long *) malloc(receive_message_length * sizeof(long));		// Diese Nachricht wird an die jeweiligen Prozesse uebermittelt. Sie besteht aus 2 Longs, wobei der erste Long der Start-Index fuer die Berechnung und der zweite Long der End-Index fuer die Berechnung ist.
+		MPI_Status status;
+
+
+		MPI_Recv(receive_message, receive_message_length, MPI_LONG, MASTER_RANK, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+
+		long start_index = receive_message[START_INDEX];
+		long end_index = receive_message[END_INDEX];
+
+		printf("Ich bin Prozess %d und arbeite Index %ld bis %ld ab.\n", my_rank, start_index, end_index);
+
+
+		/*
+			int MPI Recv(void *rmessage,
+			int count,
+			MPI Datatype datatype,
+			int source,
+			int tag,
+			MPI Comm comm,
+			MPI Status *status)
+
+			This operation is blocking. The parameters have the following meaning:
+			 - rmessage specifies the receive buffer in which the message should be stored;
+			 - count is the maximum number of elements that should be received;
+			 - datatype is the data type of the elements to be received;
+			 - source specifies the rank of the sending process which sends the message;
+			 - tag is the message tag that the message to be received must have;
+			 - comm is the communicator used for the communication;
+			 - status specifies a data structure which contains information about a message after the completion of the receive operation.
+		*/
+
+
+		// Jeder Prozess erstellt nun ein Teil-Array, auf welchem er seine Berechnungen durchfuehrt.
+		long part_array_size = (end_index - start_index) + 1;
+
+		int * part_prime_array = (int *) malloc(part_array_size * sizeof(int));		// Diese Nachricht wird an die jeweiligen Prozesse uebermittelt. Sie besteht aus 2 Longs, wobei der erste Long der Start-Index fuer die Berechnung und der zweite Long der End-Index fuer die Berechnung ist.
+
+		initialize_prime_array(part_prime_array, part_array_size);
+
+		// Diese Funktion berechnet die Primzahlen.
+
+		int i;
+		int j;
+
+		// Obwohl die ganzen Teil-Array alle Indizes von 0 bis (end_index - start_index) besitzen, wird trotzdem so getan, als waeren diese Teil-Arrays Teil des ganzen Arrays, um weiterhin mit den Indizes als potentielle Primzahlen-Kandidaten arbeiten zu koennen.
+
+		printf("Ich bin Prozess %d und beginne jetzzt mit den Berechugnen\n", my_rank);
+		fflush(stdout);
+		for (i = 0; i <= (end_index - start_index); i++) {
+			if ((i + start_index) == 0) {
+				part_prime_array[i] = FALSE;		// 0 ist per Definition keine Primzahl.
+			} else if ((i + start_index) == 1) {
+				part_prime_array[i] = FALSE;		// 1 ist per Definition keine Primzahl.
+			} else {
+				for (j = 2; j < (i + start_index); j++) {
+					if ((i + start_index) % j == 0) {
+
+
+						
+						//printf("Ich bin Prozess %d!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n", my_rank);
+						
+
+						part_prime_array[i] = FALSE;
+					}
+				}
 			}
 		}
-		
-		average_measured_time = average_measured_time / NUMBER_OF_REPEATS;
 
-		printf("\t\tDurchschnittliche Ausfuehrungszeit des Programmes bei %d Durchlaeufen mit %ld Thread(s): %f s. ", NUMBER_OF_REPEATS, number_of_threads, average_measured_time);
+		printf("Ich bin Prozess %d und habe  Index %ld bis %ld abgearbeitet.\n", my_rank, start_index, end_index);
 
-		fprintf(file_ptr, "%f\n", average_measured_time);
+		MPI_Send(part_prime_array, part_array_size, MPI_INT, MASTER_RANK, 1, MPI_COMM_WORLD);
 
-		// Ueberpruefen, ob alle berechneten Primzahlen mit der zum jeweiligen Zeitpunkt gewaehlten Anzahl an Threads korrekt sind:
-		if (calculations_right_specific_number_of_threads) {
-			printf("Alle berechneten Primzahlen mit %ld Thread(s) sind korrekt.\n",  number_of_threads);
-		} else {
-			printf("Die berechneten Primzahlen mit %ld Thread(s) weisen Fehler auf.\n", number_of_threads);
-			all_calculations_right = false;
-		}
+		/*
+			int MPI Send(void *smessage,
+			int count,
+			MPI Datatype datatype,
+			int dest,
+			int tag,
+			MPI Comm comm)
 
-		// Anzahl von Threads erhoehen:
-		if (number_of_threads < 10) {
-			number_of_threads = number_of_threads + 1;
-		} else if (number_of_threads < 50) {
-			number_of_threads = number_of_threads + 2;
-		} else if (number_of_threads < 1000) {
-			number_of_threads = number_of_threads + 50;
-		} else {
-			number_of_threads = number_of_threads + 1000;
-		}
+			The parameters have the following meaning:
+			 - smessage specifies a send buffer which contains the data elements to be sent in successive order;
+			 - count is the number of elements to be sent from the send buffer;
+			 - datatype is the data type of each entry of the send buffer; all entries have the same data type;
+			 - dest specifies the rank of the target process which should receive the data; each process of a communicator has a unique rank; the ranks are numbered from 0 to the number of processes minus one;
+			 - tag is a message tag which can be used by the receiver to distinguish different messages from the same sender;
+			 - comm specifies the communicator used for the communication. MPI default communicator MPI_COMM_WORLD is used for the communication. This communicator captures all processes executing a parallel program.
+		*/
+
+
 	}
 
-	// Ueberpruefen, ob alle berechneten Primzahlen korrekt sind.
-	if (all_calculations_right) {
-		printf("Alle berechneten Primzahlen sind korrekt.\n");
-	} else {
-		printf("Die berechneten Primzahlen weisen Fehler auf.\n");
-	}
-
-	fclose(file_ptr);
-
-	return EXIT_SUCCESS;
+	MPI_Finalize();		// MPI wird beendet. Von diesem Punkt an koennen KEINE Funktionen der MPI-Bibliothek mehr verwendet werden.
 }
 
-void initialize_prime_array() {
+void initialize_prime_array(int prime_array[], int length) {
 	int i;
 
-	for (i = 0; i < ARRAY_SIZE; i++) {
-		prime_array[i] = true;
+	for (i = 0; i < length; i++) {
+		prime_array[i] = TRUE;
 	}
 }
 
-void find_prime_numbers_parallel_threads(long number_of_threads) {
-	// Diese Funktion teilt die Arbeit auf die verschiedenen Threads auf. Fuer die Parallelisierung werden POSIX-Threads verwendet.
+void find_prime_numbers_parallel_mpi(int prime_array[], long number_of_mpi_slave_processes) {
+	// Diese Funktion teilt die Arbeit auf die verschiedenen MPI-Slave-Prozesse auf.
 
-	pthread_t threads[number_of_threads];
-	struct data * thread_data[number_of_threads];
-	long diffenence = ARRAY_SIZE / number_of_threads;	// Anzahl von Indizes, die jeder Thread abarbeiten muss. Der letzte Thread muss den Rest abarbeiten, der uebrig bleibt, da die Rechnung nicht immer restlos ist.
+	long diffenence = ARRAY_SIZE / number_of_mpi_slave_processes;	// Anzahl von Indizes, die jeder Thread abarbeiten muss. Der letzte Thread muss den Rest abarbeiten, der uebrig bleibt, da die Rechnung nicht immer restlos ist.
 	long current_start_index;
 	long current_end_index;
 	long i = 0;
 
 	current_start_index = 0;
 
-	for (i = 0; i < number_of_threads; i++) {
-		if (i == (number_of_threads - 1)) {
+	for (i = 1; i <= number_of_mpi_slave_processes; i++) {
+		if (i == number_of_mpi_slave_processes) {
 			current_end_index = ARRAY_SIZE - 1;		// Letzter Thread arbeitet den Rest ab.
 		} else {
 			current_end_index = current_start_index + diffenence - 1;
 		}
+		
+		int send_message_length = 2;	// Der Puffer, der gesendet wird, soll zwei long-Variablen enthalten.
+		long * send_message = (long *) malloc(send_message_length * sizeof(long));		// Diese Nachricht wird an die jeweiligen Prozesse uebermittelt. Sie besteht aus 2 Longs, wobei der erste Long der Start-Index fuer die Berechnung und der zweite Long der End-Index fuer die Berechnung ist.
 
-		thread_data[i] = (struct data *) malloc(sizeof(struct data));
-		thread_data[i]->start_index = current_start_index;
-		thread_data[i]->end_index = current_end_index;
+		send_message[START_INDEX] = current_start_index;
+		send_message[END_INDEX] = current_end_index;
+		
+		
 
-		if(pthread_create(&threads[i], NULL, &thread_function, thread_data[i]) != 0) {
-			// Maximale Anzahl an erzeugbaren Threads ist erreicht.
-			number_of_threads = i;	// Durch Gleichsetzen dieser beiden Variablen wird die Schleifen-Fortsetzungsbedingung falsch.
-		}
+		printf("Master: Der Prozess mit der ID %ld bekommt die Arbeit %ld bis %ld\n", i, send_message[START_INDEX],send_message[END_INDEX]);
+		MPI_Send(send_message, send_message_length, MPI_LONG, i, 0, MPI_COMM_WORLD);
+
+		
+
+		/*
+			int MPI Send(void *smessage,
+			int count,
+			MPI Datatype datatype,
+			int dest,
+			int tag,
+			MPI Comm comm)
+
+			The parameters have the following meaning:
+			 - smessage specifies a send buffer which contains the data elements to be sent in successive order;
+			 - count is the number of elements to be sent from the send buffer;
+			 - datatype is the data type of each entry of the send buffer; all entries have the same data type;
+			 - dest specifies the rank of the target process which should receive the data; each process of a communicator has a unique rank; the ranks are numbered from 0 to the number of processes minus one;
+			 - tag is a message tag which can be used by the receiver to distinguish different messages from the same sender;
+			 - comm specifies the communicator used for the communication. MPI default communicator MPI_COMM_WORLD is used for the communication. This communicator captures all processes executing a parallel program.
+		*/
 
 		current_start_index = current_end_index + 1;
 	}
 
-	for (i = 0; i < number_of_threads; i++) {
-		pthread_join(threads[i], NULL);
-		free(thread_data[i]);
+
+
+
+
+	for (i = 1; i <= number_of_mpi_slave_processes; i++) {
+		//pthread_join(threads[i], NULL);
+		//free(thread_data[i]);
 	}
 }
 
-void * thread_function(void * arg) {
-	// Diese Funktion berechnet die Primzahlen.
-
-	struct data * thread_data = (struct data *) arg;
-	int i;
-	int j;
-
-	for (i = thread_data->start_index; i <= thread_data->end_index; i++) {
-		if (i == 0) {
-			prime_array[i] = false;		// 0 ist per Definition keine Primzahl.
-		} else if (i == 1) {
-			prime_array[i] = false;		// 1 ist per Definition keine Primzahl.
-		} else {
-			for (j = 2; j < i; j++) {
-				if (i % j == 0) {
-					prime_array[i] = false;
-				}
-			}
-		}
-	}
-
-	pthread_exit(NULL);
-}
-
-bool check_if_calculation_is_right() {
+bool check_if_calculation_is_right(int prime_array[]) {
 	// Diese Funktion vergleicht die berechneten Primzahlen mit einer Datei, welche alle Primzahlen zwischen 1 und 100.000 enthaelt. Somit wird die Korrektheit der Berechnungen ueberprueft.
 
 	FILE * file_ptr;
@@ -216,7 +306,7 @@ bool check_if_calculation_is_right() {
 	file_ptr = fopen("./prime_numbers_1_to_100.000.txt", "r");
 
 	for (i = 2; i < ARRAY_SIZE; i++) {
-		if (prime_array[i] == true) {
+		if (prime_array[i] == TRUE) {
 			fgets(read_prime_number, string_size, file_ptr);		// If this function encounters a newline character '\n' or the end of the file EOF before they have read the maximum number of characters, then it returns only the characters read up to that point including the new line character.
 
 			// Nun muss der Newline-Characters '\n', welcher von fgets() standardmaessig mit eingelesen wird, entfernt werden.
