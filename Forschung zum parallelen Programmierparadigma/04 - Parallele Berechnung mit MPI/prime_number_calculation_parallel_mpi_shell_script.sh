@@ -36,5 +36,13 @@ while [ $current_number_of_mpi_processes -le $maximum_number_of_mpi_processes ];
 
 	printf "\n" >> prime_number_calculation_parallel_mpi_csv.csv;
 
-	current_number_of_mpi_processes=$(( current_number_of_mpi_processes + 1 ))
+	if [ $current_number_of_mpi_processes -lt 10 ]; then
+		current_number_of_mpi_processes=$(( current_number_of_mpi_processes + 1 ))
+	elif [ $current_number_of_mpi_processes -lt 50 ]; then
+		current_number_of_mpi_processes=$(( current_number_of_mpi_processes + 2 ))
+	elif [ $current_number_of_mpi_processes -lt 100 ]; then
+		current_number_of_mpi_processes=$(( current_number_of_mpi_processes + 10 ))
+	else
+		current_number_of_mpi_processes=$(( current_number_of_mpi_processes + 50 ))
+	fi
 done
