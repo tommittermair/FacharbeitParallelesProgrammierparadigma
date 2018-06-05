@@ -1,0 +1,45 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {german}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Grafische Darstellung der Abarbeitung von drei Befehlen nach dem Schema des Befehlszykluses.}}{3}{figure.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Zusammenhang zwischen der Anzahl der Transistoren in einem Prozessor und dem Mooreschen Gesetz.}}{6}{figure.1.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Grafische Darstellung der f\IeC {\"u}nf grundlegenden Prozesszust\IeC {\"a}nde.}}{14}{figure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Grafische Darstellung der Abarbeitung von drei Befehlen nach dem Schema des Befehlszyklus unter Anwendung der Pipelining-Verarbeitung.}}{23}{figure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Grafische Darstellung des Drucker-Spoolers als ein Beispiel f\IeC {\"u}r einen zeitkritischen Ablauf.}}{26}{figure.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Grafische Darstellung eines Deadlocks bei zwei Prozessen A und B und zwei Ressourcen 1 und 2.}}{28}{figure.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Grafische Darstellung des wechselseitigen Ausschlusses von zwei Prozessen unter der Verwendung von kritischen Regionen.}}{31}{figure.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Prozessors.}}{52}{figure.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Rechners.}}{53}{figure.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Clusters.}}{53}{figure.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Grafische Darstellung mehrerer Abarbeitungseinheiten innerhalb eines Grids.}}{54}{figure.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Grafische Darstellung eines Parallelrechners mit verteiltem Speicher.}}{59}{figure.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Grafische Darstellung eines Parallelrechners mit gemeinsamem Speicher.}}{59}{figure.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem aus dem Amdahlschen Gesetz ableitbaren Speedup und der Anzahl der verwendeten Prozessoren f\IeC {\"u}r verschieden gut parallelisierbare Programme. \cite {GesetzeParallelierung}}}{65}{figure.2.12}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Prozesse.}}{78}{figure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Prozesse.}}{79}{figure.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Threads.}}{80}{figure.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Threads.}}{81}{figure.3.4}

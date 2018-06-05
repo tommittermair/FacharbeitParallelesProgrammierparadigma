@@ -24,6 +24,7 @@
 			Das Fork-Join-Modell weist den Vorteil auf, dass es eine einfache Erstellung parallel arbeitender Programme ermöglicht\cite{ParaProgRauber}. Aus der Beschreibung dieses Modells lässt sich leicht erkennen, dass das Fork-Join-Modell auf dem Prinzip des unter Punkt \ref{TeileUndHerrsche} erwähnten Prinzips \textit{teile und herrsche} aufbaut.
 
 		\subsection{Lastenverteilung (load balancing)}
+			\label{Lastenverteilung}
 		
 			Die konsequente Anwendung des unter Punkt \ref{ForkJoinModell} genannten \textit{Fork-Join-Modells} führt zu einer grundlegenden Frage, welcher parallele Handlungsstrang wie viel Arbeit leisten soll und wie die gesamte Arbeit (Last) aufgeteilt werden soll.\\
 			Das Hauptziel der Zuweisung der Arbeit an die jeweiligen parallelen Handlungsstränge sollte sein, dass eine hochwertige \textit{Lastenverteilung}, auch \textit{load balancing} genannt, daraus resultiert, das bedeutet, jeder parallele Handlungsstrang sollte, sofern möglich, die gleiche Menge an Berechnung durchführen müssen. \cite{ParaProgRauber}
@@ -146,6 +147,7 @@
 				\end{description}
 			
 			\subsubsection{Das Thread-Modell}
+				\label{ThreadModell}
 
 				Im Rahmen des bereits bekannten Prozess-Modells, welches unter Kapitel \ref{ProzessModell} erläutert wurde, hat jeder sequentielle Prozess einen eigenen Adressraum und auch einen eigenen Ausführungsfaden, wobei die einzelnen Prozesse auf einem System parallel zueinander ablaufen.\\
 				Es hat sich in der Vergangenheit allerdings herausgestellt, dass es oft von Vorteil ist, mehrere Ausführungsfäden parallel bzw. quasiparallel zueinander innerhalb desselben Adressraums ablaufen zu lassen. Die einzelnen Ausführungsfäden verhalten sich dann ähnlich wie getrennte Prozesse, wobei der größte Unterschied der gemeinsame Adressraum darstellt.\\
@@ -783,6 +785,7 @@
 				Doch ein solcher superlinearer Speedup tritt in der Praxis nur äußerst selten auf. Meist wird auf Grund des mit der Parallelisierung einhergehenden Mehraufwandes kein linearer, geschweige denn ein superlinearer Speedup erreicht. \cite{ParaProgRauber}
 
 			\subsubsection{Effizienz eines parallelen Programmes}
+				\label{Effizienz}
 			
 				Eine Metrik, welche auf dem unter Kapitel \ref{Speedup} erläuterten Konzept des Speedups aufbaut, ist die sogenannte \textit{Effizienz}. Sie ist durch die folgende Formel gegeben.
 				

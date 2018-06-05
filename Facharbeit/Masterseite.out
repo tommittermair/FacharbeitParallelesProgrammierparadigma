@@ -30,3 +30,5 @@
 \BOOKMARK [2][-]{subsection.3.1.2}{OpenMP \(Open Multi-Processing\)}{section.3.1}% 30
 \BOOKMARK [2][-]{subsection.3.1.3}{Cilk}{section.3.1}% 31
 \BOOKMARK [1][-]{section.3.2}{Anwendungsbeispiel und Vergleich der parallelen Programmierkonzepte}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.2.1}{Voraussetzungen}{section.3.2}% 33
+\BOOKMARK [2][-]{subsection.3.2.2}{Messdaten und Auswertung}{section.3.2}% 34

@@ -1,0 +1,56 @@
+thomas@thomas-ubuntu:~/Schreibtisch/Forschung zum parallelen Programmierparadigma/01 - Serielle Berechnung$ gcc prime_number_calculation_serial.c -o prime_number_calculation_serial
+thomas@thomas-ubuntu:~/Schreibtisch/Forschung zum parallelen Programmierparadigma/01 - Serielle Berechnung$ ./prime_number_calculation_serial
+Serielle Berechnung der Primzahlen von 1 bis 100.000 mit 50 Wiederholungen:
+	1. Berechnung: 12.820111 s. Die 1. Berechnung der Primzahlen ist korrekt.
+	2. Berechnung: 12.633177 s. Die 2. Berechnung der Primzahlen ist korrekt.
+	3. Berechnung: 12.791143 s. Die 3. Berechnung der Primzahlen ist korrekt.
+	4. Berechnung: 13.038407 s. Die 4. Berechnung der Primzahlen ist korrekt.
+	5. Berechnung: 13.084893 s. Die 5. Berechnung der Primzahlen ist korrekt.
+	6. Berechnung: 12.779043 s. Die 6. Berechnung der Primzahlen ist korrekt.
+	7. Berechnung: 13.016352 s. Die 7. Berechnung der Primzahlen ist korrekt.
+	8. Berechnung: 13.010939 s. Die 8. Berechnung der Primzahlen ist korrekt.
+	9. Berechnung: 12.718866 s. Die 9. Berechnung der Primzahlen ist korrekt.
+	10. Berechnung: 12.869866 s. Die 10. Berechnung der Primzahlen ist korrekt.
+	11. Berechnung: 12.886533 s. Die 11. Berechnung der Primzahlen ist korrekt.
+	12. Berechnung: 12.880564 s. Die 12. Berechnung der Primzahlen ist korrekt.
+	13. Berechnung: 13.555966 s. Die 13. Berechnung der Primzahlen ist korrekt.
+	14. Berechnung: 13.812652 s. Die 14. Berechnung der Primzahlen ist korrekt.
+	15. Berechnung: 14.268212 s. Die 15. Berechnung der Primzahlen ist korrekt.
+	16. Berechnung: 13.011003 s. Die 16. Berechnung der Primzahlen ist korrekt.
+	17. Berechnung: 12.763738 s. Die 17. Berechnung der Primzahlen ist korrekt.
+	18. Berechnung: 13.002466 s. Die 18. Berechnung der Primzahlen ist korrekt.
+	19. Berechnung: 12.558466 s. Die 19. Berechnung der Primzahlen ist korrekt.
+	20. Berechnung: 12.525585 s. Die 20. Berechnung der Primzahlen ist korrekt.
+	21. Berechnung: 12.893493 s. Die 21. Berechnung der Primzahlen ist korrekt.
+	22. Berechnung: 12.924328 s. Die 22. Berechnung der Primzahlen ist korrekt.
+	23. Berechnung: 12.649168 s. Die 23. Berechnung der Primzahlen ist korrekt.
+	24. Berechnung: 12.872146 s. Die 24. Berechnung der Primzahlen ist korrekt.
+	25. Berechnung: 12.717378 s. Die 25. Berechnung der Primzahlen ist korrekt.
+	26. Berechnung: 12.362559 s. Die 26. Berechnung der Primzahlen ist korrekt.
+	27. Berechnung: 12.491794 s. Die 27. Berechnung der Primzahlen ist korrekt.
+	28. Berechnung: 12.477339 s. Die 28. Berechnung der Primzahlen ist korrekt.
+	29. Berechnung: 13.029553 s. Die 29. Berechnung der Primzahlen ist korrekt.
+	30. Berechnung: 13.064056 s. Die 30. Berechnung der Primzahlen ist korrekt.
+	31. Berechnung: 12.859956 s. Die 31. Berechnung der Primzahlen ist korrekt.
+	32. Berechnung: 12.562324 s. Die 32. Berechnung der Primzahlen ist korrekt.
+	33. Berechnung: 12.744756 s. Die 33. Berechnung der Primzahlen ist korrekt.
+	34. Berechnung: 12.537643 s. Die 34. Berechnung der Primzahlen ist korrekt.
+	35. Berechnung: 12.606410 s. Die 35. Berechnung der Primzahlen ist korrekt.
+	36. Berechnung: 12.768948 s. Die 36. Berechnung der Primzahlen ist korrekt.
+	37. Berechnung: 12.551573 s. Die 37. Berechnung der Primzahlen ist korrekt.
+	38. Berechnung: 12.940512 s. Die 38. Berechnung der Primzahlen ist korrekt.
+	39. Berechnung: 12.863736 s. Die 39. Berechnung der Primzahlen ist korrekt.
+	40. Berechnung: 12.781273 s. Die 40. Berechnung der Primzahlen ist korrekt.
+	41. Berechnung: 12.790932 s. Die 41. Berechnung der Primzahlen ist korrekt.
+	42. Berechnung: 13.109121 s. Die 42. Berechnung der Primzahlen ist korrekt.
+	43. Berechnung: 12.657995 s. Die 43. Berechnung der Primzahlen ist korrekt.
+	44. Berechnung: 12.793378 s. Die 44. Berechnung der Primzahlen ist korrekt.
+	45. Berechnung: 12.877879 s. Die 45. Berechnung der Primzahlen ist korrekt.
+	46. Berechnung: 12.991721 s. Die 46. Berechnung der Primzahlen ist korrekt.
+	47. Berechnung: 12.752101 s. Die 47. Berechnung der Primzahlen ist korrekt.
+	48. Berechnung: 13.003450 s. Die 48. Berechnung der Primzahlen ist korrekt.
+	49. Berechnung: 12.980676 s. Die 49. Berechnung der Primzahlen ist korrekt.
+	50. Berechnung: 12.776021 s. Die 50. Berechnung der Primzahlen ist korrekt.
+Durchschnittliche Ausfuehrungszeit des Programmes bei 50 Durchlaeufen: 12.869204 s.
+Alle berechneten Primzahlen sind korrekt.
+thomas@thomas-ubuntu:~/Schreibtisch/Forschung zum parallelen Programmierparadigma/01 - Serielle Berechnung$

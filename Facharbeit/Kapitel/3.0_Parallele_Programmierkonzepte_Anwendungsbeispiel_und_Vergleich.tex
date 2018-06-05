@@ -6,8 +6,9 @@
 \chapter{Parallele Programmierkonzepte, Anwendungsbeispiel und Vergleich}
 
 	\section{Parallele Programmierkonzepte}
+		\label{ParalleleProgrammierkonzepte}
 	
-		Seit der Entwicklung des parallelen Programmierparadigmas haben sich einige Konzepte und vor allem Programmiersprachen-Bibliotheken herausgebildet, wovon drei heute noch eingesetzte in diesem Kapitel erläutert werden sollen. Danach werden diese drei Technologie untereinander und auch mit reinen Prozessen und Threads anhand eines Anwendungsbeispiels verglichen.
+		Seit der Entwicklung des parallelen Programmierparadigmas haben sich einige Konzepte und vor allem Programmiersprachen-Bibliotheken herausgebildet, wovon drei heute noch eingesetzte in diesem Kapitel erläutert werden sollen. Danach werden zwei dieser Technologien untereinander und auch mit reinen Prozessen und Threads anhand eines Anwendungsbeispiels verglichen.
 		
 		\subsection{MPI (Message Passing Interface)}
 			\label{MPI}
@@ -28,17 +29,204 @@
 			Das Programmiermodell von OpenMP entspricht im Gegensatz zu dem von MPI auf zusammenarbeitenden Threads, welche parallel wiederum auf Prozessoren bzw. Prozessor-Kernen laufen. Die Erzeugung und Beendigung der Threads folgt dem unter Kapitel \ref{ForkJoinModell} vorgestellten Fork-Join-Modell. Wird ein OpenMP-Programm ausgeführt, so existiert zunächst nur genau ein Thread, welche \textit{Intial Thread} genannt wird. Somit erfolgt die Abarbeitung des Programmes sequentiell, bis das erste OpenMP-Konstrukt zur Parallelisierung gefunden wird. In diesem Schritt erzeugt der \textit{Intial Thread} eine Reihe von neuen Threads und bildet zusammen mit den neuen Threads ein Team, wobei der \textit{Intial Thread} zum \textit{Master Thread} befördert wird. Die Fork-Operation wird implizit durchgeführt, wird also vom Programmierer nicht direkt in die Wege geleitet. Der Programmcode innerhalb des parallelen Konstruktes wird \textit{parallele Region} genannt und wird vom gesamten Thread-Team ausgeführt. Jeder Thread kann dabei die selbe, aber auch verschiedene Aufgaben erfüllen. Am Ende der parallelen Region findet sich eine implizite Synchronisation und nur der Master Thread führt dann die Ausführung weiter, was einer impliziten Join-Operation entspricht. Parallele Regionen können auch verschachtelt werden, wobei jeder Thread, der auf ein OpenMP-Konstrukt zur Parallelisierung trifft, ein Team von Threads bildet und selbst zu einem \textit{Master Thread} wird.\\
 			Das Speicher-Modell von OpenMP unterscheidet zwischen lokalem und gemeinsamem Speicher, wobei alle OpenMP-Threads auf den letztgenannten Speicher Zugriff haben. Um die unter Kapitel \ref{ProblemeParalleleBearbeitung} vorgestellten Probleme der Synchronisation wie beispielsweise zeitkritische Abläufe oder auch Deadlocks zu vermeiden, stellt der OpenMP-Standard auch Synchronisationsmechanismen in Form von Bibliotheksfunktionen zur Verfügung. Zusätzlich zu gemeinsame genutzten Variablen können die Threads auch private Variablen verwenden, welche nicht von anderen Threads zugegriffen werden können.\\
 			Die Kompilierung eines OpenMP-Programmes führt zu einem Code, welcher Multithreading verwendet. \cite{ParaProgRauber} \cite{OpenMPWikipedia}
-			
+
 		\subsection{Cilk}
 			\label{Cilk}
-		
+			
 			Cilk, Cilk++ und Cilk Plus sind im Gegensatz zu MPI und OpenMP keine Standards, sondern eigene Programmiersprachen, welche für paralleles Rechnen unter Verwendung von Multithreading optimiert wurden. Die Syntax und Semantik ist an C und C++ angelehnt, weshalb diese Programmiersprachen als Erweiterungen von C bzw. C++ betrachtet werden können, welche das Parallelisieren von Schleifen und das Fork-Join-Modell, welche unter Kapitel \ref{ForkJoinModell} erläutert wurde, unterstützen.\\
 			Die Programmiersprache Cilk wurde vom \textit{MIT Laboratory for Computer Science} entwickelt und 1994 veröffentlicht. Der Name \textit{Cilk} ist dabei eine Anspielung an Threads, welche Ausführungsfäden darstellen. Das englische Wort \textit{Silk}, welches mit \textit{(Seiden-) Faden} übersetzt werden kann, wurde so verändert, dass aus dem \textit{S} ein \textit{C} wurde, um auf die Programmiersprache C, auf welcher Cilk basiert, zu verweisen.\\
 			Vor 2006 war Cilk nur auf Hochleistungsrechnen im professionellen Stil beschränkt und somit nicht verbreitet. Aus diesem Grund wurde das Unternehmen \textit{Cilk Arts} gegründet, welches die Programmiersprache Cilk modernisierte und somit kommerziell nutzbar machte. Die neue Version von Cilk wurde \textit{Cilk++} genannt und erschient 2008. Der Zusatz \textit{++} rührt daher, dass von nun an auch C++ unterstützt wurde.\\
 			2009 gab Cilk Arts bekannt, von nun an Teil der \textit{Intel Corporation} zu sein. Bald darauf wurde Cilk++ zur aktuellen Version \textit{Intel Cilk Plus} erweitert. Selbige erschien im Jahre 2010.\\
 			Das Konzept hinter Cilk besteht darin, dass der Programmierer dafür zuständig sein sollte, die Abschnitte im Code, die parallel verarbeitet werden können, zu identifizieren und mit den korrekten \textit{Cilk}-Schlüsselwörtern zu markieren. Er muss dann allerdings der Laufzeitumgebung die Aufgabe überlassen, wie die Arbeit genau auf die verfügbaren Prozessoren mit Hilfe von Threads aufgeteilt wird. Genau aus diesem Grund ist ein und dasselbe Cilk-Programm auf einem Ein-, aber auch auf einem \textit{n}-Prozessor-System lauffähig, ohne Veränderungen im Quellcode tätigen zu müssen.\\
 			Im Folgenden werden die wichtigsten beiden Schlüsselwörter, um die Cilk Plus die Programmiersprache C erweitert, erläutert. Dabei handelt es sich um die beiden Wörter \textit{spawn} (zu Deutsch \textit{vermehren}), und \textit{sync} (in Anlehnung an \textit{Synchronisierung}). Beide werden in Zusammenhang mit der Realisierung des unter Kapitel \ref{ForkJoinModell} erwähnten Fork-Join-Modell benötigt. Das \textit{spawn}-Schlüsselwort wird einem Funktionsaufruf vorangestellt (beispielsweise \textit{spawn f(x)}). Das bedeutet, dass die Anweisungen innerhalb der Funktion \textit{f(x)} problemlos parallel zu den auf den Funktionsaufruf folgenden Anweisungen ausgeführt werden kann. Der Scheduler ist allerdings nicht gezwungen, diesen Code dann tatsächlich parallel auszuführen. Dieses Schlüsselwort kann also eher als eine \textit{Empfehlung der parallelen Verarbeitung} betrachtet werden. Dieses Schlüsselwort realisiert also einen Fork. Das \textit{sync}-Schlüsselwort ist das Gegenstück zu \textit{spawn}. Es weist den Compiler darauf hin, dass die Ausführung der darauf folgenden Anweisungen erst vollzogen werden kann, sobald alle zuvor mit Hilfe des Schlüsselworts \textit{spawn} parallel ausgeführten Funktionen vollständig abgearbeitet worden sind. Somit wird durch dieses Schlüsselwort ein Join realisiert. \cite{CilkWikipedia}
-		
+
 	\section{Anwendungsbeispiel und Vergleich der parallelen Programmierkonzepte}
-	
-		HIER BIN ICH.
+
+		Einige der im Rahmen dieser Arbeit vorgestellten Konzepte zur parallen Programmierung, nämlich Prozesse, Threads, MPI und OpenMP werden nun anhand eines praktischen Anwendungsbeispiels verglichen.\\
+		Dabei handelt es sich um die Berechnung der Primzahlen zwischen 1 und 100.000. Dies ist eine rechenaufwändige Aufgabe, die durch Parallelisierung (erheblich) optimiert werden kann.\\
+		
+		\subsection{Voraussetzungen}
+			
+			Alle im Folgenden vorgestellten Programme und Messdaten wurden auf einem Ubuntu-System (Ubuntu 16.04 LTS) ausgeführt, welches wiederum in einer virtuellen Maschine (VMware Workstation 14 Player) arbeitete. Das virtuelle Ubuntu-System war dabei wie folgt konfiguriert:
+			
+			\begin{itemize}
+				\item Speicherplatz des Hauptspeichers: 15,6 GiB
+				\item Prozessor: Intel Core i7-6700HQ CPU @ 2.60GHz x 4
+				\item Grafik: SVGA3D; build: RELEASE;  LLVM;
+				\item Typ des Betriebssystems: 64 Bit
+				\item Speicherplatz des Sekundärspeichers: 88,6 GB
+			\end{itemize}
+		
+			Während der Berechnungen wurde zusätzlich die Netzwerk-Verbindung deaktiviert, um das Herunterladen von Updates und Ähnlichem im Hintergrund, was die Messdaten verfälschen hätte können, zu verhindern.
+		
+		\subsection{Messdaten und Auswertung}
+		
+			Nun werden die verschiedenen Ansätze zur Realisierung des Programmes zur Primzahlen-Berechnung vor allem anhand der Messdaten verglichen.\\
+			Dabei ist zu anzumerken, dass alle Messungen 50 Mal durchgeführt wurden und aus diesen Messergebnissen jeweils immer der Median gebildet wurde, um Ausreiser zu eliminieren und vertrauenswürdige Messergebnisse zu erzielen. Des Weiteren sind alle x-Achsen der im Folgenden dargestellten Diagramme logarithmisch (zur Basis 2) skaliert, das bedeutet, dass die auf der x-Achse aufgetragenen Werte exponentiell und nicht linear erhöht werden.\\
+		
+			\subsubsection{Sequentielle Lösung}
+				Die Primzahlen wurden zunächst mit einem sequentiellen Algorithmus berechnet und die Laufzeit gemessen. Die sequentielle Lösung stellt die einfachste, aber auch langsamste Lösung zur Berechnung von Primzahlen dar. Dabei wird jede Zahl von 1 bis 100.000 nacheinander überprüft und festgestellt, ob es sich bei der jeweiligen Zahl um eine Primzahl handelt oder nicht. Es findet keinerlei Parallelisierung statt.\\
+				Der Median der Laufzeit des sequentiellen Algorithmuses beträgt 12,8400335 s. Diese Größe ist alleinstehend nicht aussagekräftig, sondern wird erst beim Vergleich mit den parallelen Programmierkonzepten interessant.
+			
+			\subsubsection{Parallele Lösungen}
+				Nun werden die verschiedenen parallelen Lösungsmöglichkeiten für die Berechnung der Primzahlen aufgezeigt und verglichen.\\
+				
+				\begin{description}
+					
+					\item[Parallele Lösung des Problems durch Prozesse]
+					
+						Zunächst wurde versucht, das gegebene Problem durch Prozesse, also dem Grundkonzept der parallelen Programmierung, zu lösen, welches bereits unter Punkt \ref{ProzessModell} erläutert wurde. In diesem Fall wurden UNIX-Prozesse verwendet.\\
+						Dabei werden die Zahlen von 1 bis 100.000 abhängig von der Anzahl der verwendeten Prozesse $P$ in $P$ möglichst gleich große Intervalle aufgeteilt, um das unter Kapitel \ref{Lastenverteilung} erwähnte Load Balancing zu gewährleisten.\\
+						Das Programm funktioniert dabei wie folgt: Zunächst wird ein einziger Prozess zur Lösung des Problems verwendet. Dann werden die Primzahlen mit diesem einen Prozess 50 Mal berechnet und die Laufzeit gemessen, um anschließend wiederum den Median bilden zu können. Im Anschluss wird die Anzahl der Prozesse erhöht und dasselbe wieder durchgeführt.\\
+						Die Anzahl der Prozesse steigt dabei nicht ständig gleich schnell an, sondern lässt sich durch die folgende Funktion $P(n)$ angeben. $P$ ist dabei die Anzahl der verwendeten Prozesse im $n$. Durchlauf, wobei wie bereits erwähnt jeder Durchlauf nochmals 50 Mal unter gleichen Bedingungen wiederholt wird, um Ausreiser in der Zeitmessung zu eliminieren, und in jedem Durchlaufs-Wechsel die Anzahl der Prozesse erhöht wird.
+						
+						\begin{equation}
+							P(n) =
+							\begin{cases}
+								P(n - 1) + 1 & \text{für } 1 <= P_n < 10\\
+								P(n - 1) + 2 & \text{für } 10 <= P_n < 50\\
+								P(n - 1) + 50 & \text{für } 50 <= P_n < 1000\\
+								P(n - 1) + 1000 & \text{für } P_n >= 1000\\
+							\end{cases}
+						\end{equation}
+						
+						Als Start-Wert gilt $P(1) = 1$.\\
+						Um den Prozessen, welche am Problem gemeinsam arbeiten, und grundsätzlich über vollkommen getrennte Speicherbereiche verfügen, eine Kommunikation zu ermöglichen, wurde ein gemeinsamer Speicher für alle beteiligten Prozesse eingerichtet, wobei der Zugriff darauf mit Hilfe einer Semaphore geregelt wurde, die jeweils nur einen Prozess gleichzeitig in den kritischen Bereich eintreten ließ.\\
+						Durch Ausloten der Grenzen auf dem verwendeten System wurde festgestellt, dass sich maximal 11.000 Prozesse erzeugen lassen. Deshalb befindet sich im Rahmen dieses Versuches $P(n)$ immer im Intervall $1 <= P(n) <= 11.000$.
+						Die Messdaten werden auf Grund des großen Umfangs im Rahmen der Arbeit nicht direkt aufgelistet, sondern aus der Anzahl der verwendeten Prozesse und dem dazugehörigen Laufzeit-Median wurde der Speedup, welcher in Kapitel \ref{Speedup} erläutert wurde, und auch die Effizienz, die unter Punkt \ref{Effizienz} eingeführt wurde, ermittelt. Diese beiden wichtigen Kennzahlen wurden dann in zwei Diagrammen dargestellt.\\
+						Der Speedup $S_P$ wurde in Abhängigkeit von der Anzahl der verwendeten Prozesse $P$ berechnet und grafisch dargestellt, was in Abbildung \ref{fig:Speedup_Prozesse} erkenntlich ist.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Speedup_Prozesse.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Prozesse.}
+							\label{fig:Speedup_Prozesse}
+						\end{figure}
+					
+						Aus dem gegebenen Diagramm lassen sich einige Informationen gewinnen. Mit einem Prozess ergibt sich ein Speedup von genau 1, was auch nachvollziehbar sein sollte. Bei steigender Anzahl von Prozessen steigt zunächst auch der Speedup, allerdings zeigt sich ab 16 Prozessen (von zwei Ausreisern abgesehen) keine signifikante Verbesserung des Speedups mehr. Es scheint laut Diagramm auch eine obere Schranke für den Speedup zu existieren, die sich im Bereich zwischen 3,5 und 4 bewegt. Ab ca. 1000 Prozessen ist erkenntlich, dass der Verwaltungsaufwand für die Prozesse sogar den Nutzen, der mit der Erhöhung der Anzahl der Prozesse einhergeht, übersteigt, weshalb der Speedup von diesem Punkt an zu sinken beginnt, wobei die Werte allerdings Schwankungen aufweisen.\\
+						Bemerkenswert ist vor allem die Tatsache, dass die Messungen auf einem System mit einem 4-Kern-Prozessor ausgeführt wurden und man meinen möchte, dass ab 4 Prozessen, also einem Prozess pro Kern, keine Speedup-Steigerung mehr möglich sein sollte. In der Tat ist dies allerdings nicht der Fall. Höchstwahrscheinlich ist dies im Scheduling-Algorithmus des Systems begründet. Bis zu einem gewissen Grad ermöglicht die Anzahl der Erhöhung der Prozesse, dass der Scheduler insgesamt dem gesamten Programm (also allen Prozessen zusammen) mehr CPU-Zeit zur Verfügung stellt als nur mit 4 Prozessen.\\
+						In der Praxis muss allerdings nicht nur der Geschwindigkeitsgewinn, sondern auch die Effizienz der Lösung betrachtet werden. Selbige ist in Abbildung \ref{fig:Effizienz_Prozesse} dargestellt.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Effizienz_Prozesse.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Prozesse.}
+							\label{fig:Effizienz_Prozesse}
+						\end{figure}
+						
+						Die Effizienz entspricht in diesem Fall einer stetig sinkenden Funktion, welche zu Beginn drastisch sinkt und sich dann asymptotisch 0 annähern zu scheint. Auch ist erkenntlich, dass die Effizienz bis ca. 16 Prozessen, wie auch aus dem Speedup-Diagramm hervorgeht, akzeptable Werte zwischen 100\% und 20\% annimmt, während sie nachher immer weiter sinkt und schließlich annähernd 0\% wird.
+					
+					\item[Parallele Lösung des Problems durch Threads]
+						
+						Nun wurde das Problem mit Hilfe von Threads, also einem wichtigen Grundbaustein der parallelen Programmierung, zu lösen, welcher bereits unter Punkt \ref{ThreadModell} erläutert wurde. In diesem Fall wurden POSIX-Threads verwendet.\\
+						Das Programm läuft dabei ähnlich zum Vorherigen mit Prozessen ab, auch die Erhöhung der Anzahl der Threads $T$ wurde nach dem selben Schema vollzogen. Allerdings war in diesem Fall kein gemeinsamer Speicher nötig, weil sich die Threads den gemeinsamen Speicher des Prozesses, zu welchem sie gehören, teilen. In diesem Fall wurde keine Semaphore zur Synchronisation benötigt, da zwar gemeinsame Ressourcen existierten, die Threads sich jedoch nie in die Quere kommen konnten. Die Funktion, die die Anzahl der Threads $T$ in Abhängigkeit vom Durchlauf $n$ angibt, nennt sich in diesem Fall $T(n)$.
+						Durch Ausloten der Grenzen auf dem verwendeten System wurde in diesem Fall festgestellt, dass sich maximal 32.000 Threads erzeugen lassen. Deshalb befindet sich im Rahmen dieses Versuches $T(n)$ immer im Intervall $1 <= T(n) <= 32.000$.
+						Die Messdaten werden auf Grund des großen Umfangs im Rahmen der Arbeit wieder nicht direkt aufgelistet, sondern aus der Anzahl der verwendeten Threads und dem dazugehörigen Laufzeit-Median wurde wieder der Speedup, welcher in Kapitel \ref{Speedup} erläutert wurde, und auch die Effizienz, die unter Punkt \ref{Effizienz} eingeführt wurde, ermittelt. Diese beiden wichtigen Kennzahlen wurden dann in zwei Diagrammen dargestellt.\\
+						Der Speedup $S_T$ wurde in Abhängigkeit von der Anzahl der verwendeten Threads $T$ berechnet und grafisch dargestellt, was in Abbildung \ref{fig:Speedup_Threads} erkenntlich ist.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Speedup_Threads.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Threads.}
+							\label{fig:Speedup_Threads}
+						\end{figure}
+						
+						Aus dem gegebenen Diagramm lassen sich ähnliche Erkenntnisse wie aus der Abbildung \ref{fig:Speedup_Prozesse} gewinnen. Auch in diesem Fall zeigt sich eine allmähliche Erreichung der oberen Schranke des Speedups bei ca. 16 Threads. Danach zeigt sich keine signifikante Verbesserung des Speedups mehr. Die obere Schranke für den Speedup bewegt sich auch hier im Bereich zwischen 3,5 und 4. Ab ca. 1000 Threads ist erkenntlich, dass der Verwaltungsaufwand für die Threads sogar den Nutzen, der mit der Erhöhung der Anzahl der Threadssse einhergeht, übersteigt, weshalb der Speedup von diesem Punkt an zu sinken beginnt, wobei die Werte allerdings Schwankungen aufweisen.\\
+						Bemerkenswert ist auch hier die schon bei Prozessen genannte Tatsach, dass die Messungen auf einem System mit einem 4-Kern-Prozessor ausgeführt wurden und man meinen möchte, dass ab 4 Prozessen, also einem Prozess pro Kern, keine Speedup-Steigerung mehr möglich sein sollte. In der Tat ist dies allerdings nicht der Fall. Die möglichen Gründe hierfür sind mit jenen bei Verwendung von Prozessen ident.\\
+						Nun wird die Effizienz betrachtet. Sie ist in Abbildung \ref{fig:Effizienz_Threads} dargestellt.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Effizienz_Threads.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Threads.}
+							\label{fig:Effizienz_Threads}
+						\end{figure}
+						
+						Die Effizienz kommt auch in diesem Fall einer stetig sinkenden Funktion gleich, welche zu Beginn drastisch sinkt und sich dann asymptotisch 0 annähern zu scheint. Auch ist erkenntlich, dass die Effizienz bis ca. 16 Threads, wie auch aus dem Speedup-Diagramm hervorgeht, akzeptable Werte zwischen 100\% und 20\% annimmt, während sie nachher immer weiter sinkt und schließlich annähernd 0\% wird.
+
+					\item[Parallele Lösung des Problems durch MPI]
+					
+						Nun wurde eine der unter Kapitel \ref{ParalleleProgrammierkonzepte}
+					
+						HIER BIN ICH
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						Zunächst wurde versucht, das gegebene Problem durch Prozesse, also dem Grundkonzept der parallelen Programmierung, zu lösen, welches bereits unter Punkt \ref{ProzessModell} erläutert wurde. In diesem Fall wurden UNIX-Prozesse verwendet.\\
+						Dabei werden die Zahlen von 1 bis 100.000 abhängig von der Anzahl der verwendeten Prozesse $P$ in $P$ möglichst gleich große Intervalle aufgeteilt, um das unter Kapitel \ref{Lastenverteilung} erwähnte Load Balancing zu gewährleisten.\\
+						Das Programm funktioniert dabei wie folgt: Zunächst wird ein einziger Prozess zur Lösung des Problems verwendet. Dann werden die Primzahlen mit diesem einen Prozess 50 Mal berechnet und die Laufzeit gemessen, um anschließend wiederum den Median bilden zu können. Im Anschluss wird die Anzahl der Prozesse erhöht und dasselbe wieder durchgeführt.\\
+						Die Anzahl der Prozesse steigt dabei nicht ständig gleich schnell an, sondern lässt sich durch die folgende Funktion $P(n)$ angeben. $P$ ist dabei die Anzahl der verwendeten Prozesse im $n$. Durchlauf, wobei wie bereits erwähnt jeder Durchlauf nochmals 50 Mal unter gleichen Bedingungen wiederholt wird, um Ausreiser in der Zeitmessung zu eliminieren, und in jedem Durchlaufs-Wechsel die Anzahl der Prozesse erhöht wird.
+						
+						\begin{equation}
+						P(n) =
+						\begin{cases}
+						P(n - 1) + 1 & \text{für } 1 <= P_n < 10\\
+						P(n - 1) + 2 & \text{für } 10 <= P_n < 50\\
+						P(n - 1) + 50 & \text{für } 50 <= P_n < 1000\\
+						P(n - 1) + 1000 & \text{für } P_n >= 1000\\
+						\end{cases}
+						\end{equation}
+						
+						Als Start-Wert gilt $P(1) = 1$.\\
+						Um den Prozessen, welche am Problem gemeinsam arbeiten, und grundsätzlich über vollkommen getrennte Speicherbereiche verfügen, eine Kommunikation zu ermöglichen, wurde ein gemeinsamer Speicher für alle beteiligten Prozesse eingerichtet, wobei der Zugriff darauf mit Hilfe einer Semaphore geregelt wurde, die jeweils nur einen Prozess gleichzeitig in den kritischen Bereich eintreten ließ.\\
+						Durch Ausloten der Grenzen auf dem verwendeten System wurde festgestellt, dass sich maximal 11.000 Prozesse erzeugen lassen. Deshalb befindet sich im Rahmen dieses Versuches $P(n)$ immer im Intervall $1 <= P(n) <= 11.000$.
+						Die Messdaten werden auf Grund des großen Umfangs im Rahmen der Arbeit nicht direkt aufgelistet, sondern aus der Anzahl der verwendeten Prozesse und dem dazugehörigen Laufzeit-Median wurde der Speedup, welcher in Kapitel \ref{Speedup} erläutert wurde, und auch die Effizienz, die unter Punkt \ref{Effizienz} eingeführt wurde, ermittelt. Diese beiden wichtigen Kennzahlen wurden dann in zwei Diagrammen dargestellt.\\
+						Der Speedup $S_P$ wurde in Abhängigkeit von der Anzahl der verwendeten Prozesse $P$ berechnet und grafisch dargestellt, was in Abbildung \ref{fig:Speedup_Prozesse} erkenntlich ist.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Speedup_Prozesse.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Prozesse.}
+							\label{fig:Speedup_Prozesse}
+						\end{figure}
+						
+						Aus dem gegebenen Diagramm lassen sich einige Informationen gewinnen. Mit einem Prozess ergibt sich ein Speedup von genau 1, was auch nachvollziehbar sein sollte. Bei steigender Anzahl von Prozessen steigt zunächst auch der Speedup, allerdings zeigt sich ab 16 Prozessen (von zwei Ausreisern abgesehen) keine signifikante Verbesserung des Speedups mehr. Es scheint laut Diagramm auch eine obere Schranke für den Speedup zu existieren, die sich im Bereich zwischen 3,5 und 4 bewegt. Ab ca. 1000 Prozessen ist erkenntlich, dass der Verwaltungsaufwand für die Prozesse sogar den Nutzen, der mit der Erhöhung der Anzahl der Prozesse einhergeht, übersteigt, weshalb der Speedup von diesem Punkt an zu sinken beginnt, wobei die Werte allerdings Schwankungen aufweisen.\\
+						Bemerkenswert ist vor allem die Tatsache, dass die Messungen auf einem System mit einem 4-Kern-Prozessor ausgeführt wurden und man meinen möchte, dass ab 4 Prozessen, also einem Prozess pro Kern, keine Speedup-Steigerung mehr möglich sein sollte. In der Tat ist dies allerdings nicht der Fall. Höchstwahrscheinlich ist dies im Scheduling-Algorithmus des Systems begründet. Bis zu einem gewissen Grad ermöglicht die Anzahl der Erhöhung der Prozesse, dass der Scheduler insgesamt dem gesamten Programm (also allen Prozessen zusammen) mehr CPU-Zeit zur Verfügung stellt als nur mit 4 Prozessen.\\
+						In der Praxis muss allerdings nicht nur der Geschwindigkeitsgewinn, sondern auch die Effizienz der Lösung betrachtet werden. Selbige ist in Abbildung \ref{fig:Effizienz_Prozesse} dargestellt.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Effizienz_Prozesse.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Prozesse.}
+							\label{fig:Effizienz_Prozesse}
+						\end{figure}
+						
+						Die Effizienz entspricht in diesem Fall einer stetig sinkenden Funktion, welche zu Beginn drastisch sinkt und sich dann asymptotisch 0 annähern zu scheint. Auch ist erkenntlich, dass die Effizienz bis ca. 16 Prozessen, wie auch aus dem Speedup-Diagramm hervorgeht, akzeptable Werte zwischen 100\% und 20\% annimmt, während sie nachher immer weiter sinkt und schließlich annähernd 0\% wird.
+						
+						\item[Parallele Lösung des Problems durch Threads]
+						
+						Nun wurde das Problem mit Hilfe von Threads, also einem wichtigen Grundbaustein der parallelen Programmierung, zu lösen, welcher bereits unter Punkt \ref{ThreadModell} erläutert wurde. In diesem Fall wurden POSIX-Threads verwendet.\\
+						Das Programm läuft dabei ähnlich zum Vorherigen mit Prozessen ab, auch die Erhöhung der Anzahl der Threads $T$ wurde nach dem selben Schema vollzogen. Allerdings war in diesem Fall kein gemeinsamer Speicher nötig, weil sich die Threads den gemeinsamen Speicher des Prozesses, zu welchem sie gehören, teilen. In diesem Fall wurde keine Semaphore zur Synchronisation benötigt, da zwar gemeinsame Ressourcen existierten, die Threads sich jedoch nie in die Quere kommen konnten. Die Funktion, die die Anzahl der Threads $T$ in Abhängigkeit vom Durchlauf $n$ angibt, nennt sich in diesem Fall $T(n)$.
+						Durch Ausloten der Grenzen auf dem verwendeten System wurde in diesem Fall festgestellt, dass sich maximal 32.000 Threads erzeugen lassen. Deshalb befindet sich im Rahmen dieses Versuches $T(n)$ immer im Intervall $1 <= T(n) <= 32.000$.
+						Die Messdaten werden auf Grund des großen Umfangs im Rahmen der Arbeit wieder nicht direkt aufgelistet, sondern aus der Anzahl der verwendeten Threads und dem dazugehörigen Laufzeit-Median wurde wieder der Speedup, welcher in Kapitel \ref{Speedup} erläutert wurde, und auch die Effizienz, die unter Punkt \ref{Effizienz} eingeführt wurde, ermittelt. Diese beiden wichtigen Kennzahlen wurden dann in zwei Diagrammen dargestellt.\\
+						Der Speedup $S_T$ wurde in Abhängigkeit von der Anzahl der verwendeten Threads $T$ berechnet und grafisch dargestellt, was in Abbildung \ref{fig:Speedup_Threads} erkenntlich ist.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Speedup_Threads.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Threads.}
+							\label{fig:Speedup_Threads}
+						\end{figure}
+						
+						Aus dem gegebenen Diagramm lassen sich ähnliche Erkenntnisse wie aus der Abbildung \ref{fig:Speedup_Prozesse} gewinnen. Auch in diesem Fall zeigt sich eine allmähliche Erreichung der oberen Schranke des Speedups bei ca. 16 Threads. Danach zeigt sich keine signifikante Verbesserung des Speedups mehr. Die obere Schranke für den Speedup bewegt sich auch hier im Bereich zwischen 3,5 und 4. Ab ca. 1000 Threads ist erkenntlich, dass der Verwaltungsaufwand für die Threads sogar den Nutzen, der mit der Erhöhung der Anzahl der Threadssse einhergeht, übersteigt, weshalb der Speedup von diesem Punkt an zu sinken beginnt, wobei die Werte allerdings Schwankungen aufweisen.\\
+						Bemerkenswert ist auch hier die schon bei Prozessen genannte Tatsach, dass die Messungen auf einem System mit einem 4-Kern-Prozessor ausgeführt wurden und man meinen möchte, dass ab 4 Prozessen, also einem Prozess pro Kern, keine Speedup-Steigerung mehr möglich sein sollte. In der Tat ist dies allerdings nicht der Fall. Die möglichen Gründe hierfür sind mit jenen bei Verwendung von Prozessen ident.\\
+						Nun wird die Effizienz betrachtet. Sie ist in Abbildung \ref{fig:Effizienz_Threads} dargestellt.
+						
+						\begin{figure}
+							\centering	
+							\includegraphics[width=12cm]{Abbildungen/Effizienz_Threads.png}
+							\caption{Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Threads.}
+							\label{fig:Effizienz_Threads}
+						\end{figure}
+						
+						Die Effizienz kommt auch in diesem Fall einer stetig sinkenden Funktion gleich, welche zu Beginn drastisch sinkt und sich dann asymptotisch 0 annähern zu scheint. Auch ist erkenntlich, dass die Effizienz bis ca. 16 Threads, wie auch aus dem Speedup-Diagramm hervorgeht, akzeptable Werte zwischen 100\% und 20\% annimmt, während sie nachher immer weiter sinkt und schließlich annähernd 0\% wird.
+						
+				\end{description}
