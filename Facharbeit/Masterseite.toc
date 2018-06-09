@@ -66,45 +66,45 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.3.2.3}L\IeC {\"o}sungen zur Starvation}{50}{subsubsection.2.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Parallelrechner}{51}{section.2.4}
+\contentsline {section}{\numberline {2.4}Parallelrechner}{52}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Begriffserkl\IeC {\"a}rung}{51}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Begriffserkl\IeC {\"a}rung}{52}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}Ebenen der Parallelit\IeC {\"a}t}{52}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.4.2.1}Mehrere Abarbeitungseinheiten innerhalb eines Prozessors}{52}{subsubsection.2.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.2.2}Mehrere Abarbeitungseinheiten innerhalb eines Rechners}{52}{subsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Mehrere Abarbeitungseinheiten innerhalb eines Rechners}{53}{subsubsection.2.4.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.4.2.3}Mehrere Abarbeitungseinheiten innerhalb eines Clusters}{53}{subsubsection.2.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.2.4}Mehrere Abarbeitungseinheiten innerhalb eines Grids}{53}{subsubsection.2.4.2.4}
+\contentsline {subsubsection}{\numberline {2.4.2.4}Mehrere Abarbeitungseinheiten innerhalb eines Grids}{54}{subsubsection.2.4.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.3}Arten und Einteilungen von Parallelrechnern}{54}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.3.1}Arten von Parallelrechnern}{54}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {2.4.3.1}Arten von Parallelrechnern}{55}{subsubsection.2.4.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.4.3.2}Einteilung der Architekturen nach der Flynnschen Klassifikation}{55}{subsubsection.2.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.3.3}Einteilung von Parallelrechnern nach der Art der Speicheranordnung}{57}{subsubsection.2.4.3.3}
+\contentsline {subsubsection}{\numberline {2.4.3.3}Einteilung von Parallelrechnern nach der Art der Speicheranordnung}{58}{subsubsection.2.4.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Metriken und Modelle zur Performance-Analyse und -Vorhersage paralleler Programme}{60}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}Kosten, Speedup und Effizienz}{60}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}Kosten, Speedup und Effizienz}{61}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.5.1.1}Kosten eines parallelen Programmes}{61}{subsubsection.2.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.1.2}Speedup eines parallelen Programmes}{61}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {2.5.1.2}Speedup eines parallelen Programmes}{62}{subsubsection.2.5.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.5.1.3}Effizienz eines parallelen Programmes}{63}{subsubsection.2.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.2}Mathematische Gesetze und Modelle}{63}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.2}Mathematische Gesetze und Modelle}{64}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.5.2.1}Das Amdahlsche Gesetz}{64}{subsubsection.2.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.2.2}Das Gustafsonsche Gesetz (Gesetz von Gustafson-Barsis)}{66}{subsubsection.2.5.2.2}
+\contentsline {subsubsection}{\numberline {2.5.2.2}Das Gustafsonsche Gesetz (Gesetz von Gustafson-Barsis)}{67}{subsubsection.2.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.2.3}Zusammenhang zwischen dem Amdahlschen und dem Gustafsonschen Gesetz}{69}{subsubsection.2.5.2.3}
+\contentsline {subsubsection}{\numberline {2.5.2.3}Zusammenhang zwischen dem Amdahlschen und dem Gustafsonschen Gesetz}{70}{subsubsection.2.5.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Parallele Programmierkonzepte, Anwendungsbeispiel und Vergleich}{71}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -120,8 +120,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Voraussetzungen}{75}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Messdaten und Auswertung}{75}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Programmierung und Auswertung}{75}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2.1}Sequentielle L\IeC {\"o}sung}{76}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Sequentielle L\IeC {\"o}sung}{75}{subsubsection.3.2.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.2.2}Parallele L\IeC {\"o}sungen}{76}{subsubsection.3.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Zusammenfassung}{91}{chapter*.3}

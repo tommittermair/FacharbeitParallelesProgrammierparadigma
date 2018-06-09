@@ -21,7 +21,7 @@
 \usepackage[pdftex, pdfauthor={Thomas Mittermair}, pdftitle={Paralleles Programmierparadigma}]{hyperref}	% Set title and author used in the pdf meta data.
 \usepackage{microtype} % tweak spacing and sizing so everything fits nicely
 \usepackage{amsmath} % Für die Darstellung von mathematischen, stückweise definierten Funktionen.
-\usepackage[style=ieee, backend=bibtex]{biblatex} 
+\usepackage[style=numeric, backend=bibtex]{biblatex} 
 \addbibresource{Literatur.bib} % Zuweisung der *.bib bei Biblatex.
 
 % specify margins for two-sided print
@@ -62,3 +62,11 @@
 \makeatother \clearpage{\pagestyle{empty}\cleardoublepage}
 
 \setcounter{secnumdepth}{6} % setting level of numbering
+
+\renewcommand{\arraystretch}{1.5} % Der Abstand zwischen den Zeilen einer Tabelle wird angepasst.
+
+% Nun werden die Zeichen gesetzt, bei welchen Zeilenumbrüche bei URLs eingefügt werden können (von Latex automatisch).
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-\do\_} % Die URL kann nur bei "/", "-" und "_" getrennt werden.
