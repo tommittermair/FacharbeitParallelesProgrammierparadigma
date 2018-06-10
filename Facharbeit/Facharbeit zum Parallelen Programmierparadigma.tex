@@ -1,0 +1,61 @@
+% Abschlussarbeit am Ende der Oberschule
+% Facharbeit zum parallelen Programmierparadigma
+% Thomas Mittermair
+% Oberschulzentrum J. Ph. Fallmerayer Brixen
+
+% include file containing tex configurations
+\input{Konfiguration.tex}
+
+% start document
+\begin{document}
+	\parindent 0cm 
+	\selectlanguage{german}
+	
+	\title{Paralleles Programmierparadigma}
+	\author{Thomas Mittermair}
+	\date{\today}
+	\pagenumbering{roman}
+
+	\input{Kapitel/0.1_Titelblatt.tex}
+	\clearpage
+	
+	\input{Kapitel/0.2_Abstract.tex}
+	\clearpage
+	
+	\input{Kapitel/0.3_Eidesstattliche_Erklaerung.tex}
+	\clearpage
+
+	\setcounter{page}{1}
+	
+	\setcounter{tocdepth}{2} % set depth of the table of contents
+	\tableofcontents
+	\cleardoublepage
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+	\input{Kapitel/1.0_Einleitung_und_Motivation.tex}
+	
+	\cleardoublepage
+	
+	\input{Kapitel/2.0_Theoretische_Grundbegriffe_und_Konzepte.tex}
+	
+	\cleardoublepage
+	
+	\input{Kapitel/3.0_Parallele_Programmierkonzepte_Anwendungsbeispiel_und_Vergleich.tex}
+	
+	\cleardoublepage
+
+	\input{Kapitel/4.0_Zusammenfassung_und_Ausblick.tex}
+	
+	\cleardoublepage
+	
+	\pagenumbering{Roman}
+	\setcounter{page}{1}
+	
+	\printbibliography % Literaturverzeichnis
+	
+	\listoffigures % Abbildungsverzeichnis
+	
+	\listoftables % Tabellenverzeichnis
+\end{document}
