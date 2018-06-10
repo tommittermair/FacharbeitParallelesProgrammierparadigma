@@ -110,7 +110,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Parallele Programmierkonzepte}{71}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}MPI (Message Passing Interface)}{71}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}MPI (Message-Passing-Interface)}{71}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.2}OpenMP (Open Multi-Processing)}{72}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 

@@ -433,7 +433,7 @@
 						\begin{itemize}
 							\item Strikter Wechsel
 							\item Monitor
-							\item Message Passing\footnote{Auf das Message-Passing-Programmiermodell wird im Kapitel \ref{MPI} eingegangen.}
+							\item Message-Passing\footnote{Auf das Message-Passing-Programmiermodell wird im Kapitel \ref{MPI} eingegangen.}
 							\item Barrieren \cite{ModerneBetriebssysteme}
 						\end{itemize}
 					
@@ -701,7 +701,7 @@
 				\begin{description}
 					\item [Parallelrechner mit verteiltem Speicher]
 						Rechner mit verteiltem Speicher, auch \textit{Distributed Memory} genannt, bestehen aus \textit{n} Prozessoren $P_1, P_2, P_3, ... P_i$, wobei jedem Prozessor genau ein privater lokaler Speicher $M_i$ zugeteilt ist. Nur der Prozessor $P_i$ darf auf den Speicher $M_i$ zugreifen. Umgekehrt gilt das selbe: Ein Prozessor $P_i$ darf nur auf den Speicher $M_i$ zugreifen.\\
-						Die einzelnen Rechner (mit Prozessor, Hauptspeicher und eventuell weiteren Ressourcen) werden über ein Verbindungsnetzwerk zu einem Parallelrechner verbunden. Die Kommunikation läuft dabei anhand des sogenannten \textit{Message Passings} (Nachrichtenaustausch) ab, das bedeutet, dass die Rechner untereinander Nachrichten austauschen. Das Konzept des \textit{Message Passings} wird unter Kapitel \ref{MPI} genauer erläutert.\\
+						Die einzelnen Rechner (mit Prozessor, Hauptspeicher und eventuell weiteren Ressourcen) werden über ein Verbindungsnetzwerk zu einem Parallelrechner verbunden. Die Kommunikation läuft dabei anhand des sogenannten \textit{Message-Passings} (Nachrichtenaustausch) ab, das bedeutet, dass die Rechner untereinander Nachrichten austauschen. Das Konzept des \textit{Message-Passings} wird unter Kapitel \ref{MPI} genauer erläutert.\\
 						Die Abbildung \ref{fig:ParallelrechnerVerteilterSpeicher} soll dieses Konzept nochmals bildlich veranschaulichen. \cite{EntwicklungParallelerProgramme}
 						
 					\item[Parallelrechner mit gemeinsamem Speicher]

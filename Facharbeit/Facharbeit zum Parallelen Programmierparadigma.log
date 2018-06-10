@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700 64-bit) (preloaded format=pdflatex 2018.6.9)  10 JUN 2018 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700 64-bit) (preloaded format=pdflatex 2018.6.9)  10 JUN 2018 18:31
 entering extended mode
 **"./Facharbeit zum Parallelen Programmierparadigma.tex"
 ("Facharbeit zum Parallelen Programmierparadigma.tex"
@@ -2479,28 +2479,38 @@ Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 70.
 
 [75]
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+[]\T1/lmr/m/n/10.95 (+20) Zunächst wird
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 79--83
+\T1/lmr/m/n/10.95 (+20) ver-sucht, das ge-ge-be-ne Pro-blem durch Pro-zes-se, a
+l-so dem
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 92.
  [76]
-<Abbildungen/Speedup_Prozesse.png, id=1037, 507.8172pt x 277.9986pt>
+<Abbildungen/Speedup_Prozesse.png, id=1035, 507.8172pt x 277.9986pt>
 File: Abbildungen/Speedup_Prozesse.png Graphic file (type png)
 <use Abbildungen/Speedup_Prozesse.png>
 Package pdftex.def Info: Abbildungen/Speedup_Prozesse.png  used on input line 1
 02.
 (pdftex.def)             Requested size: 312.9803pt x 171.33504pt.
-
-Underfull \vbox (badness 1394) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 110.
 Package babel Info: Redefining german shorthand "|
@@ -2513,18 +2523,14 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 110.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 110.
- [77 <./Abbildungen/Speedup_Prozesse.png>]
-<Abbildungen/Effizienz_Prozesse.png, id=1045, 507.8172pt x 277.9986pt>
+
+[77]
+<Abbildungen/Effizienz_Prozesse.png, id=1044, 507.8172pt x 277.9986pt>
 File: Abbildungen/Effizienz_Prozesse.png Graphic file (type png)
 <use Abbildungen/Effizienz_Prozesse.png>
 Package pdftex.def Info: Abbildungen/Effizienz_Prozesse.png  used on input line
  113.
 (pdftex.def)             Requested size: 312.9803pt x 171.33504pt.
-
-Underfull \hbox (badness 1152) in paragraph at lines 122--127
-[]\T1/lmr/m/n/10.95 (+20) Nun wur-de das
- []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 127.
 Package babel Info: Redefining german shorthand "|
@@ -2537,15 +2543,15 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 127.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 127.
-[78 <./Abbildungen/Effizienz_Prozesse.png>]
-<Abbildungen/Speedup_Threads.png, id=1056, 507.8172pt x 277.9986pt>
+ [78 <./Abbildungen/Speedup_Prozesse.png>]
+<Abbildungen/Speedup_Threads.png, id=1055, 507.8172pt x 277.9986pt>
 File: Abbildungen/Speedup_Threads.png Graphic file (type png)
 <use Abbildungen/Speedup_Threads.png>
 Package pdftex.def Info: Abbildungen/Speedup_Threads.png  used on input line 13
 0.
 (pdftex.def)             Requested size: 312.9803pt x 171.33504pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2538) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 138.
@@ -2559,29 +2565,28 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 138.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 138.
- [79 <./Abbildungen/Speedup_Threads.png>]
+ [79 <./Abbildungen/Effizienz_Prozesse.png>]
 <Abbildungen/Effizienz_Threads.png, id=1065, 507.8172pt x 277.9986pt>
 File: Abbildungen/Effizienz_Threads.png Graphic file (type png)
 <use Abbildungen/Effizienz_Threads.png>
 Package pdftex.def Info: Abbildungen/Effizienz_Threads.png  used on input line 
 141.
 (pdftex.def)             Requested size: 312.9803pt x 171.33504pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 154.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 154.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 154.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 154.
+ [80 <./Abbildungen/Speedup_Threads.png>]
+Underfull \vbox (badness 1769) has occurred while \output is active []
 
-Underfull \vbox (badness 2538) has occurred while \output is active []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 154.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 154.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 154.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 154.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 154.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 154.
- [80 <./Abbildungen/Effizienz_Threads.png>]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 170.
 Package babel Info: Redefining german shorthand "|
@@ -2594,8 +2599,8 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 170.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 170.
- [81]
-<Abbildungen/Speedup_MPI.png, id=1083, 507.8172pt x 280.8894pt>
+ [81 <./Abbildungen/Effizienz_Threads.png>]
+<Abbildungen/Speedup_MPI.png, id=1084, 507.8172pt x 280.8894pt>
 File: Abbildungen/Speedup_MPI.png Graphic file (type png)
 <use Abbildungen/Speedup_MPI.png>
 Package pdftex.def Info: Abbildungen/Speedup_MPI.png  used on input line 173.
@@ -2613,34 +2618,38 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 181.
  [82 <./Abbildungen/Speedup_MPI.png>]
-<Abbildungen/Effizienz_MPI.png, id=1091, 507.8172pt x 280.8894pt>
+<Abbildungen/Effizienz_MPI.png, id=1093, 507.8172pt x 280.8894pt>
 File: Abbildungen/Effizienz_MPI.png Graphic file (type png)
 <use Abbildungen/Effizienz_MPI.png>
 Package pdftex.def Info: Abbildungen/Effizienz_MPI.png  used on input line 184.
 
 (pdftex.def)             Requested size: 312.9803pt x 173.1167pt.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 198.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 198.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 198.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 198.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 198.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 198.
 
+Underfull \hbox (badness 2717) in paragraph at lines 193--198
+[]\T1/lmr/m/n/10.95 (+20) Nun wird das
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 198.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 198.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 198.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 198.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 198.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 198.
 [83 <./Abbildungen/Effizienz_MPI.png>]
-<Abbildungen/Speedup_OpenMP.png, id=1102, 507.8172pt x 277.9986pt>
+<Abbildungen/Speedup_OpenMP.png, id=1104, 507.8172pt x 277.9986pt>
 File: Abbildungen/Speedup_OpenMP.png Graphic file (type png)
 <use Abbildungen/Speedup_OpenMP.png>
 Package pdftex.def Info: Abbildungen/Speedup_OpenMP.png  used on input line 201
 .
 (pdftex.def)             Requested size: 312.9803pt x 171.33504pt.
 
-Underfull \vbox (badness 1394) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 210.
@@ -2654,7 +2663,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 210.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 210.
- [84 <./Abbildungen/Speedup_OpenMP.png>]
+ [84]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 219.
 Package babel Info: Redefining german shorthand "|
@@ -2667,71 +2676,73 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 219.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 219.
- [85]
+
+[85 <./Abbildungen/Speedup_OpenMP.png>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 240.
  [86]
-<Abbildungen/Speedup_OpenMP_Funktion_S(t).png, id=1129, 507.8172pt x 274.1442pt
+<Abbildungen/Speedup_OpenMP_Funktion_S(t).png, id=1131, 507.8172pt x 274.1442pt
 >
 File: Abbildungen/Speedup_OpenMP_Funktion_S(t).png Graphic file (type png)
 <use Abbildungen/Speedup_OpenMP_Funktion_S(t).png>
 Package pdftex.def Info: Abbildungen/Speedup_OpenMP_Funktion_S(t).png  used on 
 input line 260.
 (pdftex.def)             Requested size: 312.9803pt x 168.9595pt.
-<Abbildungen/Effizienz_OpenMP.png, id=1131, 507.8172pt x 277.9986pt>
+<Abbildungen/Effizienz_OpenMP.png, id=1133, 507.8172pt x 277.9986pt>
 File: Abbildungen/Effizienz_OpenMP.png Graphic file (type png)
 <use Abbildungen/Effizienz_OpenMP.png>
 Package pdftex.def Info: Abbildungen/Effizienz_OpenMP.png  used on input line 2
 70.
 (pdftex.def)             Requested size: 312.9803pt x 171.33504pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 276.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 276.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 276.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 276.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 276.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 276.
- [87 <./Abbildungen/Speedup_OpenMP_Funktion_S(t).png>])
+(babel)             in language  on input line 277.
+ [87]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 46.
- [88 <./Abbildungen/Effizienz_OpenMP.png>]
+(babel)             in language  on input line 277.
+ [88 <./Abbildungen/Speedup_OpenMP_Funktion_S(t).png> <./Abbildungen/Effizienz_
+OpenMP.png>])
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 46.
+(babel)             in language  on input line 47.
  [89]
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 47.
@@ -2974,7 +2985,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `"Facharbeit zum Parallelen Programmierparadi
 gma".out' has not changed.
-(rerunfilecheck)             Checksum: 244BF801D7E3234AD9295C774C8DB6BE;3119.
+(rerunfilecheck)             Checksum: 6AF53265107A4666244E7831528E5B62;3119.
 Package logreq Info: Writing requests to '"Facharbeit zum Parallelen Programmie
 rparadigma".run.xml'.
 \openout1 = `"Facharbeit zum Parallelen Programmierparadigma.run.xml"'.
@@ -2982,10 +2993,10 @@ rparadigma".run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 18790 strings out of 492973
- 320451 string characters out of 3121375
+ 18793 strings out of 492973
+ 320628 string characters out of 3121375
  959811 words of memory out of 3000000
- 21663 multiletter control sequences out of 15000+200000
+ 21665 multiletter control sequences out of 15000+200000
  90137 words of font info for 184 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  47i,11n,75p,2753b,3738s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3019,9 +3030,9 @@ blic/lm/lmsy6.pfb><C:/Users/Thomas Mittermair/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy8.pfb><C:/Users/Thomas Mittermair/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
 Output written on "Facharbeit zum Parallelen Programmierparadigma.pdf" (106 pag
-es, 2127195 bytes).
+es, 2128410 bytes).
 PDF statistics:
- 1551 PDF objects out of 1728 (max. 8388607)
- 400 named destinations out of 1000 (max. 500000)
+ 1557 PDF objects out of 1728 (max. 8388607)
+ 401 named destinations out of 1000 (max. 500000)
  24465 words of extra memory for PDF output out of 24883 (max. 10000000)
 

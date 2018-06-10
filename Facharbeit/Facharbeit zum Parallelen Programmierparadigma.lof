@@ -36,20 +36,20 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Prozesse.}}{77}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Prozesse.}}{78}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Prozesse.}}{78}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Prozesse.}}{79}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Threads.}}{79}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten Threads.}}{80}{figure.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Threads.}}{80}{figure.3.4}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten Threads.}}{81}{figure.3.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten MPI-Prozesse.}}{82}{figure.3.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten MPI-Prozesse.}}{83}{figure.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten OpenMP-Threads.}}{84}{figure.3.7}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem Speedup und der Anzahl der verwendeten OpenMP-Threads.}}{85}{figure.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem gemessenen Speedup und der Anzahl der verwendeten OpenMP-Threads und Vergleich mit der ermittelten Funktion $S(T)$.}}{87}{figure.3.8}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen dem gemessenen Speedup und der Anzahl der verwendeten OpenMP-Threads und Vergleich mit der ermittelten Funktion $S(T)$.}}{88}{figure.3.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Grafische Darstellung des Zusammenhangs zwischen der Effizienz und der Anzahl der verwendeten OpenMP-Threads.}}{88}{figure.3.9}
